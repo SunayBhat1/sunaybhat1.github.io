@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Debiasing on Sunay Bhat</title>
+    <link>http://localhost:1313/tags/debiasing/</link>
+    <description>Recent content in Debiasing on Sunay Bhat</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 01 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/debiasing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>De-Biasing Generative Models using Counterfactual Methods</title>
+      <link>http://localhost:1313/papers/debias/</link>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/papers/debias/</guid>
+      <description>Causal Counterfactual Generative Model (CCGM) is a VAE-based framework with a partially trainable causal layer that learns causal relationships, enabling de-biased dataset generation from biased training data.</description>
+    </item>
+  </channel>
+</rss>

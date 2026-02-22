@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Generative Models on Sunay Bhat</title>
+    <link>http://localhost:1313/tags/generative-models/</link>
+    <description>Recent content in Generative Models on Sunay Bhat</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 01 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/generative-models/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PureGen: Universal Data Purification for Train-Time Poison Defense via Generative Model Dynamics</title>
+      <link>http://localhost:1313/papers/puregen/</link>
+      <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/papers/puregen/</guid>
+      <description>Train-time data poison attacks compromise machine learning models by introducing adversarial examples during training. We propose universal data purification using EBM and DDPM dynamics that achieves state-of-the-art defense without requiring knowledge of the specific attack or classifier.</description>
+    </item>
+    <item>
+      <title>Towards Composable Distributions of Latent Space Augmentations</title>
+      <link>http://localhost:1313/papers/lavae/</link>
+      <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/papers/lavae/</guid>
+      <description>We propose a composable framework for latent space image augmentation based on the VAE architecture, enabling combination of multiple augmentations via linear transformations in the latent space.</description>
+    </item>
+    <item>
+      <title>De-Biasing Generative Models using Counterfactual Methods</title>
+      <link>http://localhost:1313/papers/debias/</link>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/papers/debias/</guid>
+      <description>Causal Counterfactual Generative Model (CCGM) is a VAE-based framework with a partially trainable causal layer that learns causal relationships, enabling de-biased dataset generation from biased training data.</description>
+    </item>
+  </channel>
+</rss>

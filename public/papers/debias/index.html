@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>De-Biasing Generative Models using Counterfactual Methods | Sunay Bhat</title>
+<meta name="keywords" content="fairness, debiasing, generative models, counterfactual reasoning, causal ML, VAE">
+<meta name="description" content="Causal Counterfactual Generative Model (CCGM) is a VAE-based framework with a partially trainable causal layer that learns causal relationships, enabling de-biased dataset generation from biased training data.">
+<meta name="author" content="Sunay Bhat,&thinsp;Jeffrey Jiang,&thinsp;Omead Pooladzandi,&thinsp;Gregory Pottie">
+<link rel="canonical" href="http://localhost:1313/papers/debias/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fca9faed493caa270a41d1ee3729b08153af67a6d7342376e1e4a7945972b9ee.css" integrity="sha256-/Kn67Uk8qicKQdHuNymwgVOvZ6bXNCN24eSnlFlyue4=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/papers/debias/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><meta property="og:url" content="http://localhost:1313/papers/debias/">
+  <meta property="og:site_name" content="Sunay Bhat">
+  <meta property="og:title" content="De-Biasing Generative Models using Counterfactual Methods">
+  <meta property="og:description" content="Causal Counterfactual Generative Model (CCGM) is a VAE-based framework with a partially trainable causal layer that learns causal relationships, enabling de-biased dataset generation from biased training data.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="papers">
+    <meta property="article:published_time" content="2022-07-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2022-07-01T00:00:00+00:00">
+    <meta property="article:tag" content="Fairness">
+    <meta property="article:tag" content="Debiasing">
+    <meta property="article:tag" content="Generative Models">
+    <meta property="article:tag" content="Counterfactual Reasoning">
+    <meta property="article:tag" content="Causal ML">
+    <meta property="article:tag" content="VAE">
+    <meta property="og:image" content="http://localhost:1313/papers/debias/debias.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://localhost:1313/papers/debias/debias.png">
+<meta name="twitter:title" content="De-Biasing Generative Models using Counterfactual Methods">
+<meta name="twitter:description" content="Causal Counterfactual Generative Model (CCGM) is a VAE-based framework with a partially trainable causal layer that learns causal relationships, enabling de-biased dataset generation from biased training data.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Research",
+      "item": "http://localhost:1313/papers/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "De-Biasing Generative Models using Counterfactual Methods",
+      "item": "http://localhost:1313/papers/debias/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "De-Biasing Generative Models using Counterfactual Methods",
+  "name": "De-Biasing Generative Models using Counterfactual Methods",
+  "description": "Causal Counterfactual Generative Model (CCGM) is a VAE-based framework with a partially trainable causal layer that learns causal relationships, enabling de-biased dataset generation from biased training data.",
+  "keywords": [
+    "fairness", "debiasing", "generative models", "counterfactual reasoning", "causal ML", "VAE"
+  ],
+  "articleBody": " Download Paper Abstract Causal Counterfactual Generative Model (CCGM) is a VAE-based framework with a partially trainable causal layer that learns causal relationships without compromising reconstruction fidelity, allowing for bias analysis, interventions, and scenario simulations. Our method combines a causal latent space VAE model with modifications for causal fidelity, generating de-biased datasets from biased training data and offering finer control over the causal layer, as demonstrated by high-fidelity image and tabular data generation aligned with the causal framework.\nCitation Bhat, Sunay, Jeffrey Jiang, Omead Pooladzandi, and Gregory Pottie. 2022. “De-biasing Generative Models using Counterfactual Methods.” arXiv preprint arXiv:2207.01575.\n@article{bhat2022debias, title={De-biasing Generative Models using Counterfactual Methods}, author={Bhat, Sunay and Jiang, Jeffrey and Pooladzandi, Omead and Pottie, Gregory}, journal={arXiv preprint arXiv:2207.01575}, year={2022} } ",
+  "wordCount" : "120",
+  "inLanguage": "en",
+  "image":"http://localhost:1313/papers/debias/debias.png","datePublished": "2022-07-01T00:00:00Z",
+  "dateModified": "2022-07-01T00:00:00Z",
+  "author":[{
+    "@type": "Person",
+    "name": "Sunay Bhat"
+  }, {
+    "@type": "Person",
+    "name": "Jeffrey Jiang"
+  }, {
+    "@type": "Person",
+    "name": "Omead Pooladzandi"
+  }, {
+    "@type": "Person",
+    "name": "Gregory Pottie"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/papers/debias/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Sunay Bhat",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+            {left: "\\begin{equation*}", right: "\\end{equation*}", display: true},
+            {left: "\\begin{align}", right: "\\end{align}", display: true},
+            {left: "\\begin{align*}", right: "\\end{align*}", display: true},
+            {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+            {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+            {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+          ],
+          throwOnError : false
+        });
+    });
+</script>
+ 
+
+
+</head>
+
+<body class="" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Sunay Bhat">
+                <img src="http://localhost:1313/favicon.ico" alt="" aria-label="logo"
+                    height="18"
+                    width="18">Sunay Bhat</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/company/" title="Company">
+                    <span>Company</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/writing/" title="Writing">
+                    <span>Writing</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/papers/" title="Research">
+                    <span>Research</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      De-Biasing Generative Models using Counterfactual Methods
+    </h1>
+    <div class="post-meta"><span title='2022-07-01 00:00:00 +0000 UTC'>July 2022</span>&nbsp;&middot;&nbsp;Sunay Bhat,&thinsp;Jeffrey Jiang,&thinsp;Omead Pooladzandi,&thinsp;Gregory Pottie&nbsp;&middot;&nbsp;<a href="https://arxiv.org/abs/2207.01575" rel="noopener noreferrer" target="_blank">arXiv 2207.01575</a>
+
+</div>
+  </header> 
+  <div class="post-content"><hr>
+<h5 id="download">Download</h5>
+<ul>
+<li><a href="https://arxiv.org/abs/2207.01575" target="_blank">Paper</a></li>
+</ul>
+<hr>
+<h5 id="abstract">Abstract</h5>
+<p>Causal Counterfactual Generative Model (CCGM) is a VAE-based framework with a partially trainable causal layer that learns causal relationships without compromising reconstruction fidelity, allowing for bias analysis, interventions, and scenario simulations. Our method combines a causal latent space VAE model with modifications for causal fidelity, generating de-biased datasets from biased training data and offering finer control over the causal layer, as demonstrated by high-fidelity image and tabular data generation aligned with the causal framework.</p>
+<hr>
+<h5 id="citation">Citation</h5>
+<p>Bhat, Sunay, Jeffrey Jiang, Omead Pooladzandi, and Gregory Pottie. 2022. &ldquo;De-biasing Generative Models using Counterfactual Methods.&rdquo; <em>arXiv preprint arXiv:2207.01575</em>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span>@article<span style="color:#0aa">{</span>bhat2022debias,
+</span></span><span style="display:flex;"><span>  title=<span style="color:#0aa">{</span>De-biasing Generative Models using Counterfactual Methods<span style="color:#0aa">}</span>,
+</span></span><span style="display:flex;"><span>  author=<span style="color:#0aa">{</span>Bhat, Sunay and Jiang, Jeffrey and Pooladzandi, Omead and Pottie, Gregory<span style="color:#0aa">}</span>,
+</span></span><span style="display:flex;"><span>  journal=<span style="color:#0aa">{</span>arXiv preprint arXiv:2207.01575<span style="color:#0aa">}</span>,
+</span></span><span style="display:flex;"><span>  year=<span style="color:#0aa">{</span>2022<span style="color:#0aa">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#0aa">}</span>
+</span></span></code></pre></div>
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/fairness/">Fairness</a></li>
+      <li><a href="http://localhost:1313/tags/debiasing/">Debiasing</a></li>
+      <li><a href="http://localhost:1313/tags/generative-models/">Generative Models</a></li>
+      <li><a href="http://localhost:1313/tags/counterfactual-reasoning/">Counterfactual Reasoning</a></li>
+      <li><a href="http://localhost:1313/tags/causal-ml/">Causal ML</a></li>
+      <li><a href="http://localhost:1313/tags/vae/">VAE</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2026 Sunay Bhat</span> ·     
+    <span>
+    Powered by 
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">hugo</a>, <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">papermod</a>, &amp;
+        <a href="https://github.com/pmichaillat/hugo-website/" rel="noopener" target="_blank">hugo-website</a>.
+    </span>
+</footer>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+</html>

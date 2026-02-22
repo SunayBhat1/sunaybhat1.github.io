@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Writing on Sunay Bhat</title>
+    <link>http://localhost:1313/writing/</link>
+    <description>Recent content in Writing on Sunay Bhat</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 01 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/writing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Money is Time</title>
+      <link>http://localhost:1313/writing/money-is-time/</link>
+      <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/writing/money-is-time/</guid>
+      <description>The saying goes &amp;#39;time is money&amp;#39; — but flipping that framing reveals something more important about what we actually value.</description>
+    </item>
+  </channel>
+</rss>
