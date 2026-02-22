@@ -1,0 +1,65 @@
+/* Warm link color */
+a {
+    color: #7A5C3A;
+}
+
+a:hover {
+    color: #5A3E22;
+}
+
+/* Warm blockquote — left rule instead of cold gray */
+blockquote {
+    border-left: 3px solid #C8B59A;
+    color: var(--secondary);
+    font-style: italic;
+    padding-left: 1.2em;
+    margin-left: 0;
+}
+
+/* Warm horizontal rule */
+hr {
+    border-color: #DDD4C0;
+    opacity: 0.7;
+}
+
+/* Soften the active nav underline to warm tone */
+#menu .active {
+    border-bottom-color: #8B6F4E;
+}
+
+/* Warm tint on code snippets */
+code {
+    background: #EDE8DC;
+    color: #6B4C30;
+}
+
+/* Entry card: round corners slightly softer */
+.post-entry {
+    border-radius: 6px;
+}
+
+/* ── Papers 2×2 grid ── */
+.papers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap);
+    margin-top: var(--gap);
+}
+
+.papers-grid .post-entry {
+    margin-bottom: 0;
+}
+
+@media (max-width: 680px) {
+    .papers-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Dissertation block — centered above grid */
+.dissertation-block {
+    text-align: center;
+    padding: calc(var(--gap) * 0.5) 0 var(--gap);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: var(--gap);
+}

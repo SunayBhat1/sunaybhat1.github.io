@@ -1,0 +1,51 @@
+:root {
+    --gap: 24px;
+    --content-gap: 20px;
+    --nav-width: 1024px;
+    --main-width: 720px;
+    --header-height: 44px;
+    --footer-height: 70px;
+    --radius: 8px;
+    --theme: #F9F5EC;
+    --entry: #FDF9F2;
+    --primary: #28201A;
+    --secondary: #7A6B5A;
+    --tertiary: #CCC0A8;
+    --gray: #B0A090;
+    --content: #28201A;
+    --code-block-bg: rgb(28, 29, 33);
+    --code-bg: #EDE8DC;
+    --border: #DDD4C0;
+    --darkcolor: #8B6F4E;
+    --lightcolor: #D6C8AC;
+    --semibold: 500;
+    --homesize: 16px;
+    --textsize: 18px;
+    --h1size: 25px;
+    --entrysize: 15px;
+    --headersize: 16px;
+    --footersize: 13px;
+    --lineheight: 1.45;
+    --lineclamp: 8;
+    --marginleft: 26px;
+}
+
+.dark {
+    --theme: rgb(29, 30, 32);
+    --entry: rgb(46, 46, 51);
+    --primary: rgb(218, 218, 219);
+    --secondary: rgb(155, 156, 157);
+    --tertiary: rgb(65, 66, 68);
+    --content: rgb(196, 196, 197);
+    --code-block-bg: rgb(46, 46, 51);
+    --code-bg: rgb(55, 56, 62);
+    --border: rgb(51, 51, 51);
+}
+
+.list {
+    background: var(--code-bg);
+}
+
+.dark.list {
+    background: var(--theme);
+}

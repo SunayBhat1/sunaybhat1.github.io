@@ -1,0 +1,105 @@
+baseURL: "https://sunaybhat.me/"
+title: Sunay Bhat
+theme: PaperMod
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+pagination:
+  pagerSize: 20
+
+taxonomies:
+    tag: tags
+
+menu:
+    main:
+        - name: Company
+          url: company/
+          weight: 1
+        - name: Writing
+          url: writing/
+          weight: 2
+        - name: Research
+          url: papers/
+          weight: 3
+        - name: About
+          url: about/
+          weight: 4
+
+params:
+    description: "Sunay Bhat — CTO, AI researcher, and writer. Building at the intersection of AI and product."
+    author: Sunay Bhat
+    # googleAnalyticsID: "G-XXXXX"
+    DateFormat: "January 2006"
+    defaultTheme: light
+    hideFooter: false
+    disableThemeToggle: true
+    ShowShareButtons: false
+    ShowReadingTime: false
+    disableSpecial1stPost: true
+    disableAnchoredHeadings: true
+    ShowPostNavLinks: false
+    ShowBreadCrumbs: false
+    ShowCodeCopyButtons: true
+    ShowAllPagesInArchive: false
+    MainSections: ["papers","writing"]
+    ShowToc: false
+    disableScrollToTop: true
+    TocOpen: true
+    ShowWordCount: false
+    UseHugoToc: true
+    comments: false
+    math: true
+    profileMode:
+          enabled: true
+          title: Sunay Bhat
+          subtitle: "CTO at StreetMetrics, where we build data and intelligence infrastructure for out-of-home advertising. Previously, Ph.D. at UCLA researching robustness, generative models, and causal inference. I write about mechanistic interpretability, AI, and ideas I find interesting."
+          imageUrl: "headshot.jpg"
+          imageWidth: 160
+          imageHeight: 160
+          buttons:
+            - name: Company
+              url: company/
+            - name: Writing
+              url: writing/
+            - name: Research
+              url: papers/
+            - name: About
+              url: about/
+
+    socialIcons:
+        - name: CV
+          url: resume.pdf
+        - name: Email
+          url: mailto:sunaybhat1@gmail.com
+        - name: Google Scholar
+          url: https://scholar.google.com/citations?user=DN8trF0AAAAJ&hl=en
+        - name: GitHub
+          url: https://github.com/SunayBhat1
+        - name: LinkedIn
+          url: https://www.linkedin.com/in/sunaybhat/
+        - name: Substack
+          url: https://substack.com/@sunaybhat
+        - name: Twitter
+          url: https://x.com/highersnr
+
+    assets:
+        disableScrollBarStyle: true
+    cover:
+        hiddenInList: false
+        hiddenInSingle: true
+    label:
+      text: "Sunay Bhat"
+      icon: favicon.ico
+      iconHeight: 18
+
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
+    highlight:
+        guessSyntax: true
+        style: autumn
+    tableOfContents:
+        endLevel: 2
+        ordered: false
+        startLevel: 2

@@ -1,0 +1,49 @@
+.buttons,
+.main .profile {
+    display: flex;
+    justify-content: left;
+}
+.main .profile {
+    align-items: center;
+    min-height: calc(100vh - var(--footer-height) - (var(--gap) * 2));
+    font-size: var(--homesize);
+    line-height: var(--lineheight);
+    padding: var(--gap);
+}
+
+.profile .profile_inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.profile .profile_inner h1 {
+    font-size: 2.5rem;
+}
+
+.profile img {
+    border-radius: 50%;
+    border: 3px solid #B8A07A;
+    box-shadow: 0 4px 28px rgba(80, 55, 25, 0.18);
+    filter: sepia(18%) brightness(0.96) contrast(0.94) saturate(0.9);
+}
+
+.buttons {
+    flex-wrap: wrap;
+}
+
+.button {
+    background: var(--tertiary);
+    border-radius: var(--radius);
+    margin: 6px 12px 6px 0px;
+    padding: 10px;
+}
+
+.button-inner {
+    padding: 0 8px;
+}
+
+.button:hover {
+    background: var(--lightcolor);
+}
