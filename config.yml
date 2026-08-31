@@ -15,15 +15,18 @@ menu:
         - name: Company
           url: company/
           weight: 1
-        - name: Writing
-          url: writing/
-          weight: 2
         - name: Research
           url: papers/
+          weight: 2
+        - name: Projects
+          url: projects/
           weight: 3
+        - name: Writing
+          url: writing/
+          weight: 4
         - name: About
           url: about/
-          weight: 4
+          weight: 5
 
 params:
     description: "Sunay Bhat — CTO, AI researcher, and writer. Building at the intersection of AI and product."
@@ -59,10 +62,12 @@ params:
           buttons:
             - name: Company
               url: company/
-            - name: Writing
-              url: writing/
             - name: Research
               url: papers/
+            - name: Projects
+              url: projects/
+            - name: Writing
+              url: writing/
             - name: About
               url: about/
 
