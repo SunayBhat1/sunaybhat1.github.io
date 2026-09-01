@@ -1,39 +1,31 @@
 {{- define "main" }}
-
-<header class="page-header">
-  <h1>{{ .Title }}</h1>
-</header>
-
-{{- if .Content }}
-<div class="post-content dissertation-block">
-  {{- .Content }}
-</div>
-{{- end }}
-
-{{- $pages := .RegularPages }}
-{{- $paginator := .Paginate $pages }}
-
-<div class="papers-grid">
-{{- range $paginator.Pages }}
-<article class="post-entry">
-  {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
-  {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">{{ .Title }}</h2>
-  </header>
-  {{- if (ne (.Param "hideSummary") true) }}
-  <div class="entry-content">
-    <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+<section class="archive-hero">
+  <p class="eyebrow"><span></span> Research archive · 2022—2024</p>
+  <h1>Making machine learning<br><em>more dependable.</em></h1>
+  <p>Work spanning robustness, generative models, causal inference, and interpretability. My doctoral research at UCLA asked how we can build systems that learn the right things—and let us inspect why.</p>
+  <div class="archive-callout">
+    <span>Dissertation</span>
+    <div>
+      <a href="https://escholarship.org/content/qt98f7s81c/qt98f7s81c.pdf">Robust Modeling through Causal Priors and Data Purification in Machine Learning <b>↗</b></a>
+      <small>UCLA, 2024 · advised by Gregory Pottie</small>
+    </div>
   </div>
-  {{- end }}
-  {{- if not (.Param "hideMeta") }}
-  <footer class="entry-footer">
-    {{- partial "post_meta.html" . -}}
-  </footer>
-  {{- end }}
-  <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
-</article>
+</section>
+
+<div class="archive-label"><span>Selected publications</span><span>{{ len .RegularPages }} entries</span></div>
+<div class="archive-list">
+{{- range .RegularPages.ByDate.Reverse }}
+  <article class="archive-row">
+    <div class="archive-year">{{ .Date.Format "2006" }}</div>
+    <div class="archive-main">
+      {{- with .Params.tags }}<p class="archive-type">{{ delimit (first 2 .) " · " }}</p>{{ end }}
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      {{- with .Summary }}<p>{{ . | plainify | htmlUnescape }}</p>{{ end }}
+      {{- with .Params.tags }}<div class="archive-tags">{{ range first 3 . }}<span>{{ . }}</span>{{ end }}</div>{{ end }}
+    </div>
+    <a class="archive-link" href="{{ .RelPermalink }}" aria-label="Read {{ .Title }}">↗</a>
+  </article>
 {{- end }}
 </div>
-
-{{- end }}{{- /* end main */ -}}
+<section class="archive-footer-note"><p>For a complete list of publications and current research, find me on <a href="https://scholar.google.com/citations?user=DN8trF0AAAAJ&hl=en">Google Scholar ↗</a>.</p></section>
+{{- end }}

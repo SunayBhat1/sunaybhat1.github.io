@@ -1,0 +1,70 @@
+{{- $researchURL := "papers/" | relURL -}}
+{{- $writingURL := "writing/" | relURL -}}
+{{- $projectsURL := "projects/" | relURL -}}
+{{- $puregen := site.GetPage "/papers/puregen" -}}
+
+<section class="home-hero">
+  <div class="home-hero-copy">
+    <p class="eyebrow"><span></span> Los Angeles, California</p>
+    <h1>Building with intelligence,<br><em>and staying curious.</em></h1>
+    <p class="home-intro">I’m Sunay—CTO at StreetMetrics, researcher, and writer. I work at the intersection of AI, data systems, and the ideas that make a product worth building.</p>
+    <div class="home-actions">
+      <a class="home-button" href="{{ $researchURL }}">Explore my work <span>→</span></a>
+      <a class="home-text-link" href="mailto:sunaybhat1@gmail.com">Say hello <span>↗</span></a>
+    </div>
+  </div>
+  <div class="home-portrait-wrap">
+    <div class="home-portrait-shape"></div>
+    <img src="{{ "headshot.jpg" | absURL }}" alt="Sunay Bhat">
+    <span class="home-portrait-caption">A life in inquiry<br>and motion</span>
+  </div>
+</section>
+
+<section class="home-now">
+  <div class="home-section-intro">
+    <p class="eyebrow">Right now</p>
+    <h2>Three threads I’m following.</h2>
+  </div>
+  <div class="home-now-grid">
+    <article class="home-now-card">
+      <span class="home-card-number">01</span>
+      <h3>Building</h3>
+      <p>Data and intelligence infrastructure for the physical world at StreetMetrics.</p>
+      <a href="{{ "company/" | relURL }}">Company <span>↗</span></a>
+    </article>
+    <article class="home-now-card">
+      <span class="home-card-number">02</span>
+      <h3>Researching</h3>
+      <p>How we can make machine-learning systems more robust, legible, and useful.</p>
+      <a href="{{ $researchURL }}">Selected research <span>↗</span></a>
+    </article>
+    <article class="home-now-card">
+      <span class="home-card-number">03</span>
+      <h3>Writing</h3>
+      <p>Notes on intelligence, economics, and the ideas I keep returning to.</p>
+      <a href="{{ $writingURL }}">Read the notes <span>↗</span></a>
+    </article>
+  </div>
+</section>
+
+<section class="home-featured-work">
+  <div class="home-section-topline">
+    <p class="eyebrow">Selected work</p>
+    <a class="home-text-link" href="{{ $researchURL }}">See all research <span>→</span></a>
+  </div>
+  <article class="home-feature-paper">
+    <div class="home-feature-meta"><span>2024</span><span>Robustness · Generative models</span></div>
+    <div class="home-feature-body">
+      <p class="home-feature-label">Research</p>
+      {{- with $puregen }}
+      <h2>{{ .Title }}</h2>
+      <p>{{ .Summary | plainify | htmlUnescape }}</p>
+      <a class="home-round-link" href="{{ .RelPermalink }}" aria-label="Read {{ .Title }}">↗</a>
+      {{- else }}
+      <h2>PureGen: Universal Data Purification for Train-Time Poison Defense</h2>
+      <p>Using generative-model dynamics to make poisoned training data safer—without needing to know the attack in advance.</p>
+      <a class="home-round-link" href="{{ $researchURL }}" aria-label="Read selected research">↗</a>
+      {{- end }}
+    </div>
+  </article>
+</section>

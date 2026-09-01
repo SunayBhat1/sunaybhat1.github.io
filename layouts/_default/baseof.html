@@ -9,18 +9,15 @@
     {{- partial "head.html" . }}
 </head>
 
-<body class="
-{{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) -}}
-{{- print "list" -}}
-{{- end -}}
-{{- if eq site.Params.defaultTheme `dark` -}}
-{{- print " dark" }}
-{{- end -}}
+<body class="site-body
+{{- if .IsHome }} page-home{{ end -}}
+{{- if eq .Section "papers" }} page-research{{ end -}}
+{{- if eq .Section "writing" }} page-writing{{ end -}}
+{{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) }} list{{ end -}}
+{{- if eq site.Params.defaultTheme `dark` }} dark{{ end -}}
 " id="top">
-    {{- if not .IsHome  }}
     {{- partialCached "header.html" . .Page -}}
-    {{- end }}
-    <main class="main">
+    <main class="site-main">
         {{- block "main" . }}{{ end }}
     </main>
     {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}

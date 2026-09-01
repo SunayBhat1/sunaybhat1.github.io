@@ -1,26 +1,22 @@
 {{- define "main" }}
-
-<header class="page-header">
+<section class="collection-lede">
+  <p class="editorial-kicker">Independent work</p>
   <h1>{{ .Title }}</h1>
-  {{- with .Description }}
-  <div class="post-description">{{ . | markdownify }}</div>
-  {{- end }}
-</header>
+  {{- with .Description }}<p>{{ . }}</p>{{ end }}
+  {{- with .Content }}<div class="collection-intro">{{ . }}</div>{{ end }}
+</section>
 
-{{- with .Content }}
-<div class="post-content project-intro">{{ . }}</div>
+<div class="project-collection">
+{{- range $index, $page := .RegularPages.ByDate.Reverse }}
+  <article class="project-card">
+    <span class="project-index">{{ printf "%02d" (add $index 1) }}</span>
+    <div>
+      <p class="editorial-kicker">{{ with .Params.tags }}{{ index . 0 }}{{ else }}Project{{ end }}</p>
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      {{- with .Summary }}<p>{{ . | plainify | htmlUnescape }}</p>{{ end }}
+    </div>
+    <a class="project-arrow" href="{{ .RelPermalink }}" aria-label="Read {{ .Title }}">↗</a>
+  </article>
 {{- end }}
-
-{{- range .RegularPages }}
-<article class="post-entry">
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">{{ .Title }}</h2>
-  </header>
-  <div class="entry-content">
-    <p>{{ .Summary | plainify | htmlUnescape }}</p>
-  </div>
-  <a class="entry-link" aria-label="Read about {{ .Title | plainify }}" href="{{ .RelPermalink }}"></a>
-</article>
-{{- end }}
-
+</div>
 {{- end }}

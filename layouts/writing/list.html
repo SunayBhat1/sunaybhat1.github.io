@@ -1,0 +1,24 @@
+{{- define "main" }}
+<section class="archive-hero writing-hero">
+  <p class="eyebrow"><span></span> Notes · Essays · Ideas</p>
+  <h1>Things I’m still<br><em>thinking through.</em></h1>
+  <p>Long-form notes on intelligence, product, economics, and the questions that become clearer when given enough room.</p>
+</section>
+
+<div class="archive-label"><span>Selected writing</span><span>{{ len .RegularPages }} {{ if eq (len .RegularPages) 1 }}essay{{ else }}essays{{ end }}</span></div>
+<div class="writing-list">
+{{- range $index, $page := .RegularPages.ByDate.Reverse }}
+  <article class="writing-row">
+    <div class="writing-date"><span>{{ printf "%02d" (add $index 1) }}</span><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2006" }}</time></div>
+    <div class="writing-main">
+      {{- with .Params.tags }}<p class="archive-type">{{ delimit (first 2 .) " · " }}</p>{{ end }}
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      {{- with .Summary }}<p>{{ . | plainify | htmlUnescape }}</p>{{ end }}
+      {{- with .Params.tags }}<div class="archive-tags">{{ range first 3 . }}<span>{{ . }}</span>{{ end }}</div>{{ end }}
+    </div>
+    <a class="writing-link" href="{{ .RelPermalink }}">Read <span>↗</span></a>
+  </article>
+{{- end }}
+</div>
+<section class="writing-coda"><p>More notes are coming. The archive is designed to grow from essays to research notes, shorter observations, and conversations worth saving.</p></section>
+{{- end }}
