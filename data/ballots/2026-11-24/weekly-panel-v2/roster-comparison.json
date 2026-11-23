@@ -1,0 +1,1189 @@
+{
+  "release_id": "2026-11-24",
+  "packet_sha256": "dfeed91d28062387489b6d6ef525b0f3943121734d3c344a80445a110320194b",
+  "run": {
+    "profile": "weekly-v2",
+    "requested_ballots": 416,
+    "valid_ballots": 408,
+    "qualified_groups": 32,
+    "requested_groups": 32,
+    "attempted_calls": 494,
+    "provider_reported_cost_usd": 3.343885,
+    "accounted_usd": 3.343885
+  },
+  "head_to_head_ballots": 63,
+  "winner_preference": {
+    "definition": "Compare each ballot's winner and loser ranks across unique completed matchups between candidates. A split series is excluded. An unranked team gets rank 26 and a rank tie counts as half a preference.",
+    "comparable_proxy": "The two teams differ by at most one overall loss and five percentage points on the frozen FBS schedule-strength proxy.",
+    "all_direct_matchups": {
+      "unique_matchups": 35,
+      "changed_seats": {
+        "matched_ballots": 63,
+        "old": 0.755102,
+        "new": 0.788662,
+        "delta": 0.03356
+      },
+      "unchanged_seats": {
+        "matched_ballots": 335,
+        "old": 0.752026,
+        "new": 0.751514,
+        "delta": -0.000512
+      }
+    },
+    "comparable_matchups": {
+      "unique_matchups": 8,
+      "changed_seats": {
+        "matched_ballots": 63,
+        "old": 0.642857,
+        "new": 0.744048,
+        "delta": 0.10119
+      },
+      "unchanged_seats": {
+        "matched_ballots": 335,
+        "old": 0.61903,
+        "new": 0.616604,
+        "delta": -0.002425
+      }
+    }
+  },
+  "group_summary": {
+    "matched_groups": 32,
+    "median_kendall_tau_b": 0.963333,
+    "same_top_12": 23,
+    "top_12_overlaps": {
+      "11": 9,
+      "12": 23
+    }
+  },
+  "groups": {
+    "deepseek|cfp_off_ap_off|0.3": {
+      "kendall_tau_b": 0.944444,
+      "top_12_overlap": 11,
+      "top_12_in": [
+        "Tennessee"
+      ],
+      "top_12_out": [
+        "Alabama"
+      ],
+      "old_top_12": [
+        "Georgia",
+        "Utah",
+        "Miami",
+        "Texas",
+        "Notre Dame",
+        "Texas Tech",
+        "Indiana",
+        "BYU",
+        "UCLA",
+        "Oregon",
+        "Wake Forest",
+        "Alabama"
+      ],
+      "new_top_12": [
+        "Utah",
+        "Georgia",
+        "Miami",
+        "Texas",
+        "Notre Dame",
+        "Texas Tech",
+        "BYU",
+        "Indiana",
+        "Oregon",
+        "UCLA",
+        "Wake Forest",
+        "Tennessee"
+      ]
+    },
+    "deepseek|cfp_off_ap_on|0.3": {
+      "kendall_tau_b": 0.973333,
+      "top_12_overlap": 12,
+      "top_12_in": [],
+      "top_12_out": [],
+      "old_top_12": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Miami",
+        "Texas",
+        "Indiana",
+        "UCLA",
+        "Texas Tech",
+        "Alabama",
+        "BYU",
+        "Tennessee",
+        "Oregon"
+      ],
+      "new_top_12": [
+        "Georgia",
+        "Utah",
+        "Miami",
+        "Notre Dame",
+        "Texas",
+        "Indiana",
+        "UCLA",
+        "Texas Tech",
+        "Alabama",
+        "Tennessee",
+        "BYU",
+        "Oregon"
+      ]
+    },
+    "deepseek|cfp_on_ap_off|0.3": {
+      "kendall_tau_b": 0.975556,
+      "top_12_overlap": 12,
+      "top_12_in": [],
+      "top_12_out": [],
+      "old_top_12": [
+        "Georgia",
+        "Utah",
+        "Miami",
+        "Texas",
+        "Notre Dame",
+        "Indiana",
+        "Alabama",
+        "BYU",
+        "Tennessee",
+        "Texas Tech",
+        "Wake Forest",
+        "UCLA"
+      ],
+      "new_top_12": [
+        "Georgia",
+        "Utah",
+        "Miami",
+        "Texas",
+        "Notre Dame",
+        "Alabama",
+        "Indiana",
+        "BYU",
+        "Tennessee",
+        "Texas Tech",
+        "Wake Forest",
+        "UCLA"
+      ]
+    },
+    "deepseek|cfp_on_ap_on|0.3": {
+      "kendall_tau_b": 0.982222,
+      "top_12_overlap": 12,
+      "top_12_in": [],
+      "top_12_out": [],
+      "old_top_12": [
+        "Georgia",
+        "Utah",
+        "Miami",
+        "Notre Dame",
+        "Texas",
+        "UCLA",
+        "Indiana",
+        "Alabama",
+        "Tennessee",
+        "BYU",
+        "Texas Tech",
+        "Wake Forest"
+      ],
+      "new_top_12": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Miami",
+        "Texas",
+        "UCLA",
+        "Indiana",
+        "Alabama",
+        "Tennessee",
+        "BYU",
+        "Texas Tech",
+        "Wake Forest"
+      ]
+    },
+    "gemini|cfp_off_ap_off|0.3": {
+      "kendall_tau_b": 0.911111,
+      "top_12_overlap": 12,
+      "top_12_in": [],
+      "top_12_out": [],
+      "old_top_12": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Texas",
+        "Miami",
+        "UCLA",
+        "Alabama",
+        "Tennessee",
+        "Texas Tech",
+        "Wake Forest",
+        "Indiana",
+        "BYU"
+      ],
+      "new_top_12": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Texas",
+        "Miami",
+        "UCLA",
+        "Alabama",
+        "Tennessee",
+        "Texas Tech",
+        "Indiana",
+        "Wake Forest",
+        "BYU"
+      ]
+    },
+    "gemini|cfp_off_ap_on|0.3": {
+      "kendall_tau_b": 0.991111,
+      "top_12_overlap": 12,
+      "top_12_in": [],
+      "top_12_out": [],
+      "old_top_12": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Miami",
+        "Texas",
+        "UCLA",
+        "Alabama",
+        "Indiana",
+        "Tennessee",
+        "Wake Forest",
+        "Texas Tech",
+        "BYU"
+      ],
+      "new_top_12": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Miami",
+        "Texas",
+        "UCLA",
+        "Alabama",
+        "Tennessee",
+        "Indiana",
+        "Wake Forest",
+        "Texas Tech",
+        "BYU"
+      ]
+    },
+    "gemini|cfp_on_ap_off|0.3": {
+      "kendall_tau_b": 0.964444,
+      "top_12_overlap": 12,
+      "top_12_in": [],
+      "top_12_out": [],
+      "old_top_12": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Texas",
+        "Miami",
+        "Alabama",
+        "UCLA",
+        "Tennessee",
+        "Indiana",
+        "Wake Forest",
+        "Texas Tech",
+        "BYU"
+      ],
+      "new_top_12": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Texas",
+        "Miami",
+        "Alabama",
+        "UCLA",
+        "Tennessee",
+        "Texas Tech",
+        "BYU",
+        "Indiana",
+        "Wake Forest"
+      ]
+    },
+    "gemini|cfp_on_ap_on|0.3": {
+      "kendall_tau_b": 0.982222,
+      "top_12_overlap": 12,
+      "top_12_in": [],
+      "top_12_out": [],
+      "old_top_12": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Miami",
+        "Texas",
+        "UCLA",
+        "Alabama",
+        "Indiana",
+        "Tennessee",
+        "Wake Forest",
+        "Texas Tech",
+        "BYU"
+      ],
+      "new_top_12": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Miami",
+        "UCLA",
+        "Texas",
+        "Alabama",
+        "Tennessee",
+        "Indiana",
+        "Wake Forest",
+        "Texas Tech",
+        "BYU"
+      ]
+    },
+    "glm|cfp_off_ap_off|0.3": {
+      "kendall_tau_b": 0.973333,
+      "top_12_overlap": 12,
+      "top_12_in": [],
+      "top_12_out": [],
+      "old_top_12": [
+        "Georgia",
+        "Texas",
+        "Notre Dame",
+        "Miami",
+        "Utah",
+        "Alabama",
+        "Indiana",
+        "Wake Forest",
+        "Tennessee",
+        "Oregon",
+        "Texas Tech",
+        "Ohio State"
+      ],
+      "new_top_12": [
+        "Georgia",
+        "Texas",
+        "Notre Dame",
+        "Miami",
+        "Utah",
+        "Alabama",
+        "Indiana",
+        "Wake Forest",
+        "Tennessee",
+        "Oregon",
+        "Texas Tech",
+        "Ohio State"
+      ]
+    },
+    "glm|cfp_off_ap_on|0.3": {
+      "kendall_tau_b": 0.982222,
+      "top_12_overlap": 12,
+      "top_12_in": [],
+      "top_12_out": [],
+      "old_top_12": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Miami",
+        "Texas",
+        "Alabama",
+        "Indiana",
+        "Tennessee",
+        "Wake Forest",
+        "Texas Tech",
+        "UCLA",
+        "BYU"
+      ],
+      "new_top_12": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Miami",
+        "Texas",
+        "Indiana",
+        "Alabama",
+        "Tennessee",
+        "Wake Forest",
+        "UCLA",
+        "Texas Tech",
+        "BYU"
+      ]
+    },
+    "glm|cfp_on_ap_off|0.3": {
+      "kendall_tau_b": 0.973333,
+      "top_12_overlap": 12,
+      "top_12_in": [],
+      "top_12_out": [],
+      "old_top_12": [
+        "Georgia",
+        "Utah",
+        "Texas",
+        "Notre Dame",
+        "Alabama",
+        "Miami",
+        "Indiana",
+        "Tennessee",
+        "UCLA",
+        "Wake Forest",
+        "BYU",
+        "Texas Tech"
+      ],
+      "new_top_12": [
+        "Georgia",
+        "Utah",
+        "Texas",
+        "Notre Dame",
+        "Miami",
+        "Alabama",
+        "Indiana",
+        "Tennessee",
+        "Wake Forest",
+        "BYU",
+        "Texas Tech",
+        "UCLA"
+      ]
+    },
+    "glm|cfp_on_ap_on|0.3": {
+      "kendall_tau_b": 0.982222,
+      "top_12_overlap": 11,
+      "top_12_in": [
+        "Oregon"
+      ],
+      "top_12_out": [
+        "BYU"
+      ],
+      "old_top_12": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Miami",
+        "Texas",
+        "Alabama",
+        "Indiana",
+        "Tennessee",
+        "Wake Forest",
+        "Texas Tech",
+        "UCLA",
+        "BYU"
+      ],
+      "new_top_12": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Miami",
+        "Texas",
+        "Indiana",
+        "Alabama",
+        "Tennessee",
+        "Wake Forest",
+        "Texas Tech",
+        "UCLA",
+        "Oregon"
+      ]
+    },
+    "haiku|cfp_off_ap_off|0.3": {
+      "kendall_tau_b": 0.96,
+      "top_12_overlap": 12,
+      "top_12_in": [],
+      "top_12_out": [],
+      "old_top_12": [
+        "Georgia",
+        "Ohio State",
+        "Notre Dame",
+        "Texas",
+        "Alabama",
+        "Miami",
+        "Oregon",
+        "Indiana",
+        "Utah",
+        "Tennessee",
+        "UCLA",
+        "Ole Miss"
+      ],
+      "new_top_12": [
+        "Georgia",
+        "Ohio State",
+        "Texas",
+        "Notre Dame",
+        "Alabama",
+        "Miami",
+        "Oregon",
+        "Utah",
+        "Indiana",
+        "UCLA",
+        "Tennessee",
+        "Ole Miss"
+      ]
+    },
+    "haiku|cfp_off_ap_on|0.3": {
+      "kendall_tau_b": 0.946667,
+      "top_12_overlap": 12,
+      "top_12_in": [],
+      "top_12_out": [],
+      "old_top_12": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Miami",
+        "Alabama",
+        "Texas",
+        "Ohio State",
+        "Indiana",
+        "Tennessee",
+        "UCLA",
+        "Oregon",
+        "Texas Tech"
+      ],
+      "new_top_12": [
+        "Georgia",
+        "Notre Dame",
+        "Utah",
+        "Miami",
+        "Ohio State",
+        "Texas",
+        "Alabama",
+        "Indiana",
+        "Tennessee",
+        "UCLA",
+        "Oregon",
+        "Texas Tech"
+      ]
+    },
+    "haiku|cfp_on_ap_off|0.3": {
+      "kendall_tau_b": 0.926667,
+      "top_12_overlap": 12,
+      "top_12_in": [],
+      "top_12_out": [],
+      "old_top_12": [
+        "Georgia",
+        "Alabama",
+        "Notre Dame",
+        "Texas",
+        "Ohio State",
+        "Utah",
+        "Miami",
+        "Texas Tech",
+        "Indiana",
+        "UCLA",
+        "Oregon",
+        "Tennessee"
+      ],
+      "new_top_12": [
+        "Georgia",
+        "Alabama",
+        "Utah",
+        "Notre Dame",
+        "Ohio State",
+        "Texas",
+        "Texas Tech",
+        "Miami",
+        "Indiana",
+        "Oregon",
+        "UCLA",
+        "Tennessee"
+      ]
+    },
+    "haiku|cfp_on_ap_on|0.3": {
+      "kendall_tau_b": 0.942222,
+      "top_12_overlap": 12,
+      "top_12_in": [],
+      "top_12_out": [],
+      "old_top_12": [
+        "Georgia",
+        "Notre Dame",
+        "Miami",
+        "Utah",
+        "Texas",
+        "Alabama",
+        "Indiana",
+        "Ohio State",
+        "UCLA",
+        "Tennessee",
+        "Texas Tech",
+        "Oregon"
+      ],
+      "new_top_12": [
+        "Georgia",
+        "Notre Dame",
+        "Utah",
+        "Miami",
+        "Alabama",
+        "Texas",
+        "Indiana",
+        "UCLA",
+        "Ohio State",
+        "Tennessee",
+        "Oregon",
+        "Texas Tech"
+      ]
+    },
+    "luna|cfp_off_ap_off|0.3": {
+      "kendall_tau_b": 0.931111,
+      "top_12_overlap": 11,
+      "top_12_in": [
+        "Alabama"
+      ],
+      "top_12_out": [
+        "Wake Forest"
+      ],
+      "old_top_12": [
+        "Georgia",
+        "Utah",
+        "Miami",
+        "Texas",
+        "Notre Dame",
+        "Oregon",
+        "Indiana",
+        "Texas Tech",
+        "Tennessee",
+        "BYU",
+        "UCLA",
+        "Wake Forest"
+      ],
+      "new_top_12": [
+        "Georgia",
+        "Utah",
+        "Miami",
+        "Notre Dame",
+        "Oregon",
+        "Texas",
+        "Indiana",
+        "Texas Tech",
+        "Tennessee",
+        "BYU",
+        "UCLA",
+        "Alabama"
+      ]
+    },
+    "luna|cfp_off_ap_on|0.3": {
+      "kendall_tau_b": 0.977778,
+      "top_12_overlap": 12,
+      "top_12_in": [],
+      "top_12_out": [],
+      "old_top_12": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Miami",
+        "UCLA",
+        "Texas",
+        "Indiana",
+        "Tennessee",
+        "Texas Tech",
+        "Oregon",
+        "Alabama",
+        "Wake Forest"
+      ],
+      "new_top_12": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Miami",
+        "UCLA",
+        "Indiana",
+        "Texas",
+        "Tennessee",
+        "Texas Tech",
+        "Alabama",
+        "Wake Forest",
+        "Oregon"
+      ]
+    },
+    "luna|cfp_on_ap_off|0.3": {
+      "kendall_tau_b": 0.968889,
+      "top_12_overlap": 12,
+      "top_12_in": [],
+      "top_12_out": [],
+      "old_top_12": [
+        "Georgia",
+        "Utah",
+        "Texas",
+        "Miami",
+        "Notre Dame",
+        "Oregon",
+        "UCLA",
+        "Alabama",
+        "Tennessee",
+        "Indiana",
+        "Texas Tech",
+        "BYU"
+      ],
+      "new_top_12": [
+        "Georgia",
+        "Utah",
+        "Texas",
+        "Miami",
+        "Notre Dame",
+        "UCLA",
+        "Tennessee",
+        "Indiana",
+        "Oregon",
+        "Alabama",
+        "Texas Tech",
+        "BYU"
+      ]
+    },
+    "luna|cfp_on_ap_on|0.3": {
+      "kendall_tau_b": 0.982222,
+      "top_12_overlap": 12,
+      "top_12_in": [],
+      "top_12_out": [],
+      "old_top_12": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Miami",
+        "UCLA",
+        "Texas",
+        "Indiana",
+        "Tennessee",
+        "Oregon",
+        "Texas Tech",
+        "Alabama",
+        "BYU"
+      ],
+      "new_top_12": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Miami",
+        "UCLA",
+        "Texas",
+        "Indiana",
+        "Tennessee",
+        "Texas Tech",
+        "Oregon",
+        "Alabama",
+        "BYU"
+      ]
+    },
+    "minimax|cfp_off_ap_off|0.3": {
+      "kendall_tau_b": 0.942222,
+      "top_12_overlap": 12,
+      "top_12_in": [],
+      "top_12_out": [],
+      "old_top_12": [
+        "Georgia",
+        "Notre Dame",
+        "Texas",
+        "Miami",
+        "Utah",
+        "Oregon",
+        "Indiana",
+        "Ohio State",
+        "Tennessee",
+        "Alabama",
+        "Texas Tech",
+        "UCLA"
+      ],
+      "new_top_12": [
+        "Georgia",
+        "Notre Dame",
+        "Texas",
+        "Oregon",
+        "Miami",
+        "Utah",
+        "Indiana",
+        "Alabama",
+        "Tennessee",
+        "Ohio State",
+        "Texas Tech",
+        "UCLA"
+      ]
+    },
+    "minimax|cfp_off_ap_on|0.3": {
+      "kendall_tau_b": 0.935556,
+      "top_12_overlap": 12,
+      "top_12_in": [],
+      "top_12_out": [],
+      "old_top_12": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Texas",
+        "Indiana",
+        "Miami",
+        "Tennessee",
+        "Oregon",
+        "UCLA",
+        "Texas Tech",
+        "Alabama",
+        "Ohio State"
+      ],
+      "new_top_12": [
+        "Georgia",
+        "Notre Dame",
+        "Utah",
+        "Texas",
+        "Indiana",
+        "Miami",
+        "Oregon",
+        "Tennessee",
+        "UCLA",
+        "Ohio State",
+        "Texas Tech",
+        "Alabama"
+      ]
+    },
+    "minimax|cfp_on_ap_off|0.3": {
+      "kendall_tau_b": 0.962222,
+      "top_12_overlap": 12,
+      "top_12_in": [],
+      "top_12_out": [],
+      "old_top_12": [
+        "Georgia",
+        "Texas",
+        "Utah",
+        "Notre Dame",
+        "Miami",
+        "Alabama",
+        "Indiana",
+        "Oregon",
+        "Tennessee",
+        "UCLA",
+        "Texas Tech",
+        "Ohio State"
+      ],
+      "new_top_12": [
+        "Georgia",
+        "Texas",
+        "Utah",
+        "Notre Dame",
+        "Miami",
+        "Indiana",
+        "Alabama",
+        "Oregon",
+        "Tennessee",
+        "UCLA",
+        "Texas Tech",
+        "Ohio State"
+      ]
+    },
+    "minimax|cfp_on_ap_on|0.3": {
+      "kendall_tau_b": 0.94,
+      "top_12_overlap": 11,
+      "top_12_in": [
+        "Alabama"
+      ],
+      "top_12_out": [
+        "BYU"
+      ],
+      "old_top_12": [
+        "Georgia",
+        "Notre Dame",
+        "Texas",
+        "Utah",
+        "Miami",
+        "Indiana",
+        "Oregon",
+        "Tennessee",
+        "UCLA",
+        "Texas Tech",
+        "Ohio State",
+        "BYU"
+      ],
+      "new_top_12": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Texas",
+        "Miami",
+        "Indiana",
+        "Oregon",
+        "Tennessee",
+        "UCLA",
+        "Texas Tech",
+        "Alabama",
+        "Ohio State"
+      ]
+    },
+    "mixed|cfp_off_ap_off|0.3": {
+      "kendall_tau_b": 0.942222,
+      "top_12_overlap": 12,
+      "top_12_in": [],
+      "top_12_out": [],
+      "old_top_12": [
+        "Georgia",
+        "Notre Dame",
+        "Miami",
+        "Texas",
+        "Utah",
+        "Alabama",
+        "Indiana",
+        "Oregon",
+        "Tennessee",
+        "Texas Tech",
+        "UCLA",
+        "Wake Forest"
+      ],
+      "new_top_12": [
+        "Georgia",
+        "Texas",
+        "Notre Dame",
+        "Utah",
+        "Miami",
+        "Alabama",
+        "Texas Tech",
+        "Oregon",
+        "Indiana",
+        "Tennessee",
+        "UCLA",
+        "Wake Forest"
+      ]
+    },
+    "mixed|cfp_off_ap_off|0.7": {
+      "kendall_tau_b": 0.891111,
+      "top_12_overlap": 11,
+      "top_12_in": [
+        "Wake Forest"
+      ],
+      "top_12_out": [
+        "Ohio State"
+      ],
+      "old_top_12": [
+        "Georgia",
+        "Notre Dame",
+        "Texas",
+        "Miami",
+        "Utah",
+        "Oregon",
+        "Indiana",
+        "Alabama",
+        "Tennessee",
+        "Texas Tech",
+        "UCLA",
+        "Ohio State"
+      ],
+      "new_top_12": [
+        "Georgia",
+        "Notre Dame",
+        "Texas",
+        "Utah",
+        "Miami",
+        "UCLA",
+        "Indiana",
+        "Oregon",
+        "Alabama",
+        "Texas Tech",
+        "Tennessee",
+        "Wake Forest"
+      ]
+    },
+    "mixed|cfp_off_ap_on|0.3": {
+      "kendall_tau_b": 0.968889,
+      "top_12_overlap": 11,
+      "top_12_in": [
+        "Wake Forest"
+      ],
+      "top_12_out": [
+        "BYU"
+      ],
+      "old_top_12": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Miami",
+        "Texas",
+        "Indiana",
+        "Alabama",
+        "UCLA",
+        "Tennessee",
+        "Texas Tech",
+        "Oregon",
+        "BYU"
+      ],
+      "new_top_12": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Texas",
+        "Miami",
+        "Indiana",
+        "Alabama",
+        "UCLA",
+        "Tennessee",
+        "Oregon",
+        "Texas Tech",
+        "Wake Forest"
+      ]
+    },
+    "mixed|cfp_off_ap_on|0.7": {
+      "kendall_tau_b": 0.977778,
+      "top_12_overlap": 12,
+      "top_12_in": [],
+      "top_12_out": [],
+      "old_top_12": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Miami",
+        "Texas",
+        "Indiana",
+        "UCLA",
+        "Alabama",
+        "Tennessee",
+        "Texas Tech",
+        "Oregon",
+        "Wake Forest"
+      ],
+      "new_top_12": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Miami",
+        "Texas",
+        "Indiana",
+        "Alabama",
+        "UCLA",
+        "Tennessee",
+        "Texas Tech",
+        "Wake Forest",
+        "Oregon"
+      ]
+    },
+    "mixed|cfp_on_ap_off|0.3": {
+      "kendall_tau_b": 0.951111,
+      "top_12_overlap": 11,
+      "top_12_in": [
+        "Wake Forest"
+      ],
+      "top_12_out": [
+        "BYU"
+      ],
+      "old_top_12": [
+        "Georgia",
+        "Texas",
+        "Utah",
+        "Notre Dame",
+        "Alabama",
+        "Miami",
+        "Indiana",
+        "Tennessee",
+        "UCLA",
+        "Oregon",
+        "Texas Tech",
+        "BYU"
+      ],
+      "new_top_12": [
+        "Georgia",
+        "Utah",
+        "Texas",
+        "Notre Dame",
+        "Alabama",
+        "Miami",
+        "UCLA",
+        "Tennessee",
+        "Indiana",
+        "Texas Tech",
+        "Oregon",
+        "Wake Forest"
+      ]
+    },
+    "mixed|cfp_on_ap_off|0.7": {
+      "kendall_tau_b": 0.964444,
+      "top_12_overlap": 11,
+      "top_12_in": [
+        "BYU"
+      ],
+      "top_12_out": [
+        "Wake Forest"
+      ],
+      "old_top_12": [
+        "Georgia",
+        "Texas",
+        "Utah",
+        "Notre Dame",
+        "Miami",
+        "Alabama",
+        "Indiana",
+        "Tennessee",
+        "UCLA",
+        "Oregon",
+        "Texas Tech",
+        "Wake Forest"
+      ],
+      "new_top_12": [
+        "Georgia",
+        "Utah",
+        "Texas",
+        "Notre Dame",
+        "Miami",
+        "Alabama",
+        "Tennessee",
+        "UCLA",
+        "Indiana",
+        "Texas Tech",
+        "BYU",
+        "Oregon"
+      ]
+    },
+    "mixed|cfp_on_ap_on|0.3": {
+      "kendall_tau_b": 0.96,
+      "top_12_overlap": 11,
+      "top_12_in": [
+        "Wake Forest"
+      ],
+      "top_12_out": [
+        "Ohio State"
+      ],
+      "old_top_12": [
+        "Georgia",
+        "Notre Dame",
+        "Utah",
+        "Miami",
+        "Texas",
+        "Indiana",
+        "Alabama",
+        "UCLA",
+        "Tennessee",
+        "Oregon",
+        "Texas Tech",
+        "Ohio State"
+      ],
+      "new_top_12": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Texas",
+        "Miami",
+        "Indiana",
+        "Alabama",
+        "UCLA",
+        "Tennessee",
+        "Texas Tech",
+        "Oregon",
+        "Wake Forest"
+      ]
+    },
+    "mixed|cfp_on_ap_on|0.7": {
+      "kendall_tau_b": 0.96,
+      "top_12_overlap": 12,
+      "top_12_in": [],
+      "top_12_out": [],
+      "old_top_12": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Miami",
+        "Texas",
+        "Indiana",
+        "UCLA",
+        "Alabama",
+        "Tennessee",
+        "Texas Tech",
+        "Oregon",
+        "Wake Forest"
+      ],
+      "new_top_12": [
+        "Georgia",
+        "Utah",
+        "Texas",
+        "Notre Dame",
+        "Miami",
+        "Alabama",
+        "UCLA",
+        "Indiana",
+        "Tennessee",
+        "Texas Tech",
+        "Wake Forest",
+        "Oregon"
+      ]
+    }
+  },
+  "notes": [
+    "The two changed seats previously used Metrics Heavy and Performatively Neutral. Matched comparisons hold group, seat, and model fixed.",
+    "The two runs used independent model calls. Remaining seats provide a descriptive check on variation. The comparison does not establish causal effects or forecast accuracy.",
+    "Official target-release accuracy is evaluated separately."
+  ]
+}

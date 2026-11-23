@@ -1,0 +1,15 @@
+{
+  "release_id": "2026-11-24",
+  "packet_sha256": "dfeed91d28062387489b6d6ef525b0f3943121734d3c344a80445a110320194b",
+  "lock_deadline": "2026-11-24T16:00:00-05:00",
+  "prepared_at_utc": "2026-11-23T13:58:28.049619+00:00",
+  "panel_finished_at_utc": "2026-11-23T13:54:01.852240+00:00",
+  "profile": "weekly-v1",
+  "artifacts_sha256": {
+    "aggregates.json": "ab0b57d169e255d4c20fa2a4674f1ab7396d1d41dbb9ebdd5609fb93c6558baa",
+    "experiment.json": "18685f5faeca3ea613a732b78635d2d1f450edb3c5902cd6c3eab02f857ac82b",
+    "valid-ballots.json": "d63562605951b2da448408709b36fc29fbbde25271ec98c6a351343c741d7b9d",
+    "usage.json": "84929ffca1ec772056500b74a038a5fe908e1276e8cac0af020b95c664bb139b"
+  },
+  "source_packet": "Retained locally. The SHA-256 binds the experiment to the exact frozen source input."
+}

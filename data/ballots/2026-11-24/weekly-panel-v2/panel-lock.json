@@ -1,0 +1,18 @@
+{
+  "release_id": "2026-11-24",
+  "packet_sha256": "dfeed91d28062387489b6d6ef525b0f3943121734d3c344a80445a110320194b",
+  "lock_deadline": "2026-11-24T16:00:00-05:00",
+  "prepared_at_utc": "2026-11-23T23:32:29.406687+00:00",
+  "panel_started_at_utc": "2026-11-23T23:23:47.146750+00:00",
+  "panel_finished_at_utc": "2026-11-23T23:26:50.079686+00:00",
+  "profile": "weekly-v2",
+  "runner_commit": "ca66176f9edf30284a889c003727a0f486e891f8",
+  "artifacts_sha256": {
+    "aggregates.json": "70ed780df913b3a0031fb07a24d728c63a7c1045d14ce09de0d7a5b979752411",
+    "experiment.json": "4ed8d0ab1cc5ff9deb1a858737bc10de1764c0c4f5b7449e35f1380dd49c7a2d",
+    "valid-ballots.json": "d277695f7e9dce6af0157ffc36b8e23b1490d8547f17a82d3e4f0067a79b6ceb",
+    "usage.json": "f421e873394efb36447d15311100e128cadc35c74cf0f12a591c39737f958ac5",
+    "roster-comparison.json": "8d0c06f249ed1ba23e44c9893560f82b59e378995312c2acadda617305dd84c3"
+  },
+  "source_packet": "Retained locally under the data provider's terms. The SHA-256 identifies the exact frozen input."
+}

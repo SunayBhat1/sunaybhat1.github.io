@@ -1,0 +1,17 @@
+# Change only these dates to reuse the experiment for a later CFP release.
+season: 2026
+release_id: "2026-11-24"
+games_through: "2026-11-21"
+prior_cfp_release: "2026-11-17"
+ap_week: null
+candidate_cap: 40
+model: "openai/gpt-4.1-mini"
+temperature_seeds: [0.3, 0.7, 1.0]
+max_budget_usd: 40
+timeout_s: 120
+max_retries: 3
+# Update this editable table if a provider changes prices. Values are USD / 1M tokens.
+pricing_usd_per_million:
+  input: 0.40
+  output: 1.60
+assumed_output_tokens: 1700
