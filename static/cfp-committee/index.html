@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <meta name="robots" content="noindex, nofollow">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Compare AI-generated CFP rankings across models, personas, and information conditions.">
-  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="See how six AI models would rank the College Football Playoff field and where their picks differ.">
   <title>CFP Committee Lab</title>
   <link rel="icon" href="mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
@@ -17,7 +17,7 @@
     <div class="wrap top-inner">
       <a class="brand" href="#"><img src="mark.svg" width="34" height="34" alt="">CFP Committee Lab</a>
       <nav aria-label="Main navigation">
-        <a href="#rankings">Rankings</a><a href="#analysis">Analysis</a><a href="#method">Method</a><a href="#downloads">Downloads</a>
+        <a href="#rankings">Rankings</a><a href="#downloads">Downloads</a><a href="https://github.com/SunayBhat1/sunaybhat1.github.io/tree/cfp-committee-lab">GitHub</a>
       </nav>
     </div>
   </header>
@@ -25,13 +25,19 @@
     <section class="hero">
       <div class="wrap hero-inner">
         <div>
-          <p class="eyebrow" id="release-label">2026 College Football Playoff</p>
-          <h1>Inside the<br>committee room.</h1>
-          <p class="intro">How do AI committees rank the same teams when they see different polls and weigh different evidence?</p>
-          <div class="hero-links"><a class="button primary" href="#rankings">Explore rankings</a><a class="button outline" href="SKILL.md" download>Download agent skill</a></div>
+          <p class="eyebrow" id="release-label">2026 College Football Playoff forecast</p>
+          <h1>How would AI rank the CFP field?</h1>
+          <p class="intro">Six AI models ranked the same college football teams using the games and evidence available before the CFP release. This is their forecast.</p>
+          <p class="intro intro-follow">See who made the top 12, where the models disagreed, and why they ranked a team where they did.</p>
+          <ul class="quick-guide">
+            <li><strong>Change the polls.</strong> See what happens when the models can see the AP poll, the previous CFP rankings, both, or neither.</li>
+            <li><strong>Open a team.</strong> Read what each voter said about putting that team in the playoff field.</li>
+          </ul>
+          <div class="hero-links"><a class="button primary" href="#rankings">See the rankings</a><a class="button outline" href="https://github.com/SunayBhat1/sunaybhat1.github.io/tree/cfp-committee-lab">Code on GitHub</a></div>
         </div>
-        <aside class="snapshot" aria-label="Experiment snapshot">
-          <p class="snapshot-label">Experiment snapshot</p>
+        <aside class="snapshot" aria-label="Forecast at a glance">
+          <p class="snapshot-label">The combined committee’s No. 1</p>
+          <p id="headline-team" class="headline-team">—</p>
           <dl id="snapshot"></dl>
           <p class="snapshot-note" id="official-state" aria-live="polite"></p>
         </aside>
@@ -39,61 +45,73 @@
     </section>
     <div class="wrap main-content">
       <section id="rankings" class="section">
-        <div class="section-heading"><div><p class="eyebrow">Ballot explorer</p><h2>Rankings</h2><p>Compare a committee’s top 25 and open a team to read its ballot justifications.</p></div>
-          <a class="button secondary" href="data/rankings.csv" download>Download rankings CSV</a>
+        <div class="section-heading"><div><h2>Rankings</h2><p>The combined committee is shown first. Pick a model or change which polls it saw.</p></div>
         </div>
+        <aside id="roster-note" class="roster-note" hidden></aside>
         <div class="card rankings">
           <div class="controls">
             <label>Committee<select id="committee"></select></label>
-            <label>Information shown<select id="condition"></select></label>
+            <label>Polls shown<select id="condition"></select></label>
             <label>Team filter<input id="team-filter" type="search" placeholder="Search teams"></label>
           </div>
           <p class="selection-note" id="selection-note" aria-live="polite"></p>
           <div class="table-wrap"><table>
-            <caption class="sr-only">Committee rankings, Borda points, and top-12 ballot votes</caption>
-            <thead><tr><th scope="col">Rank</th><th scope="col">Team</th><th scope="col">Borda points</th><th scope="col">Top-12 votes</th></tr></thead>
+            <caption class="sr-only">Committee rankings and top-12 ballot votes</caption>
+            <thead><tr><th scope="col">Rank</th><th scope="col">Team</th><th scope="col">Top-12 votes</th></tr></thead>
             <tbody id="ranking-rows"></tbody>
           </table></div>
           <details id="rank-more" class="rank-more"><summary>Show ranks 13–25</summary><div class="table-wrap"><table>
             <caption class="sr-only">Ranks 13–25</caption>
-            <thead><tr><th scope="col">Rank</th><th scope="col">Team</th><th scope="col">Borda points</th><th scope="col">Top-12 votes</th></tr></thead>
+            <thead><tr><th scope="col">Rank</th><th scope="col">Team</th><th scope="col">Top-12 votes</th></tr></thead>
             <tbody id="ranking-extra"></tbody>
           </table></div></details>
         </div>
         <div id="rationale-panel" class="card rationale" hidden tabindex="-1"></div>
       </section>
-      <section id="analysis" class="section">
-        <div class="section-heading"><div><p class="eyebrow">Rank agreement</p><h2>Where the votes moved</h2><p>The charts update with the selected information condition. A rank of 26 represents teams outside a ballot’s top 25.</p></div></div>
-        <div class="chart-grid">
-          <article class="card chart wide"><div class="chart-head"><div><h3>Agreement by model</h3><p>Pairwise agreement between solo-model committees.</p></div><label>Metric<select id="agreement-metric"><option value="tau">Kendall τ-b</option><option value="rho">Spearman ρ</option><option value="overlap">Top-12 overlap</option></select></label></div><div id="model-chart"></div></article>
-          <article class="card chart wide"><div class="chart-head"><div><h3>Persona effects by model</h3><p>Average absolute rank shift versus other personas in the same model and condition.</p></div></div><div id="persona-chart"></div></article>
-          <article class="card chart"><h3>Information sensitivity</h3><p>Rank distance when one poll is withheld. Higher values mean more movement.</p><div id="sensitivity-chart"></div></article>
-          <article class="card chart"><h3>Top-12 consensus</h3><p>Teams most often included by the available solo-model committees.</p><div id="consensus-chart"></div></article>
-          <article class="card chart wide"><div class="chart-head"><div><h3>Agreement with the mixed committee</h3><p>Kendall agreement between each solo model and the mixed committee under the same information condition.</p></div></div><div id="reference-chart"></div></article>
-          <article class="card chart wide"><h3>Ballot validation</h3><p>Valid ballots by solo model, out of 13 requested per condition.</p><div id="validation-chart"></div></article>
+      <section id="downloads" class="section">
+        <div class="section-heading"><div><h2>Ask your own AI</h2><p>Download both files, attach them to your chatbot, and start with the prompt below.</p></div></div>
+        <div class="download-pair">
+          <a class="card file-card" href="SKILL.md" download><span><strong>Agent skill</strong><small>How to read, verify, and reproduce the analysis</small></span><span class="filetype" id="skill-size">MD</span></a>
+          <a class="card file-card" href="data/results.json" download><span><strong>Full results JSON</strong><small>Every ranking, ballot, explanation, and run detail</small></span><span class="filetype" id="results-size">JSON</span></a>
         </div>
+        <div class="card starter">
+          <div class="starter-head"><h3>Starter prompt</h3><button class="button secondary" id="copy-prompt" type="button">Copy prompt</button></div>
+          <p id="starter-prompt" tabindex="0">Use the attached SKILL.md and results.json. Explain what the AI committee predicted, what information it had, and which teams moved most when the polls were hidden. Give me a short podcast-ready briefing. Point to the ballots or rankings that support each takeaway and flag any official results that are still pending.</p>
+          <p id="copy-status" class="sr-only" aria-live="polite"></p>
+        </div>
+        <details class="expand download-more">
+          <summary>Technical downloads and reproduction</summary>
+          <div class="download-list">
+            <a href="data/cfp-data.zip" download><span><strong>Complete data bundle</strong><small>Skill, rankings, ballots, usage, and audit details</small></span><span class="filetype">ZIP</span></a>
+            <a href="data/rankings.csv" download><span><strong>Committee rankings</strong><small>Ranking and vote points for each version of the committee</small></span><span class="filetype">CSV</span></a>
+            <a href="data/provenance.json" download><span><strong>Run record and lock</strong><small>Input fingerprint, exact prompts, timestamps, and model settings</small></span><span class="filetype">JSON</span></a>
+          </div>
+          <p class="attribution">The source games come from <a href="https://collegefootballdata.com/">CollegeFootballData.com</a>. Its <a href="https://collegefootballdata.com/terms">API terms</a> restrict bulk redistribution. The skill shows how to rebuild the inputs with an authorized key.</p>
+        </details>
       </section>
-      <section id="method" class="section">
-        <div class="section-heading"><div><p class="eyebrow">Study design</p><h2>Methodology</h2><p>One frozen evidence packet, four information conditions, and repeatable ballot rules.</p></div></div>
+      <section id="analysis" class="section deep-section">
+        <details class="expand"><summary>Explore the comparisons</summary>
+        <p class="disclosure-intro">The charts follow your poll choice above. For ranking comparisons, a team outside a ballot’s top 25 is treated as 26th.</p>
+        <div class="chart-grid">
+          <article class="card chart wide"><div class="chart-head"><div><h3>How often did models agree?</h3><p>Compare any two models’ rankings.</p></div><label>Measure<select id="agreement-metric"><option value="overlap">Shared top-12 teams</option><option value="tau">Kendall τ-b</option><option value="rho">Spearman ρ</option></select></label></div><div id="model-chart"></div></article>
+          <article class="card chart wide"><div class="chart-head"><div><h3>Which conferences gained ground?</h3><p>Places gained or lost by each voting style against the other styles in the same model and poll setup.</p></div></div><div id="persona-chart"></div></article>
+          <article class="card chart"><h3>How much did the polls matter?</h3><p>A higher number means rankings moved more when a poll was hidden.</p><div id="sensitivity-chart"></div></article>
+          <article class="card chart"><h3>Who made the most playoff fields?</h3><p>Top-12 appearances across the individual models.</p><div id="consensus-chart"></div></article>
+          <article class="card chart wide"><div class="chart-head"><div><h3>How close were the picks to the polls?</h3><p>Agreement with the AP and previous CFP rankings. The official release is added once verified.</p></div></div><div id="reference-chart"></div></article>
+          <article class="card chart wide"><h3>How many ballots counted?</h3><p>Each model group was asked for 13 ballots under each poll setup.</p><div id="validation-chart"></div></article>
+        </div>
+        </details>
+      </section>
+      <section id="method" class="section deep-section">
+        <details class="expand"><summary>How the committee worked</summary>
         <div class="method-grid">
           <article class="card method-card"><h3>Timing</h3><ol id="timeline"></ol></article>
           <article class="card method-card"><h3>Information diet</h3><p>All agents see the same alphabetized set of 31 candidates, compact game rows, team résumés, and available ratings. The four conditions cross prior CFP and AP visibility. Poll-off conditions omit the relevant poll table and résumé rank fields. AP helped define the candidate pool, so its influence on eligibility persists across conditions.</p></article>
           <article class="card method-card"><h3>Leakage controls</h3><p>The runner verifies the frozen packet SHA-256 and date cutoffs before calling models. Agents receive no search, tools, or retrieval. The input packet predates the target CFP release. Prior CFP publication date is a configured mapping because the source has no timestamp. Prompt instructions cannot erase knowledge already in model weights.</p></article>
           <article class="card method-card"><h3>Ballots and comparisons</h3><p>Each ballot ranks exactly 25 unique eligible teams and explains its top 12. A committee needs at least 10 valid ballots. Borda awards 25 points for first through 1 for 25th, breaking ties on available SP+ then alphabetically. Persona contrasts are descriptive. The mixed seats are fixed across conditions, and temperature support varies by provider.</p></article>
         </div>
-        <div class="card personas"><h3>The personas</h3><p>These are instruction treatments applied to model calls. Seat counts below describe each 13-seat committee.</p><div id="personas"></div></div>
-      </section>
-      <section id="downloads" class="section">
-        <div class="section-heading"><div><p class="eyebrow">Reproducibility</p><h2>Downloads</h2><p>Give the skill and data bundle to your own agent to filter, compare, or reproduce the published analyses.</p></div></div>
-        <div class="card download-list">
-          <a href="SKILL.md" download><span><strong>Agent skill</strong><small>Instructions, field definitions, and analysis recipes</small></span><span class="filetype">MD</span></a>
-          <a href="data/cfp-data.zip" download><span><strong>Complete derived-data bundle</strong><small>Validated ballots, explanations, rankings, metrics, usage, and provenance</small></span><span class="filetype">ZIP</span></a>
-          <a href="data/results.json" download><span><strong>Results and methodology</strong><small>Machine-readable committees, charts, and timing</small></span><span class="filetype">JSON</span></a>
-          <a href="data/valid-ballots.json" download><span><strong>Validated ballots</strong><small>Per-seat top 25 lists and top-12 justifications</small></span><span class="filetype">JSON</span></a>
-          <a href="data/rankings.csv" download><span><strong>Committee rankings</strong><small>Rank, Borda points, model, and information condition</small></span><span class="filetype">CSV</span></a>
-          <a href="data/provenance.json" download><span><strong>Provenance and lock</strong><small>Packet fingerprint, prompt hashes, timestamps, and model routes</small></span><span class="filetype">JSON</span></a>
-        </div>
-        <p class="attribution">The download includes derived results. Source records are available from <a href="https://collegefootballdata.com/">CollegeFootballData.com</a> under its <a href="https://collegefootballdata.com/terms">API terms</a>. The skill explains how to rebuild inputs with an authorized key.</p>
+        <div class="card personas"><h3>The voting styles</h3><p>Each voter got a different emphasis, such as efficiency, quality of wins, or head-to-head results.</p><div id="personas"></div></div>
+        </details>
       </section>
     </div>
   </main>
