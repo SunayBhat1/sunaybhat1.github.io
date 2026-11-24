@@ -1,0 +1,17 @@
+{
+  "release_id": "2026-11-24",
+  "profile": "weekly-v3",
+  "packet_sha256": "02361a0d858b38cda40e19bbf4848cc1e63a629e9db32c7d9ac864076afc36ff",
+  "lock_deadline": "2026-11-24T16:00:00-05:00",
+  "started_at_utc": "2026-11-24T04:03:50.867303+00:00",
+  "finished_at_utc": "2026-11-24T04:06:36.722297+00:00",
+  "requested_ballots": 112,
+  "valid_ballots": 110,
+  "prepared_at_utc": "2026-11-24T04:11:04.331567+00:00",
+  "artifacts_sha256": {
+    "experiment.json": "ab5b90739ac7848ae19ed1130adb6a3ea0543ebf985568fcd357694bbe9b420b",
+    "aggregates.json": "8c880a5a5add40971e0232b8bb959a08b4020a1095cb55634319105b57eea0a4",
+    "valid-ballots.json": "85b543ca8b238d569f31ce413277af33d39e06bdea7eb5c08dfff1dda21f9571",
+    "usage.json": "2bb71a84fb46ec4d861a735779d9cc78fd8ba95714bac62272699804dc6d5462"
+  }
+}

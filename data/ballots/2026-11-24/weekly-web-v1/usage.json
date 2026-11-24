@@ -1,0 +1,3378 @@
+[
+  {
+    "attempt": 1,
+    "model": "openai/gpt-6-luna",
+    "requested_temperature": null,
+    "started_at_utc": "2026-11-24T04:05:50.436875+00:00",
+    "accounted_usd": 0.022239605000000003,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 156044,
+      "completion_tokens": 804,
+      "total_tokens": 156848,
+      "cost": 0.022239605000000003,
+      "prompt_tokens_details": {
+        "cached_tokens": 101458,
+        "cache_write_tokens": 54577,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.008239605,
+        "upstream_inference_prompt_cost": 0.007837605000000001,
+        "upstream_inference_completions_cost": 0.000402
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "OpenAI",
+    "finish_reason": "stop",
+    "web_search_requests": 0,
+    "finished_at_utc": "2026-11-24T04:06:00.175454+00:00",
+    "group": "mixed|pundit_research|0.3",
+    "agent_id": "M01",
+    "web_sources": [
+      {
+        "url": "https://www.on3.com/news/brett-mcmurphy-college-football-ap-top-25-ballot-after-week-12/",
+        "title": "Brett McMurphy's college football AP Top 25 ballot after Week 12 - On3"
+      },
+      {
+        "url": "https://www.ncaa.com/rankings/football/fbs/associated-press",
+        "title": "College football rankings: Associated Press Top 25"
+      },
+      {
+        "url": "https://www.cbssports.com/college-football/rankings/ap/",
+        "title": "College Football Rankings 2026-27 - AP Top 25 - CBS Sports"
+      },
+      {
+        "url": "https://www.on3.com/news/college-football-rankings-espn-updates-fpi-top-25-in-week-12-before-fourth-cfp-rankings/",
+        "title": "College Football Rankings: ESPN updates FPI Top 25 in Week 12, before fourth CFP rankings - On3"
+      },
+      {
+        "url": "http://www.espn.com/college-football/story/_/id/49868647/2026-college-football-sp%2B-rankings-all-138-fbs-teams",
+        "title": "2026 college football SP+ rankings for all 138 FBS teams - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50545207/2026-college-football-power-rankings-top-25-week-12",
+        "title": "College football Power Rankings - Week 12 chaos shifts top 25 - ESPN"
+      }
+    ]
+  },
+  {
+    "attempt": 2,
+    "model": "openai/gpt-6-luna",
+    "requested_temperature": null,
+    "started_at_utc": "2026-11-24T04:06:00.176184+00:00",
+    "accounted_usd": 0.016768335000000002,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 153960,
+      "completion_tokens": 1606,
+      "total_tokens": 155566,
+      "cost": 0.016768335000000002,
+      "prompt_tokens_details": {
+        "cached_tokens": 150256,
+        "cache_write_tokens": 3695,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0027683350000000002,
+        "upstream_inference_prompt_cost": 0.0019653350000000003,
+        "upstream_inference_completions_cost": 0.000803
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "OpenAI",
+    "finish_reason": "stop",
+    "web_search_requests": 0,
+    "finished_at_utc": "2026-11-24T04:06:16.218115+00:00",
+    "group": "mixed|pundit_research|0.3",
+    "agent_id": "M01",
+    "web_sources": [
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-22/college-football-playoff-rankings-predictions-what-2026s-fourth-cfp-top-25-bracket",
+        "title": "College Football Playoff rankings predictions: What 2026's fourth CFP top 25, bracket could look like | NCAA.com"
+      },
+      {
+        "url": "https://www.cbssports.com/college-football/news/college-football-rankings-tomorrows-top-25-week-13-2026/",
+        "title": "Tomorrow's Top 25 Today: Ohio State, Indiana, UCLA fall in college football rankings amid Big Ten chaos - CBS Sports"
+      },
+      {
+        "url": "https://www.on3.com/news/college-football-rankings-espn-updates-fpi-top-25-in-week-12-before-fourth-cfp-rankings/",
+        "title": "College Football Rankings: ESPN updates FPI Top 25 in Week 12, before fourth CFP rankings - On3"
+      },
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-22/college-football-playoff-rankings-predictions-what-2026s-fourth-cfp-top-25-bracket",
+        "title": "College Football Playoff rankings predictions: What 2026's fourth CFP top 25, bracket could look like | NCAA.com"
+      },
+      {
+        "url": "http://www.espn.com/college-football/story/_/id/49868647/2026-college-football-sp%2B-rankings-all-138-fbs-teams",
+        "title": "2026 college football SP+ rankings for all 138 FBS teams - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50552244/projecting-2026-playoff-top-12-week-12-cfp",
+        "title": "College Football Playoff top 12 projection after Week 12 - ESPN"
+      }
+    ]
+  },
+  {
+    "attempt": 3,
+    "model": "openai/gpt-6-luna",
+    "requested_temperature": null,
+    "started_at_utc": "2026-11-24T04:08:06.953761+00:00",
+    "accounted_usd": 0.01689808,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 155018,
+      "completion_tokens": 1621,
+      "total_tokens": 156639,
+      "cost": 0.01689808,
+      "prompt_tokens_details": {
+        "cached_tokens": 150343,
+        "cache_write_tokens": 4666,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00289808,
+        "upstream_inference_prompt_cost": 0.00208758,
+        "upstream_inference_completions_cost": 0.0008105
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "OpenAI",
+    "finish_reason": "stop",
+    "web_search_requests": 2,
+    "finished_at_utc": "2026-11-24T04:08:21.566182+00:00",
+    "group": "mixed|pundit_research|0.3",
+    "agent_id": "M01",
+    "web_sources": [
+      {
+        "url": "https://www.on3.com/news/college-football-rankings-espn-updates-fpi-top-25-in-week-12-before-fourth-cfp-rankings/",
+        "title": "College Football Rankings: ESPN updates FPI Top 25 in Week 12, before fourth CFP rankings - On3"
+      },
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-22/college-football-playoff-rankings-predictions-what-2026s-fourth-cfp-top-25-bracket",
+        "title": "College Football Playoff rankings predictions: What 2026's fourth CFP top 25, bracket could look like | NCAA.com"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50563018/week-12-results-rivalry-week",
+        "title": "What Week 12's results mean for Rivalry Week and beyond - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50545207/2026-college-football-power-rankings-top-25-week-12",
+        "title": "College football Power Rankings - Week 12 chaos shifts top 25 - ESPN"
+      },
+      {
+        "url": "http://www.espn.com/college-football/story/_/id/49868647/2026-college-football-sp%2B-rankings-all-138-fbs-teams",
+        "title": "2026 college football SP+ rankings for all 138 FBS teams - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/rankings",
+        "title": "2026 College Football Rankings - ESPN"
+      }
+    ]
+  },
+  {
+    "attempt": 1,
+    "model": "anthropic/claude-haiku-5.5",
+    "requested_temperature": null,
+    "started_at_utc": "2026-11-24T04:05:50.437990+00:00",
+    "accounted_usd": 0.010344525,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 74897,
+      "completion_tokens": 1965,
+      "total_tokens": 76862,
+      "cost": 0.010344525,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 74893,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.010344525,
+        "upstream_inference_prompt_cost": 0.009362025,
+        "upstream_inference_completions_cost": 0.0009825
+      }
+    },
+    "provider": "Anthropic",
+    "finish_reason": "stop",
+    "web_search_requests": 0,
+    "finished_at_utc": "2026-11-24T04:06:00.059203+00:00",
+    "group": "mixed|pundit_research|0.3",
+    "agent_id": "M02",
+    "web_sources": []
+  },
+  {
+    "attempt": 2,
+    "model": "anthropic/claude-haiku-5.5",
+    "requested_temperature": null,
+    "started_at_utc": "2026-11-24T04:06:00.059647+00:00",
+    "accounted_usd": 0.00172033,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 74897,
+      "completion_tokens": 1942,
+      "total_tokens": 76839,
+      "cost": 0.00172033,
+      "prompt_tokens_details": {
+        "cached_tokens": 74893,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00172033,
+        "upstream_inference_prompt_cost": 0.00074933,
+        "upstream_inference_completions_cost": 0.000971
+      }
+    },
+    "provider": "Anthropic",
+    "finish_reason": "stop",
+    "web_search_requests": 0,
+    "finished_at_utc": "2026-11-24T04:06:08.848941+00:00",
+    "group": "mixed|pundit_research|0.3",
+    "agent_id": "M02",
+    "web_sources": []
+  },
+  {
+    "attempt": 3,
+    "model": "anthropic/claude-haiku-5.5",
+    "requested_temperature": null,
+    "started_at_utc": "2026-11-24T04:08:06.954187+00:00",
+    "accounted_usd": 0.018529155000000002,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 152786,
+      "completion_tokens": 2088,
+      "total_tokens": 154874,
+      "cost": 0.018529155000000002,
+      "prompt_tokens_details": {
+        "cached_tokens": 74893,
+        "cache_write_tokens": 77877,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.011529155000000001,
+        "upstream_inference_prompt_cost": 0.010485155000000001,
+        "upstream_inference_completions_cost": 0.001044
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 1,
+        "tool_calls_requested": 1,
+        "tool_calls_executed": 1
+      }
+    },
+    "provider": "Anthropic",
+    "finish_reason": "stop",
+    "web_search_requests": 1,
+    "finished_at_utc": "2026-11-24T04:08:18.828071+00:00",
+    "group": "mixed|pundit_research|0.3",
+    "agent_id": "M02",
+    "web_sources": [
+      {
+        "url": "http://www.espn.com/college-football/story/_/id/49868647/2026-college-football-sp%2B-rankings-all-138-fbs-teams",
+        "title": "2026 college football SP+ rankings for all 138 FBS teams - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/fpi",
+        "title": "2026 College Football Power Index - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50552244/projecting-2026-playoff-top-12-week-12-cfp",
+        "title": "College Football Playoff top 12 projection after Week 12 - ESPN"
+      }
+    ]
+  },
+  {
+    "attempt": 1,
+    "model": "google/gemini-3.8-flash",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:06:02.932668+00:00",
+    "accounted_usd": 0.033396775000000004,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 118045,
+      "completion_tokens": 541,
+      "total_tokens": 118586,
+      "cost": 0.033396775000000004,
+      "prompt_tokens_details": {
+        "cached_tokens": 55954,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.026396775,
+        "upstream_inference_prompt_cost": 0.0253824,
+        "upstream_inference_completions_cost": 0.001014375
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 1,
+        "tool_calls_requested": 1,
+        "tool_calls_executed": 1
+      }
+    },
+    "provider": "Google",
+    "finish_reason": "stop",
+    "web_search_requests": 0,
+    "finished_at_utc": "2026-11-24T04:06:34.609764+00:00",
+    "group": "mixed|pundit_research|0.3",
+    "agent_id": "M03",
+    "web_sources": [
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-22/college-football-playoff-rankings-predictions-what-2026s-fourth-cfp-top-25-bracket",
+        "title": "College Football Playoff rankings predictions: What 2026's fourth CFP top 25, bracket could look like | NCAA.com"
+      },
+      {
+        "url": "https://www.on3.com/news/college-football-playoff-prediction-projecting-committee-top-25-12-team-bracket-after-week-12/",
+        "title": "College Football Playoff Prediction: Projecting committee's Top 25, 12-team bracket after Week 12 - On3"
+      },
+      {
+        "url": "https://www.cbssports.com/college-football/news/tom-fornellis-cfp-vibe-big-ten-big-12/",
+        "title": "Tom Fornelli's CFP Vibe Check: Big Ten bloodbath leaves league on brink - CBS Sports"
+      }
+    ]
+  },
+  {
+    "attempt": 2,
+    "model": "google/gemini-3.8-flash",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:06:34.610214+00:00",
+    "accounted_usd": 0.13,
+    "group": "mixed|pundit_research|0.3",
+    "agent_id": "M03"
+  },
+  {
+    "attempt": 3,
+    "model": "google/gemini-3.8-flash",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:08:06.957267+00:00",
+    "accounted_usd": 0.0515825875,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 118036,
+      "completion_tokens": 521,
+      "total_tokens": 118557,
+      "cost": 0.0515825875,
+      "prompt_tokens_details": {
+        "cached_tokens": 1949,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0445825875,
+        "upstream_inference_prompt_cost": 0.043605712500000005,
+        "upstream_inference_completions_cost": 0.0009768749999999999
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 1,
+        "tool_calls_requested": 1,
+        "tool_calls_executed": 1
+      }
+    },
+    "provider": "Google",
+    "finish_reason": "stop",
+    "web_search_requests": 1,
+    "finished_at_utc": "2026-11-24T04:08:37.921973+00:00",
+    "group": "mixed|pundit_research|0.3",
+    "agent_id": "M03",
+    "web_sources": [
+      {
+        "url": "https://www.nbcsports.com/college-football/news/projecting-the-fourth-college-football-playoff-rankings-could-the-big-ten-be-a-one-bid-league",
+        "title": "Projecting the fourth College Football Playoff rankings: Could the Big Ten be a one-bid league? - NBC Sports"
+      },
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-22/college-football-playoff-rankings-predictions-what-2026s-fourth-cfp-top-25-bracket",
+        "title": "College Football Playoff rankings predictions: What 2026's fourth CFP top 25, bracket could look like | NCAA.com"
+      },
+      {
+        "url": "https://www.cbssports.com/college-football/news/tom-fornellis-cfp-vibe-big-ten-big-12/",
+        "title": "Tom Fornelli's CFP Vibe Check: Big Ten bloodbath leaves league on brink - CBS Sports"
+      }
+    ]
+  },
+  {
+    "attempt": 1,
+    "model": "deepseek/deepseek-v4.1-flash-1017",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:06:16.037925+00:00",
+    "accounted_usd": 0.032817596,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 110813,
+      "completion_tokens": 1212,
+      "total_tokens": 112025,
+      "cost": 0.032817596,
+      "prompt_tokens_details": {
+        "cached_tokens": 54016,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.018817596,
+        "upstream_inference_prompt_cost": 0.017363196,
+        "upstream_inference_completions_cost": 0.0014544
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "CoreWeave",
+    "finish_reason": "stop",
+    "web_search_requests": 0,
+    "finished_at_utc": "2026-11-24T04:06:23.987679+00:00",
+    "group": "mixed|pundit_research|0.3",
+    "agent_id": "M04",
+    "web_sources": [
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-22/college-football-playoff-rankings-predictions-what-2026s-fourth-cfp-top-25-bracket",
+        "title": "College Football Playoff rankings predictions: What 2026's fourth CFP top 25, bracket could look like | NCAA.com"
+      },
+      {
+        "url": "https://www.on3.com/news/college-football-playoff-prediction-projecting-committee-top-25-12-team-bracket-after-week-12/",
+        "title": "College Football Playoff Prediction: Projecting committee's Top 25, 12-team bracket after Week 12 - On3"
+      },
+      {
+        "url": "https://www.on3.com/teams/tennessee-volunteers/news/tennessee-vols-college-football-playoff-rankings-alabama-bracket-on3/",
+        "title": "On3 keeps Tennessee ahead of Alabama in playoff projections"
+      },
+      {
+        "url": "https://www.cbssports.com/college-football/news/college-football-playoff-resume-rankings-texas-no-1-utah-georgia/",
+        "title": "CFP resume rankings: Why two-loss Texas is No. 1 ahead of Utah, Georgia - CBS Sports"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50552244/projecting-2026-playoff-top-12-week-12-cfp",
+        "title": "College Football Playoff top 12 projection after Week 12 - ESPN"
+      },
+      {
+        "url": "https://www.cbssports.com/college-football/news/2026-sec-championship-game-scenarios-georgia-clinches-alabama-texas-tennessee/",
+        "title": "2026 SEC Championship Game scenarios: Georgia clinches spot as Alabama, Texas, Tennessee vie for No. 2 seed - CBS Sports"
+      }
+    ]
+  },
+  {
+    "attempt": 2,
+    "model": "deepseek/deepseek-v4.1-flash-1017",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:06:23.988158+00:00",
+    "accounted_usd": 0.016637816,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 110714,
+      "completion_tokens": 768,
+      "total_tokens": 111482,
+      "cost": 0.016637816,
+      "prompt_tokens_details": {
+        "cached_tokens": 107136,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.002637816,
+        "upstream_inference_prompt_cost": 0.001716216,
+        "upstream_inference_completions_cost": 0.0009216000000000001
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "CoreWeave",
+    "finish_reason": "stop",
+    "web_search_requests": 0,
+    "finished_at_utc": "2026-11-24T04:06:29.793669+00:00",
+    "group": "mixed|pundit_research|0.3",
+    "agent_id": "M04",
+    "web_sources": [
+      {
+        "url": "https://www.cbssports.com/college-football/news/college-football-bowl-projections-cfp-bracket-predictions-week-13-2026/",
+        "title": "Bowl projections: Slotting all 47 games as Week 12 upsets provide massive shakeup to postseason picture - CBS Sports"
+      },
+      {
+        "url": "https://www.cbssports.com/college-football/news/college-football-bold-predictions-rivalry-week-2026-playoff-bracket-teams/",
+        "title": "Ten bold CFP predictions during rivalry week: Big Ten in disarray, Big 12 makes strong push for three bids - CBS Sports"
+      },
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-22/college-football-playoff-rankings-predictions-what-2026s-fourth-cfp-top-25-bracket",
+        "title": "College Football Playoff rankings predictions: What 2026's fourth CFP top 25, bracket could look like | NCAA.com"
+      },
+      {
+        "url": "https://www.cbssports.com/college-football/news/cfp-committee-boosting-sec/",
+        "title": "Data shows the CFP committee is boosting the SEC more than ever, and it isn't close - CBS Sports"
+      },
+      {
+        "url": "https://www.cbssports.com/college-football/news/college-football-playoff-resume-rankings-texas-no-1-utah-georgia/",
+        "title": "CFP resume rankings: Why two-loss Texas is No. 1 ahead of Utah, Georgia - CBS Sports"
+      },
+      {
+        "url": "https://sports.yahoo.com/articles/why-alabama-remains-front-texas-201846647.html",
+        "title": "Why Alabama remains in front of Texas in the CFP rankings - Yahoo Sports"
+      }
+    ]
+  },
+  {
+    "attempt": 3,
+    "model": "deepseek/deepseek-v4.1-flash-1017",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:08:12.138625+00:00",
+    "accounted_usd": 0.017383916,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 111233,
+      "completion_tokens": 1260,
+      "total_tokens": 112493,
+      "cost": 0.017383916,
+      "prompt_tokens_details": {
+        "cached_tokens": 107136,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.003383916,
+        "upstream_inference_prompt_cost": 0.001871916,
+        "upstream_inference_completions_cost": 0.0015119999999999999
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "CoreWeave",
+    "finish_reason": "stop",
+    "web_search_requests": 2,
+    "finished_at_utc": "2026-11-24T04:08:18.853813+00:00",
+    "group": "mixed|pundit_research|0.3",
+    "agent_id": "M04",
+    "web_sources": [
+      {
+        "url": "https://www.on3.com/news/college-football-playoff-prediction-projecting-committee-top-25-12-team-bracket-after-week-12/",
+        "title": "College Football Playoff Prediction: Projecting committee's Top 25, 12-team bracket after Week 12 - On3"
+      },
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-22/college-football-playoff-rankings-predictions-what-2026s-fourth-cfp-top-25-bracket",
+        "title": "College Football Playoff rankings predictions: What 2026's fourth CFP top 25, bracket could look like | NCAA.com"
+      },
+      {
+        "url": "https://www.cbssports.com/college-football/news/college-football-bold-predictions-rivalry-week-2026-playoff-bracket-teams/",
+        "title": "Ten bold CFP predictions during rivalry week: Big Ten in disarray, Big 12 makes strong push for three bids - CBS Sports"
+      },
+      {
+        "url": "https://www.cbssports.com/college-football/news/college-football-rankings-cbs-sports-138-week-13-2026/",
+        "title": "CBS Sports 138: Texas, Tennessee move up as UCLA, Indiana tumble in college football rankings - CBS Sports"
+      },
+      {
+        "url": "https://sports.yahoo.com/articles/ap-top-25-sends-clear-020853828.html",
+        "title": "AP Top 25 Sends Clear Message About SEC’s Place in College Football Playoff Race - Yahoo Sports"
+      },
+      {
+        "url": "https://www.cbssports.com/college-football/news/college-football-rankings-coaches-poll-top-25-week-13-2026/",
+        "title": "Coaches Poll top 25: Texas, Tennessee climb; UCLA, Indiana tumble in college football rankings - CBS Sports"
+      }
+    ]
+  },
+  {
+    "attempt": 4,
+    "model": "deepseek/deepseek-v4.1-flash-1017",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:08:18.854878+00:00",
+    "accounted_usd": 0.017012216,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 110690,
+      "completion_tokens": 1086,
+      "total_tokens": 111776,
+      "cost": 0.017012216,
+      "prompt_tokens_details": {
+        "cached_tokens": 107136,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0030122160000000003,
+        "upstream_inference_prompt_cost": 0.0017090159999999998,
+        "upstream_inference_completions_cost": 0.0013032
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "CoreWeave",
+    "finish_reason": "stop",
+    "web_search_requests": 2,
+    "finished_at_utc": "2026-11-24T04:08:25.103886+00:00",
+    "group": "mixed|pundit_research|0.3",
+    "agent_id": "M04",
+    "web_sources": [
+      {
+        "url": "https://www.cbssports.com/college-football/news/college-football-bowl-projections-cfp-bracket-predictions-week-13-2026/",
+        "title": "Bowl projections: Slotting all 47 games as Week 12 upsets provide massive shakeup to postseason picture - CBS Sports"
+      },
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-22/college-football-playoff-rankings-predictions-what-2026s-fourth-cfp-top-25-bracket",
+        "title": "College Football Playoff rankings predictions: What 2026's fourth CFP top 25, bracket could look like | NCAA.com"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50564492/2026-week-12-college-football-playoff-bowl-projections",
+        "title": "2026-27 Week 12 College Football Playoff, bowl projections - ESPN"
+      },
+      {
+        "url": "https://www.cbssports.com/college-football/news/college-football-playoff-resume-rankings-texas-no-1-utah-georgia/",
+        "title": "CFP resume rankings: Why two-loss Texas is No. 1 ahead of Utah, Georgia - CBS Sports"
+      },
+      {
+        "url": "https://sports.yahoo.com/articles/why-alabama-remains-front-texas-201846647.html",
+        "title": "Why Alabama remains in front of Texas in the CFP rankings - Yahoo Sports"
+      },
+      {
+        "url": "https://www.cbssports.com/college-football/news/cfp-committee-boosting-sec/",
+        "title": "Data shows the CFP committee is boosting the SEC more than ever, and it isn't close - CBS Sports"
+      }
+    ]
+  },
+  {
+    "attempt": 1,
+    "model": "z-ai/glm-5.3-flash",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:06:25.283063+00:00",
+    "accounted_usd": 0.021402669200000002,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 104100,
+      "completion_tokens": 2664,
+      "total_tokens": 106764,
+      "cost": 0.021402669200000002,
+      "prompt_tokens_details": {
+        "cached_tokens": 49152,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1439,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0074026692,
+        "upstream_inference_prompt_cost": 0.0065102292,
+        "upstream_inference_completions_cost": 0.00089244
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "DeepInfra",
+    "finish_reason": "stop",
+    "web_search_requests": 0,
+    "finished_at_utc": "2026-11-24T04:06:47.700724+00:00",
+    "group": "mixed|pundit_research|0.3",
+    "agent_id": "M05",
+    "web_sources": [
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-17/college-football-playoff-bracket-based-current-committee-rankings",
+        "title": "College Football Playoff bracket, based on current committee rankings | NCAA.com"
+      },
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-22/college-football-playoff-rankings-predictions-what-2026s-fourth-cfp-top-25-bracket",
+        "title": "College Football Playoff rankings predictions: What 2026's fourth CFP top 25, bracket could look like | NCAA.com"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50552244/projecting-2026-playoff-top-12-week-12-cfp",
+        "title": "College Football Playoff top 12 projection after Week 12 - ESPN"
+      },
+      {
+        "url": "https://www.cbssports.com/college-football/news/college-football-rankings-ap-top-25-poll-week-13-ucla-indiana-texas/",
+        "title": "AP Top 25 poll: UCLA, Indiana slide; Texas moves into top five of college football rankings - CBS Sports"
+      },
+      {
+        "url": "https://www.cbssports.com/college-football/news/college-football-rankings-coaches-poll-top-25-week-13-2026/",
+        "title": "Coaches Poll top 25: Texas, Tennessee climb; UCLA, Indiana tumble in college football rankings - CBS Sports"
+      },
+      {
+        "url": "https://www.cbssports.com/college-football/news/college-football-power-rankings-week-13-2026/",
+        "title": "College Football Power Rankings: UCLA tumbles after first loss, Texas continues to rise - CBS Sports"
+      }
+    ]
+  },
+  {
+    "attempt": 2,
+    "model": "z-ai/glm-5.3-flash",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:06:47.701628+00:00",
+    "accounted_usd": 0.13,
+    "group": "mixed|pundit_research|0.3",
+    "agent_id": "M05"
+  },
+  {
+    "attempt": 3,
+    "model": "z-ai/glm-5.3-flash",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:08:18.831656+00:00",
+    "accounted_usd": 0.0170974234,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 102420,
+      "completion_tokens": 2113,
+      "total_tokens": 104533,
+      "cost": 0.0170974234,
+      "prompt_tokens_details": {
+        "cached_tokens": 98304,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 769,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0030974234,
+        "upstream_inference_prompt_cost": 0.0023895684,
+        "upstream_inference_completions_cost": 0.000707855
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "DeepInfra",
+    "finish_reason": "stop",
+    "web_search_requests": 2,
+    "finished_at_utc": "2026-11-24T04:08:35.970070+00:00",
+    "group": "mixed|pundit_research|0.3",
+    "agent_id": "M05",
+    "web_sources": [
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-17/college-football-playoff-bracket-based-current-committee-rankings",
+        "title": "College Football Playoff bracket, based on current committee rankings | NCAA.com"
+      },
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-22/college-football-playoff-rankings-predictions-what-2026s-fourth-cfp-top-25-bracket",
+        "title": "College Football Playoff rankings predictions: What 2026's fourth CFP top 25, bracket could look like | NCAA.com"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50552244/projecting-2026-playoff-top-12-week-12-cfp",
+        "title": "College Football Playoff top 12 projection after Week 12 - ESPN"
+      },
+      {
+        "url": "https://www.cbssports.com/college-football/news/college-football-rankings-coaches-poll-top-25-week-13-2026/",
+        "title": "Coaches Poll top 25: Texas, Tennessee climb; UCLA, Indiana tumble in college football rankings - CBS Sports"
+      },
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-22/college-football-playoff-rankings-predictions-what-2026s-fourth-cfp-top-25-bracket",
+        "title": "College Football Playoff rankings predictions: What 2026's fourth CFP top 25, bracket could look like | NCAA.com"
+      },
+      {
+        "url": "https://www.cbssports.com/college-football/news/college-football-bold-predictions-rivalry-week-2026-playoff-bracket-teams/",
+        "title": "Ten bold CFP predictions during rivalry week: Big Ten in disarray, Big 12 makes strong push for three bids - CBS Sports"
+      }
+    ]
+  },
+  {
+    "attempt": 1,
+    "model": "minimax/minimax-m3.1-flash",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:06:29.796837+00:00",
+    "accounted_usd": 0.023949440000000002,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 102976,
+      "completion_tokens": 2128,
+      "total_tokens": 105104,
+      "cost": 0.023949440000000002,
+      "prompt_tokens_details": {
+        "cached_tokens": 50176,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1509,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00994944,
+        "upstream_inference_prompt_cost": 0.00867264,
+        "upstream_inference_completions_cost": 0.0012768
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "DigitalOcean",
+    "finish_reason": "stop",
+    "web_search_requests": 0,
+    "finished_at_utc": "2026-11-24T04:06:44.088963+00:00",
+    "group": "mixed|pundit_research|0.3",
+    "agent_id": "M06",
+    "web_sources": [
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-17/college-football-playoff-bracket-based-current-committee-rankings",
+        "title": "College Football Playoff bracket, based on current committee rankings | NCAA.com"
+      },
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-17/georgia-leads-texas-enters-top-five-third-college-football-playoff-rankings-2026",
+        "title": "Georgia leads, Texas enters top five of third College Football Playoff rankings of 2026 | NCAA.com"
+      },
+      {
+        "url": "https://www.cbssports.com/college-football/news/college-football-playoff-rankings-top-25-week-12-2026/",
+        "title": "College Football Playoff Rankings: Top four holds firm as Texas leaps Notre Dame in third top 25 reveal - CBS Sports"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50552244/projecting-2026-playoff-top-12-week-12-cfp",
+        "title": "College Football Playoff top 12 projection after Week 12 - ESPN"
+      },
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-17/college-football-playoff-bracket-based-current-committee-rankings",
+        "title": "College Football Playoff bracket, based on current committee rankings | NCAA.com"
+      },
+      {
+        "url": "https://www.nbcsports.com/college-football/news/2026-college-football-rankings-top-25-week-12-expert-picks-analysis-ap-projections-including-utah-ucla",
+        "title": "2026 College Football Rankings Top 25 Week 12: Expert picks, analysis, AP projections including Utah, UCLA - NBC Sports"
+      }
+    ]
+  },
+  {
+    "attempt": 2,
+    "model": "minimax/minimax-m3.1-flash",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:06:44.090356+00:00",
+    "accounted_usd": 0.13,
+    "group": "mixed|pundit_research|0.3",
+    "agent_id": "M06"
+  },
+  {
+    "attempt": 3,
+    "model": "minimax/minimax-m3.1-flash",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:08:21.570093+00:00",
+    "accounted_usd": 0.01685675,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 102829,
+      "completion_tokens": 1374,
+      "total_tokens": 104203,
+      "cost": 0.01685675,
+      "prompt_tokens_details": {
+        "cached_tokens": 99200,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 750,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00285675,
+        "upstream_inference_prompt_cost": 0.00203235,
+        "upstream_inference_completions_cost": 0.0008244
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "DigitalOcean",
+    "finish_reason": "stop",
+    "web_search_requests": 2,
+    "finished_at_utc": "2026-11-24T04:08:29.676011+00:00",
+    "group": "mixed|pundit_research|0.3",
+    "agent_id": "M06",
+    "web_sources": [
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-22/college-football-playoff-rankings-predictions-what-2026s-fourth-cfp-top-25-bracket",
+        "title": "College Football Playoff rankings predictions: What 2026's fourth CFP top 25, bracket could look like | NCAA.com"
+      },
+      {
+        "url": "https://www.on3.com/teams/utah-utes/news/utah-football-holds-at-2-in-polls-as-dampier-builds-heisman-case/",
+        "title": "Utah football holds at #2 in polls as Dampier builds Heisman case - On3"
+      },
+      {
+        "url": "https://sports.yahoo.com/articles/college-football-playoff-top-25-093847693.html",
+        "title": "College Football Playoff Top 25 Prediction: Will the Big Ten Get Just One Team In? - Yahoo Sports"
+      },
+      {
+        "url": "https://www.on3.com/news/college-football-playoff-prediction-projecting-committee-top-25-12-team-bracket-after-week-12/",
+        "title": "College Football Playoff Prediction: Projecting committee's Top 25, 12-team bracket after Week 12 - On3"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50564492/2026-week-12-college-football-playoff-bowl-projections",
+        "title": "2026-27 Week 12 College Football Playoff, bowl projections - ESPN"
+      },
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-22/college-football-playoff-rankings-predictions-what-2026s-fourth-cfp-top-25-bracket",
+        "title": "College Football Playoff rankings predictions: What 2026's fourth CFP top 25, bracket could look like | NCAA.com"
+      }
+    ]
+  },
+  {
+    "attempt": 1,
+    "model": "minimax/minimax-m3.1-flash",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:08:29.680494+00:00",
+    "accounted_usd": 0.02432918,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 153658,
+      "completion_tokens": 1524,
+      "total_tokens": 155182,
+      "cost": 0.02432918,
+      "prompt_tokens_details": {
+        "cached_tokens": 100992,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 893,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.010329179999999999,
+        "upstream_inference_prompt_cost": 0.009414780000000001,
+        "upstream_inference_completions_cost": 0.0009144
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "DigitalOcean",
+    "finish_reason": "stop",
+    "web_search_requests": 2,
+    "finished_at_utc": "2026-11-24T04:08:40.336482+00:00",
+    "group": "mixed|pundit_research|0.3",
+    "agent_id": "M07",
+    "web_sources": [
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-22/college-football-playoff-rankings-predictions-what-2026s-fourth-cfp-top-25-bracket",
+        "title": "College Football Playoff rankings predictions: What 2026's fourth CFP top 25, bracket could look like | NCAA.com"
+      },
+      {
+        "url": "https://www.cbssports.com/college-football/news/tom-fornellis-cfp-vibe-big-ten-big-12/",
+        "title": "Tom Fornelli's CFP Vibe Check: Big Ten bloodbath leaves league on brink - CBS Sports"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50552244/projecting-2026-playoff-top-12-week-12-cfp",
+        "title": "College Football Playoff top 12 projection after Week 12 - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50552244/projecting-2026-playoff-top-12-week-12-cfp",
+        "title": "College Football Playoff top 12 projection after Week 12 - ESPN"
+      },
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-22/college-football-playoff-rankings-predictions-what-2026s-fourth-cfp-top-25-bracket",
+        "title": "College Football Playoff rankings predictions: What 2026's fourth CFP top 25, bracket could look like | NCAA.com"
+      },
+      {
+        "url": "https://www.cbssports.com/college-football/news/tom-fornellis-cfp-vibe-big-ten-big-12/",
+        "title": "Tom Fornelli's CFP Vibe Check: Big Ten bloodbath leaves league on brink - CBS Sports"
+      }
+    ]
+  },
+  {
+    "attempt": 1,
+    "model": "z-ai/glm-5.3-flash",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:08:35.974601+00:00",
+    "accounted_usd": 0.0210238512,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 102274,
+      "completion_tokens": 2081,
+      "total_tokens": 104355,
+      "cost": 0.0210238512,
+      "prompt_tokens_details": {
+        "cached_tokens": 49152,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 581,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0070238512,
+        "upstream_inference_prompt_cost": 0.0063267162000000005,
+        "upstream_inference_completions_cost": 0.000697135
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "DeepInfra",
+    "finish_reason": "stop",
+    "web_search_requests": 2,
+    "finished_at_utc": "2026-11-24T04:08:54.046179+00:00",
+    "group": "mixed|pundit_research|0.3",
+    "agent_id": "M08",
+    "web_sources": [
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-17/college-football-playoff-bracket-based-current-committee-rankings",
+        "title": "College Football Playoff bracket, based on current committee rankings | NCAA.com"
+      },
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-22/college-football-playoff-rankings-predictions-what-2026s-fourth-cfp-top-25-bracket",
+        "title": "College Football Playoff rankings predictions: What 2026's fourth CFP top 25, bracket could look like | NCAA.com"
+      },
+      {
+        "url": "https://www.on3.com/news/college-football-playoff-official-projected-12-team-bracket-after-third-2026-cfp-rankings/",
+        "title": "College Football Playoff: Official Projected 12-Team Bracket After Third 2026 CFP Rankings - On3"
+      },
+      {
+        "url": "https://www.cbssports.com/college-football/news/college-football-rankings-tomorrows-top-25-week-13-2026/",
+        "title": "Tomorrow's Top 25 Today: Ohio State, Indiana, UCLA fall in college football rankings amid Big Ten chaos - CBS Sports"
+      },
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-22/college-football-playoff-rankings-predictions-what-2026s-fourth-cfp-top-25-bracket",
+        "title": "College Football Playoff rankings predictions: What 2026's fourth CFP top 25, bracket could look like | NCAA.com"
+      },
+      {
+        "url": "https://sports.yahoo.com/articles/coaches-poll-prediction-finally-tennessee-080353869.html",
+        "title": "Coaches Poll Prediction: Will They Finally Get Tennessee, Texas, Alabama Right? - Yahoo Sports"
+      }
+    ]
+  },
+  {
+    "attempt": 1,
+    "model": "deepseek/deepseek-v4.1-flash-1017",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:08:40.340154+00:00",
+    "accounted_usd": 0.032930996,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 111423,
+      "completion_tokens": 1154,
+      "total_tokens": 112577,
+      "cost": 0.032930996,
+      "prompt_tokens_details": {
+        "cached_tokens": 54016,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.018930996,
+        "upstream_inference_prompt_cost": 0.017546196,
+        "upstream_inference_completions_cost": 0.0013848
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "CoreWeave",
+    "finish_reason": "stop",
+    "web_search_requests": 2,
+    "finished_at_utc": "2026-11-24T04:08:47.499222+00:00",
+    "group": "mixed|pundit_research|0.3",
+    "agent_id": "M09",
+    "web_sources": [
+      {
+        "url": "https://sports.yahoo.com/articles/ap-top-25-poll-prediction-072155221.html",
+        "title": "AP Top 25 Poll Prediction: How Far Will UCLA, Ohio State and Indiana Drop? - Yahoo Sports"
+      },
+      {
+        "url": "https://sports.yahoo.com/articles/coaches-poll-prediction-finally-tennessee-080353869.html",
+        "title": "Coaches Poll Prediction: Will They Finally Get Tennessee, Texas, Alabama Right? - Yahoo Sports"
+      },
+      {
+        "url": "https://www.cbssports.com/college-football/news/college-football-rankings-coaches-poll-top-25-week-13-2026/",
+        "title": "Coaches Poll top 25: Texas, Tennessee climb; UCLA, Indiana tumble in college football rankings - CBS Sports"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50552244/projecting-2026-playoff-top-12-week-12-cfp",
+        "title": "College Football Playoff top 12 projection after Week 12 - ESPN"
+      },
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-17/college-football-playoff-bracket-based-current-committee-rankings",
+        "title": "College Football Playoff bracket, based on current committee rankings | NCAA.com"
+      },
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-22/college-football-playoff-rankings-predictions-what-2026s-fourth-cfp-top-25-bracket",
+        "title": "College Football Playoff rankings predictions: What 2026's fourth CFP top 25, bracket could look like | NCAA.com"
+      }
+    ]
+  },
+  {
+    "attempt": 1,
+    "model": "google/gemini-3.8-flash",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:08:51.903591+00:00",
+    "accounted_usd": 0.03287815,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 117891,
+      "completion_tokens": 522,
+      "total_tokens": 118413,
+      "cost": 0.03287815,
+      "prompt_tokens_details": {
+        "cached_tokens": 57214,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.02587815,
+        "upstream_inference_prompt_cost": 0.024899400000000002,
+        "upstream_inference_completions_cost": 0.00097875
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 1,
+        "tool_calls_requested": 1,
+        "tool_calls_executed": 1
+      }
+    },
+    "provider": "Google",
+    "finish_reason": "stop",
+    "web_search_requests": 1,
+    "finished_at_utc": "2026-11-24T04:09:33.541922+00:00",
+    "group": "mixed|pundit_research|0.3",
+    "agent_id": "M10",
+    "web_sources": [
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-22/college-football-playoff-rankings-predictions-what-2026s-fourth-cfp-top-25-bracket",
+        "title": "College Football Playoff rankings predictions: What 2026's fourth CFP top 25, bracket could look like | NCAA.com"
+      },
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-15/college-football-playoff-rankings-predictions-what-2026s-third-cfp-top-25-bracket",
+        "title": "College Football Playoff rankings predictions: What 2026's third CFP top 25, bracket could look like | NCAA.com"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50552244/projecting-2026-playoff-top-12-week-12-cfp",
+        "title": "College Football Playoff top 12 projection after Week 12 - ESPN"
+      }
+    ]
+  },
+  {
+    "attempt": 1,
+    "model": "anthropic/claude-haiku-5.5",
+    "requested_temperature": null,
+    "started_at_utc": "2026-11-24T04:08:54.048496+00:00",
+    "accounted_usd": 0.02722935,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 152762,
+      "completion_tokens": 2269,
+      "total_tokens": 155031,
+      "cost": 0.02722935,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 152746,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.02022935,
+        "upstream_inference_prompt_cost": 0.01909485,
+        "upstream_inference_completions_cost": 0.0011344999999999999
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 1,
+        "tool_calls_requested": 1,
+        "tool_calls_executed": 1
+      }
+    },
+    "provider": "Anthropic",
+    "finish_reason": "stop",
+    "web_search_requests": 1,
+    "finished_at_utc": "2026-11-24T04:09:07.118453+00:00",
+    "group": "mixed|pundit_research|0.3",
+    "agent_id": "M11",
+    "web_sources": [
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-22/college-football-playoff-rankings-predictions-what-2026s-fourth-cfp-top-25-bracket",
+        "title": "College Football Playoff rankings predictions: What 2026's fourth CFP top 25, bracket could look like | NCAA.com"
+      },
+      {
+        "url": "https://www.nbcsports.com/college-football/news/2026-college-football-rankings-top-25-week-12-expert-picks-analysis-ap-projections-including-utah-ucla",
+        "title": "2026 College Football Rankings Top 25 Week 12: Expert picks, analysis, AP projections including Utah, UCLA - NBC Sports"
+      },
+      {
+        "url": "https://www.cbssports.com/college-football/news/college-football-rankings-cbs-sports-138-week-13-2026/",
+        "title": "CBS Sports 138: Texas, Tennessee move up as UCLA, Indiana tumble in college football rankings - CBS Sports"
+      }
+    ]
+  },
+  {
+    "attempt": 2,
+    "model": "anthropic/claude-haiku-5.5",
+    "requested_temperature": null,
+    "started_at_utc": "2026-11-24T04:09:07.118947+00:00",
+    "accounted_usd": 0.01844924,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 152715,
+      "completion_tokens": 1968,
+      "total_tokens": 154683,
+      "cost": 0.01844924,
+      "prompt_tokens_details": {
+        "cached_tokens": 74989,
+        "cache_write_tokens": 77710,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.01144924,
+        "upstream_inference_prompt_cost": 0.01046524,
+        "upstream_inference_completions_cost": 0.000984
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 1,
+        "tool_calls_requested": 1,
+        "tool_calls_executed": 1
+      }
+    },
+    "provider": "Anthropic",
+    "finish_reason": "stop",
+    "web_search_requests": 1,
+    "finished_at_utc": "2026-11-24T04:09:18.255230+00:00",
+    "group": "mixed|pundit_research|0.3",
+    "agent_id": "M11",
+    "web_sources": [
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-22/college-football-playoff-rankings-predictions-what-2026s-fourth-cfp-top-25-bracket",
+        "title": "College Football Playoff rankings predictions: What 2026's fourth CFP top 25, bracket could look like | NCAA.com"
+      },
+      {
+        "url": "https://www.nbcsports.com/college-football/news/2026-college-football-rankings-top-25-week-12-expert-picks-analysis-ap-projections-including-utah-ucla",
+        "title": "2026 College Football Rankings Top 25 Week 12: Expert picks, analysis, AP projections including Utah, UCLA - NBC Sports"
+      },
+      {
+        "url": "https://www.cbssports.com/college-football/news/college-football-playoff-rankings-prediction-top-25-week-12-2026/",
+        "title": "College Football Playoff Rankings prediction: Texas rises into top four, but biggest debate is outside top 12 - CBS Sports"
+      }
+    ]
+  },
+  {
+    "attempt": 1,
+    "model": "openai/gpt-6-luna",
+    "requested_temperature": null,
+    "started_at_utc": "2026-11-24T04:09:18.594628+00:00",
+    "accounted_usd": 0.02194196,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 153679,
+      "completion_tokens": 650,
+      "total_tokens": 154329,
+      "cost": 0.02194196,
+      "prompt_tokens_details": {
+        "cached_tokens": 100806,
+        "cache_write_tokens": 52864,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00794196,
+        "upstream_inference_prompt_cost": 0.007616960000000001,
+        "upstream_inference_completions_cost": 0.000325
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "OpenAI",
+    "finish_reason": "stop",
+    "web_search_requests": 2,
+    "finished_at_utc": "2026-11-24T04:09:30.406347+00:00",
+    "group": "mixed|pundit_research|0.3",
+    "agent_id": "M12",
+    "web_sources": [
+      {
+        "url": "https://www.on3.com/news/brett-mcmurphy-college-football-ap-top-25-ballot-after-week-12/",
+        "title": "Brett McMurphy's college football AP Top 25 ballot after Week 12 - On3"
+      },
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-22/college-football-playoff-rankings-predictions-what-2026s-fourth-cfp-top-25-bracket",
+        "title": "College Football Playoff rankings predictions: What 2026's fourth CFP top 25, bracket could look like | NCAA.com"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50552244/projecting-2026-playoff-top-12-week-12-cfp",
+        "title": "College Football Playoff top 12 projection after Week 12 - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50552244/projecting-2026-playoff-top-12-week-12-cfp",
+        "title": "College Football Playoff top 12 projection after Week 12 - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50564492/2026-week-12-college-football-playoff-bowl-projections",
+        "title": "2026-27 Week 12 College Football Playoff, bowl projections - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50563018/week-12-results-rivalry-week",
+        "title": "What Week 12's results mean for Rivalry Week and beyond - ESPN"
+      }
+    ]
+  },
+  {
+    "attempt": 1,
+    "model": "z-ai/glm-5.3-flash",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:09:29.175165+00:00",
+    "accounted_usd": 0.021415700699999998,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 103913,
+      "completion_tokens": 2759,
+      "total_tokens": 106672,
+      "cost": 0.021415700699999998,
+      "prompt_tokens_details": {
+        "cached_tokens": 49152,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1365,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0074157007,
+        "upstream_inference_prompt_cost": 0.0064914357,
+        "upstream_inference_completions_cost": 0.0009242650000000001
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "DeepInfra",
+    "finish_reason": "stop",
+    "web_search_requests": 2,
+    "finished_at_utc": "2026-11-24T04:09:51.391136+00:00",
+    "group": "mixed|pundit_research|0.3",
+    "agent_id": "M13",
+    "web_sources": [
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50552244/projecting-2026-playoff-top-12-week-12-cfp",
+        "title": "College Football Playoff top 12 projection after Week 12 - ESPN"
+      },
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-17/college-football-playoff-bracket-based-current-committee-rankings",
+        "title": "College Football Playoff bracket, based on current committee rankings | NCAA.com"
+      },
+      {
+        "url": "https://www.on3.com/news/college-football-playoff-official-projected-12-team-bracket-after-third-2026-cfp-rankings/",
+        "title": "College Football Playoff: Official Projected 12-Team Bracket After Third 2026 CFP Rankings - On3"
+      },
+      {
+        "url": "https://www.nbcsports.com/college-football/news/big-ten-takes-a-beating-no-teams-in-ap-top-5-for-1st-time-since-2021-as-georgia-utah-hold-steady",
+        "title": "Big Ten takes a beating, no teams in AP top 5 for 1st time since 2021 as Georgia, Utah hold steady - NBC Sports"
+      },
+      {
+        "url": "https://www.on3.com/teams/utah-utes/news/utah-football-holds-at-2-in-polls-as-dampier-builds-heisman-case/",
+        "title": "Utah football holds at #2 in polls as Dampier builds Heisman case - On3"
+      },
+      {
+        "url": "https://www.cbssports.com/college-football/rankings/ap/",
+        "title": "College Football Rankings 2026-27 - AP Top 25 - CBS Sports"
+      }
+    ]
+  },
+  {
+    "attempt": 1,
+    "model": "openai/gpt-6-luna",
+    "requested_temperature": null,
+    "started_at_utc": "2026-11-24T04:09:33.544547+00:00",
+    "accounted_usd": 0.022234385000000002,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 154421,
+      "completion_tokens": 1085,
+      "total_tokens": 155506,
+      "cost": 0.022234385000000002,
+      "prompt_tokens_details": {
+        "cached_tokens": 100961,
+        "cache_write_tokens": 53451,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.008234385,
+        "upstream_inference_prompt_cost": 0.007691885000000001,
+        "upstream_inference_completions_cost": 0.0005425
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "OpenAI",
+    "finish_reason": "stop",
+    "web_search_requests": 2,
+    "finished_at_utc": "2026-11-24T04:09:46.396076+00:00",
+    "group": "mixed|pundit_research|0.3",
+    "agent_id": "M14",
+    "web_sources": [
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50564492/2026-week-12-college-football-playoff-bowl-projections",
+        "title": "2026-27 Week 12 College Football Playoff, bowl projections - ESPN"
+      },
+      {
+        "url": "https://www.on3.com/news/college-football-playoff-prediction-projecting-committee-top-25-12-team-bracket-after-week-12/",
+        "title": "College Football Playoff Prediction: Projecting committee's Top 25, 12-team bracket after Week 12 - On3"
+      },
+      {
+        "url": "https://www.ncaa.com/news/football/article/2026-11-22/college-football-playoff-rankings-predictions-what-2026s-fourth-cfp-top-25-bracket",
+        "title": "College Football Playoff rankings predictions: What 2026's fourth CFP top 25, bracket could look like | NCAA.com"
+      },
+      {
+        "url": "https://www.on3.com/news/college-football-rankings-joel-klatt-names-top-10-teams-after-week-12/",
+        "title": "College Football Rankings: Joel Klatt names Top 10 teams after Week 12 - On3"
+      },
+      {
+        "url": "https://www.ncaa.com/rankings/football/fbs/associated-press",
+        "title": "College football rankings: Associated Press Top 25"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50545207/2026-college-football-power-rankings-top-25-week-12",
+        "title": "College football Power Rankings - Week 12 chaos shifts top 25 - ESPN"
+      }
+    ]
+  },
+  {
+    "attempt": 1,
+    "model": "openai/gpt-6-luna",
+    "requested_temperature": null,
+    "started_at_utc": "2026-11-24T04:05:19.604627+00:00",
+    "accounted_usd": 0.022317795,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 153545,
+      "completion_tokens": 1394,
+      "total_tokens": 154939,
+      "cost": 0.022317795,
+      "prompt_tokens_details": {
+        "cached_tokens": 100627,
+        "cache_write_tokens": 52909,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.008317795000000001,
+        "upstream_inference_prompt_cost": 0.007620795,
+        "upstream_inference_completions_cost": 0.000697
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "OpenAI",
+    "finish_reason": "stop",
+    "web_search_requests": 0,
+    "finished_at_utc": "2026-11-24T04:05:36.388059+00:00",
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M01",
+    "web_sources": [
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50562947/week-12-ap-college-football-poll-reaction-next-top-25",
+        "title": "AP college football Week 12 poll What's next for Top 25 - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50552244/projecting-2026-playoff-top-12-week-12-cfp",
+        "title": "College Football Playoff top 12 projection after Week 12 - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50563018/week-12-results-rivalry-week",
+        "title": "What Week 12's results mean for Rivalry Week and beyond - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/recap/_/gameId/401858307",
+        "title": "Notre Dame 24-3 SMU (Nov 21, 2026) Game Recap - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/recap?gameId=401856872",
+        "title": "Utah 38-17 TCU (Nov 21, 2026) Game Recap - ESPN"
+      }
+    ]
+  },
+  {
+    "attempt": 2,
+    "model": "openai/gpt-6-luna",
+    "requested_temperature": null,
+    "started_at_utc": "2026-11-24T04:05:50.437234+00:00",
+    "accounted_usd": 0.01634682,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 154292,
+      "completion_tokens": 717,
+      "total_tokens": 155009,
+      "cost": 0.01634682,
+      "prompt_tokens_details": {
+        "cached_tokens": 150417,
+        "cache_write_tokens": 3866,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00234682,
+        "upstream_inference_prompt_cost": 0.00198832,
+        "upstream_inference_completions_cost": 0.0003585
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "OpenAI",
+    "finish_reason": "stop",
+    "web_search_requests": 0,
+    "finished_at_utc": "2026-11-24T04:06:02.929768+00:00",
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M01",
+    "web_sources": [
+      {
+        "url": "http://www.espn.com/college-football/story/_/id/49868647/2026-college-football-sp%2B-rankings-all-138-fbs-teams",
+        "title": "2026 college football SP+ rankings for all 138 FBS teams - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50563018/week-12-results-rivalry-week",
+        "title": "What Week 12's results mean for Rivalry Week and beyond - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/recap?gameId=401856872",
+        "title": "Utah 38-17 TCU (Nov 21, 2026) Game Recap - ESPN"
+      },
+      {
+        "url": "http://www.espn.com/college-football/story/_/id/49868647/2026-college-football-sp%2B-rankings-all-138-fbs-teams",
+        "title": "2026 college football SP+ rankings for all 138 FBS teams - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50552244/projecting-2026-playoff-top-12-week-12-cfp",
+        "title": "College Football Playoff top 12 projection after Week 12 - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50563018/week-12-results-rivalry-week",
+        "title": "What Week 12's results mean for Rivalry Week and beyond - ESPN"
+      }
+    ]
+  },
+  {
+    "attempt": 3,
+    "model": "openai/gpt-6-luna",
+    "requested_temperature": null,
+    "started_at_utc": "2026-11-24T04:07:38.746928+00:00",
+    "accounted_usd": 0.01661947,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 155118,
+      "completion_tokens": 1111,
+      "total_tokens": 156229,
+      "cost": 0.01661947,
+      "prompt_tokens_details": {
+        "cached_tokens": 150657,
+        "cache_write_tokens": 4452,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0026194699999999996,
+        "upstream_inference_prompt_cost": 0.00206397,
+        "upstream_inference_completions_cost": 0.0005555
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "OpenAI",
+    "finish_reason": "stop",
+    "web_search_requests": 2,
+    "finished_at_utc": "2026-11-24T04:07:54.443711+00:00",
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M01",
+    "web_sources": [
+      {
+        "url": "http://www.espn.com/college-football/story/_/id/49868647/2026-college-football-sp%2B-rankings-all-138-fbs-teams",
+        "title": "2026 college football SP+ rankings for all 138 FBS teams - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50563018/week-12-results-rivalry-week",
+        "title": "What Week 12's results mean for Rivalry Week and beyond - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/fpi",
+        "title": "2026 College Football Power Index - ESPN"
+      },
+      {
+        "url": "http://www.espn.com/college-football/story/_/id/49868647/2026-college-football-sp%2B-rankings-all-138-fbs-teams",
+        "title": "2026 college football SP+ rankings for all 138 FBS teams - ESPN"
+      },
+      {
+        "url": "https://insider.espn.com/college-football/insider/story/_/id/30364909/college-football-sp+-rankings-week-12-bama-top-interesting-moves-big-ten",
+        "title": "College football SP+ rankings after Week 12: Bama on top and interesting moves in the Big Ten - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/scoreboard/_/week/12/year/2026/seasontype/2",
+        "title": "College Football Schedule Week 12, 2026 Regular Season - ESPN"
+      }
+    ]
+  },
+  {
+    "attempt": 1,
+    "model": "anthropic/claude-haiku-5.5",
+    "requested_temperature": null,
+    "started_at_utc": "2026-11-24T04:05:19.604951+00:00",
+    "accounted_usd": 0.010372275,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 74903,
+      "completion_tokens": 2019,
+      "total_tokens": 76922,
+      "cost": 0.010372275,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 74899,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.010372275,
+        "upstream_inference_prompt_cost": 0.009362775,
+        "upstream_inference_completions_cost": 0.0010095
+      }
+    },
+    "provider": "Anthropic",
+    "finish_reason": "stop",
+    "web_search_requests": 0,
+    "finished_at_utc": "2026-11-24T04:05:28.939595+00:00",
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M02",
+    "web_sources": []
+  },
+  {
+    "attempt": 2,
+    "model": "anthropic/claude-haiku-5.5",
+    "requested_temperature": null,
+    "started_at_utc": "2026-11-24T04:05:50.438146+00:00",
+    "accounted_usd": 0.00168489,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 74903,
+      "completion_tokens": 1871,
+      "total_tokens": 76774,
+      "cost": 0.00168489,
+      "prompt_tokens_details": {
+        "cached_tokens": 74899,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00168489,
+        "upstream_inference_prompt_cost": 0.00074939,
+        "upstream_inference_completions_cost": 0.0009355
+      }
+    },
+    "provider": "Anthropic",
+    "finish_reason": "stop",
+    "web_search_requests": 0,
+    "finished_at_utc": "2026-11-24T04:05:59.512821+00:00",
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M02",
+    "web_sources": []
+  },
+  {
+    "attempt": 3,
+    "model": "anthropic/claude-haiku-5.5",
+    "requested_temperature": null,
+    "started_at_utc": "2026-11-24T04:07:38.746466+00:00",
+    "accounted_usd": 0.018649965,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 154134,
+      "completion_tokens": 1994,
+      "total_tokens": 156128,
+      "cost": 0.018649965,
+      "prompt_tokens_details": {
+        "cached_tokens": 74899,
+        "cache_write_tokens": 79219,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.011649965,
+        "upstream_inference_prompt_cost": 0.010652965,
+        "upstream_inference_completions_cost": 0.000997
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 1,
+        "tool_calls_requested": 1,
+        "tool_calls_executed": 1
+      }
+    },
+    "provider": "Anthropic",
+    "finish_reason": "stop",
+    "web_search_requests": 1,
+    "finished_at_utc": "2026-11-24T04:07:50.883099+00:00",
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M02",
+    "web_sources": [
+      {
+        "url": "http://www.espn.com/college-football/story/_/id/49868647/2026-college-football-sp%2B-rankings-all-138-fbs-teams",
+        "title": "2026 college football SP+ rankings for all 138 FBS teams - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50563018/week-12-results-rivalry-week",
+        "title": "What Week 12's results mean for Rivalry Week and beyond - ESPN"
+      },
+      {
+        "url": "https://insider.espn.com/espn/print?id=42444119",
+        "title": "ESPN.com\n\t- College football's post-Week 12 SP+ rankings"
+      }
+    ]
+  },
+  {
+    "attempt": 1,
+    "model": "google/gemini-3.8-flash",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:05:19.605352+00:00",
+    "accounted_usd": 0.03355285,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 119282,
+      "completion_tokens": 604,
+      "total_tokens": 119886,
+      "cost": 0.03355285,
+      "prompt_tokens_details": {
+        "cached_tokens": 57216,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.02655285,
+        "upstream_inference_prompt_cost": 0.02542035,
+        "upstream_inference_completions_cost": 0.0011325
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 1,
+        "tool_calls_requested": 1,
+        "tool_calls_executed": 1
+      }
+    },
+    "provider": "Google",
+    "finish_reason": "stop",
+    "web_search_requests": 0,
+    "finished_at_utc": "2026-11-24T04:05:50.432010+00:00",
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M03",
+    "web_sources": [
+      {
+        "url": "https://www.espn.com/college-football/scoreboard/_/week/12/year/2026/seasontype/2/group/80",
+        "title": "College Football Scores Week 12, FBS 2026 Regular Season - ESPN"
+      },
+      {
+        "url": "https://www.secsports.com/football-rankings",
+        "title": "Football Rankings - Southeastern Conference"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50563018/week-12-results-rivalry-week",
+        "title": "What Week 12's results mean for Rivalry Week and beyond - ESPN"
+      }
+    ]
+  },
+  {
+    "attempt": 2,
+    "model": "google/gemini-3.8-flash",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:05:59.515602+00:00",
+    "accounted_usd": 0.015486924999999999,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 119624,
+      "completion_tokens": 475,
+      "total_tokens": 120099,
+      "cost": 0.015486924999999999,
+      "prompt_tokens_details": {
+        "cached_tokens": 110408,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.008486925,
+        "upstream_inference_prompt_cost": 0.0075963,
+        "upstream_inference_completions_cost": 0.0008906249999999999
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 1,
+        "tool_calls_requested": 1,
+        "tool_calls_executed": 1
+      }
+    },
+    "provider": "Google",
+    "finish_reason": "stop",
+    "web_search_requests": 0,
+    "finished_at_utc": "2026-11-24T04:06:27.483020+00:00",
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M03",
+    "web_sources": [
+      {
+        "url": "https://www.espn.com/college-football/scoreboard/_/week/12/year/2026/seasontype/2/group/80",
+        "title": "College Football Scores Week 12, FBS 2026 Regular Season - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/scoreboard/_/week/12/year/2026/seasontype/2",
+        "title": "College Football Schedule Week 12, 2026 Regular Season - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/recap/_/gameId/401856755",
+        "title": "Texas 45-3 Arkansas (Nov 21, 2026) Game Recap - ESPN"
+      }
+    ]
+  },
+  {
+    "attempt": 3,
+    "model": "google/gemini-3.8-flash",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:07:38.747938+00:00",
+    "accounted_usd": 0.0152918875,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 119158,
+      "completion_tokens": 464,
+      "total_tokens": 119622,
+      "cost": 0.0152918875,
+      "prompt_tokens_details": {
+        "cached_tokens": 110407,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.008291887500000001,
+        "upstream_inference_prompt_cost": 0.0074218875,
+        "upstream_inference_completions_cost": 0.00087
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 1,
+        "tool_calls_requested": 1,
+        "tool_calls_executed": 1
+      }
+    },
+    "provider": "Google",
+    "finish_reason": "stop",
+    "web_search_requests": 1,
+    "finished_at_utc": "2026-11-24T04:08:06.949606+00:00",
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M03",
+    "web_sources": [
+      {
+        "url": "https://www.espn.com/college-football/scoreboard/_/week/12/year/2026/seasontype/2/group/80",
+        "title": "College Football Scores Week 12, FBS 2026 Regular Season - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50553426/nebraska-snaps-ap-top-25-losing-skid-upsets-ohio-state",
+        "title": "Nebraska snaps AP Top 25 losing skid, upsets Ohio State - ESPN"
+      },
+      {
+        "url": "https://www.teamrankings.com/college-football-scores-week-12",
+        "title": "2026-2027 College Football Week 12 Scores on TeamRankings.com"
+      }
+    ]
+  },
+  {
+    "attempt": 1,
+    "model": "deepseek/deepseek-v4.1-flash-1017",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:05:19.605783+00:00",
+    "accounted_usd": 0.033260492,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 111617,
+      "completion_tokens": 1286,
+      "total_tokens": 112903,
+      "cost": 0.033260492,
+      "prompt_tokens_details": {
+        "cached_tokens": 53632,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.019260492,
+        "upstream_inference_prompt_cost": 0.017717292,
+        "upstream_inference_completions_cost": 0.0015432
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "CoreWeave",
+    "finish_reason": "stop",
+    "web_search_requests": 0,
+    "finished_at_utc": "2026-11-24T04:05:27.368119+00:00",
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M04",
+    "web_sources": [
+      {
+        "url": "https://www.espn.com/college-football/scoreboard/_/week/12/year/2026/seasontype/2/group/80",
+        "title": "College Football Scores Week 12, FBS 2026 Regular Season - ESPN"
+      },
+      {
+        "url": "https://www.teamrankings.com/college-football-scores-week-12",
+        "title": "2026-2027 College Football Week 12 Scores on TeamRankings.com"
+      },
+      {
+        "url": "https://www.secsports.com/schedule/football?view=",
+        "title": "Schedule - Football - Southeastern Conference"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/page/mondaytakeaways112326/2026-college-football-takeaways-week-12",
+        "title": "College football takeaways - Lasting impressions from Week 12 - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50552244/projecting-2026-playoff-top-12-week-12-cfp",
+        "title": "College Football Playoff top 12 projection after Week 12 - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/rankings",
+        "title": "2026 College Football Rankings - ESPN"
+      }
+    ]
+  },
+  {
+    "attempt": 2,
+    "model": "deepseek/deepseek-v4.1-flash-1017",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:06:08.851963+00:00",
+    "accounted_usd": 0.017901584,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 112840,
+      "completion_tokens": 1321,
+      "total_tokens": 114161,
+      "cost": 0.017901584,
+      "prompt_tokens_details": {
+        "cached_tokens": 107264,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.003901584,
+        "upstream_inference_prompt_cost": 0.0023163840000000003,
+        "upstream_inference_completions_cost": 0.0015852
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "CoreWeave",
+    "finish_reason": "stop",
+    "web_search_requests": 0,
+    "finished_at_utc": "2026-11-24T04:06:16.035457+00:00",
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M04",
+    "web_sources": [
+      {
+        "url": "https://www.espn.com/college-football/scoreboard/_/week/12/year/2026/seasontype/2/group/80",
+        "title": "College Football Scores Week 12, FBS 2026 Regular Season - ESPN"
+      },
+      {
+        "url": "https://www.secsports.com/schedule/football?view=",
+        "title": "Schedule - Football - Southeastern Conference"
+      },
+      {
+        "url": "https://www.secsports.com/championships/football-championship",
+        "title": "SEC Football Championship - Southeastern Conference"
+      },
+      {
+        "url": "https://www.sports-reference.com/cfb/schools/utah/2026-schedule.html",
+        "title": "2026 Utah Utes Schedule and Results | College Football at Sports-Reference.com"
+      },
+      {
+        "url": "https://www.espn.com/college-football/scoreboard/_/week/12/year/2026/seasontype/2/group/80",
+        "title": "College Football Scores Week 12, FBS 2026 Regular Season - ESPN"
+      },
+      {
+        "url": "https://www.sports-reference.com/cfb/schools/ucla/2026-schedule.html",
+        "title": "2026 UCLA Bruins Schedule and Results | College Football at Sports-Reference.com"
+      }
+    ]
+  },
+  {
+    "attempt": 3,
+    "model": "deepseek/deepseek-v4.1-flash-1017",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:07:38.748411+00:00",
+    "accounted_usd": 0.016971284,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 109631,
+      "completion_tokens": 1348,
+      "total_tokens": 110979,
+      "cost": 0.016971284,
+      "prompt_tokens_details": {
+        "cached_tokens": 107264,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0029712840000000003,
+        "upstream_inference_prompt_cost": 0.001353684,
+        "upstream_inference_completions_cost": 0.0016175999999999999
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "CoreWeave",
+    "finish_reason": "stop",
+    "web_search_requests": 2,
+    "finished_at_utc": "2026-11-24T04:07:45.318140+00:00",
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M04",
+    "web_sources": [
+      {
+        "url": "https://www.secsports.com/news/2026/11/no-1-georgia-vaporizes-no-21-south-carolina-to-secure-spot-in-sec-championship",
+        "title": "No. 1 Georgia vaporizes No. 21 South Carolina to secure spot in SEC Championship - Southeastern Conference"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50558713/georgia-clinches-sec-title-game-berth-win-south-carolina",
+        "title": "Georgia clinches SEC title game berth with win at South Carolina - ESPN"
+      },
+      {
+        "url": "https://www.secsports.com/videos/2026/11/kirby-smart-emphasizes-patience-in-georgias-dominance-on-the-road",
+        "title": "Kirby Smart emphasizes patience in Georgia's dominance on the road - Southeastern Conference"
+      },
+      {
+        "url": "https://www.espn.com/college-football/recap/_/gameId/401856752",
+        "title": "Oklahoma 28-7 Texas A&M (Nov 21, 2026) Game Recap - ESPN"
+      },
+      {
+        "url": "https://www.secsports.com/news/2026/11/john-mateer-propels-no-22-oklahoma-past-texas-am",
+        "title": "John Mateer propels No. 22 Oklahoma past Texas A&M - Southeastern Conference"
+      },
+      {
+        "url": "https://cfbstats.com/2026/team/522/scoring/defense/gamelog.html",
+        "title": "cfbstats.com - 2026 Oklahoma Sooners Scoring Defense Game Log"
+      }
+    ]
+  },
+  {
+    "attempt": 4,
+    "model": "deepseek/deepseek-v4.1-flash-1017",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:08:06.959735+00:00",
+    "accounted_usd": 0.016581584,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 110072,
+      "completion_tokens": 913,
+      "total_tokens": 110985,
+      "cost": 0.016581584,
+      "prompt_tokens_details": {
+        "cached_tokens": 107264,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.002581584,
+        "upstream_inference_prompt_cost": 0.0014859839999999999,
+        "upstream_inference_completions_cost": 0.0010956
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "CoreWeave",
+    "finish_reason": "stop",
+    "web_search_requests": 2,
+    "finished_at_utc": "2026-11-24T04:08:12.135650+00:00",
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M04",
+    "web_sources": [
+      {
+        "url": "https://www.secsports.com/news/2026/11/no-1-georgia-vaporizes-no-21-south-carolina-to-secure-spot-in-sec-championship",
+        "title": "No. 1 Georgia vaporizes No. 21 South Carolina to secure spot in SEC Championship - Southeastern Conference"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50558713/georgia-clinches-sec-title-game-berth-win-south-carolina",
+        "title": "Georgia clinches SEC title game berth with win at South Carolina - ESPN"
+      },
+      {
+        "url": "https://www.secsports.com/videos/2026/11/kirby-smart-emphasizes-patience-in-georgias-dominance-on-the-road",
+        "title": "Kirby Smart emphasizes patience in Georgia's dominance on the road - Southeastern Conference"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50553426/nebraska-snaps-ap-top-25-losing-skid-upsets-ohio-state",
+        "title": "Nebraska snaps AP Top 25 losing skid, upsets Ohio State - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50555411/preseason-no-1-ohio-state-sees-cfp-hopes-end-4th-loss",
+        "title": "Preseason No. 1 Ohio State sees CFP hopes end with 4th loss - ESPN"
+      },
+      {
+        "url": "https://bigten.org/boxscore.aspx?id=7ltyipP022aUJKmSgYVs3wXi7up73ghniwD5ElWyd07J7BNseBaMQePf0fY%2F3yUPXIzsSucBEtEUpI6RCrVyJ9BLTZn3lO71K6u2a%2FkKs6MrkcfK60ORqgY4Ac5UYM4hqGxVbPvX8d1lkaBlqJVBoS1%2B8aSpV7IGH31a%2FCHl9Po%3D&path=football",
+        "title": "Nebraska vs Ohio St. - Football - 11/21/2026 - Box Score - Big Ten Conference"
+      }
+    ]
+  },
+  {
+    "attempt": 1,
+    "model": "z-ai/glm-5.3-flash",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:05:27.370836+00:00",
+    "accounted_usd": 0.021130481700000002,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 103995,
+      "completion_tokens": 1883,
+      "total_tokens": 105878,
+      "cost": 0.021130481700000002,
+      "prompt_tokens_details": {
+        "cached_tokens": 49152,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 792,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0071304817,
+        "upstream_inference_prompt_cost": 0.0064996767,
+        "upstream_inference_completions_cost": 0.000630805
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "DeepInfra",
+    "finish_reason": "stop",
+    "web_search_requests": 0,
+    "finished_at_utc": "2026-11-24T04:05:44.436166+00:00",
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M05",
+    "web_sources": [
+      {
+        "url": "https://www.sports-reference.com/cfb/years/2026-polls.html",
+        "title": "2026 College Football Polls  | College Football at Sports-Reference.com"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50448424",
+        "title": "Georgia takes CFP's top spot, Notre Dame leaps up to No. 5 - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50514170/cfp-2026-third-committee-top-25-bracket",
+        "title": "College Football Playoff 2026 - Byes, bracket and new top 25 - ESPN"
+      },
+      {
+        "url": "https://www.sports-reference.com/cfb/schools/utah/2026/gamelog/",
+        "title": "Utah Utes 2026 Game Log | College Football at Sports-Reference.com"
+      },
+      {
+        "url": "https://www.espn.com/college-football/game/_/gameId/401856849/byu-utah",
+        "title": "Utah 28-20 BYU (Nov 7, 2026) Final Score - ESPN"
+      },
+      {
+        "url": "https://www.sports-reference.com/cfb/boxscores/2026-11-07-utah.html",
+        "title": "BYU at Utah Box Score, November 7, 2026 | College Football at Sports-Reference.com"
+      }
+    ]
+  },
+  {
+    "attempt": 2,
+    "model": "z-ai/glm-5.3-flash",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:06:16.220652+00:00",
+    "accounted_usd": 0.0014442587,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 49359,
+      "completion_tokens": 1300,
+      "total_tokens": 50659,
+      "cost": 0.0014442587,
+      "prompt_tokens_details": {
+        "cached_tokens": 49152,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 730,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0014442587,
+        "upstream_inference_prompt_cost": 0.0010087587,
+        "upstream_inference_completions_cost": 0.0004355
+      }
+    },
+    "provider": "DeepInfra",
+    "finish_reason": "stop",
+    "web_search_requests": 0,
+    "finished_at_utc": "2026-11-24T04:06:25.281183+00:00",
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M05",
+    "web_sources": []
+  },
+  {
+    "attempt": 3,
+    "model": "z-ai/glm-5.3-flash",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:07:45.320899+00:00",
+    "accounted_usd": 0.01698594,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 101322,
+      "completion_tokens": 1510,
+      "total_tokens": 102832,
+      "cost": 0.01698594,
+      "prompt_tokens_details": {
+        "cached_tokens": 49728,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 550,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00998594,
+        "upstream_inference_prompt_cost": 0.00923094,
+        "upstream_inference_completions_cost": 0.000755
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 1,
+        "tool_calls_requested": 1,
+        "tool_calls_executed": 1
+      }
+    },
+    "provider": "Together",
+    "finish_reason": "stop",
+    "web_search_requests": 1,
+    "finished_at_utc": "2026-11-24T04:07:56.858121+00:00",
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M05",
+    "web_sources": [
+      {
+        "url": "https://www.espn.com/college-football/recap?gameId=401856872",
+        "title": "Utah 38-17 TCU (Nov 21, 2026) Game Recap - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/scoreboard/_/week/13/year/2026/seasontype/2",
+        "title": "College Football Schedule Week 13, 2026 Regular Season - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50448424",
+        "title": "Georgia takes CFP's top spot, Notre Dame leaps up to No. 5 - ESPN"
+      }
+    ]
+  },
+  {
+    "attempt": 1,
+    "model": "minimax/minimax-m3.1-flash",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:05:28.941920+00:00",
+    "accounted_usd": 0.01624576,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 101968,
+      "completion_tokens": 1092,
+      "total_tokens": 103060,
+      "cost": 0.01624576,
+      "prompt_tokens_details": {
+        "cached_tokens": 49664,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 506,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00924576,
+        "upstream_inference_prompt_cost": 0.00859056,
+        "upstream_inference_completions_cost": 0.0006552000000000001
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 1,
+        "tool_calls_requested": 1,
+        "tool_calls_executed": 1
+      }
+    },
+    "provider": "DigitalOcean",
+    "finish_reason": "stop",
+    "web_search_requests": 0,
+    "finished_at_utc": "2026-11-24T04:05:36.397333+00:00",
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M06",
+    "web_sources": [
+      {
+        "url": "https://www.espn.com/college-football/rankings",
+        "title": "2026 College Football Rankings - ESPN"
+      },
+      {
+        "url": "https://www.sports-reference.com/cfb/schools/notre-dame/2026.html",
+        "title": "2026 Notre Dame Fighting Irish Stats | College Football at Sports-Reference.com"
+      },
+      {
+        "url": "https://www.secsports.com/news/2026/11/no-1-georgia-vaporizes-no-21-south-carolina-to-secure-spot-in-sec-championship",
+        "title": "No. 1 Georgia vaporizes No. 21 South Carolina to secure spot in SEC Championship - Southeastern Conference"
+      }
+    ]
+  },
+  {
+    "attempt": 2,
+    "model": "minimax/minimax-m3.1-flash",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:06:27.485335+00:00",
+    "accounted_usd": 0.0168197,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 103318,
+      "completion_tokens": 1190,
+      "total_tokens": 104508,
+      "cost": 0.0168197,
+      "prompt_tokens_details": {
+        "cached_tokens": 99200,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 532,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0028197,
+        "upstream_inference_prompt_cost": 0.0021057,
+        "upstream_inference_completions_cost": 0.000714
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "DigitalOcean",
+    "finish_reason": "stop",
+    "web_search_requests": 0,
+    "finished_at_utc": "2026-11-24T04:06:34.700924+00:00",
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M06",
+    "web_sources": [
+      {
+        "url": "https://www.espn.com/college-football/scoreboard/_/week/12/year/2026/seasontype/2/group/80",
+        "title": "College Football Scores Week 12, FBS 2026 Regular Season - ESPN"
+      },
+      {
+        "url": "https://www.secsports.com/news/2026/11/no-1-georgia-vaporizes-no-21-south-carolina-to-secure-spot-in-sec-championship",
+        "title": "No. 1 Georgia vaporizes No. 21 South Carolina to secure spot in SEC Championship - Southeastern Conference"
+      },
+      {
+        "url": "https://www.espn.com/college-football/recap?gameId=401856872",
+        "title": "Utah 38-17 TCU (Nov 21, 2026) Game Recap - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/game/_/gameId/401858514/oregon-ohio-state",
+        "title": "Oregon 41-28 Ohio State (Nov 7, 2026) Final Score - ESPN"
+      },
+      {
+        "url": "https://www.sports-reference.com/cfb/conferences/big-ten/2026-schedule.html",
+        "title": "2026 Big Ten Conference Schedule and Results | College Football at Sports-Reference.com"
+      },
+      {
+        "url": "https://bigten.org/news/2026/11/23/football-far-from-finished.aspx",
+        "title": "Far From Finished - Big Ten Conference"
+      }
+    ]
+  },
+  {
+    "attempt": 3,
+    "model": "minimax/minimax-m3.1-flash",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:07:50.886141+00:00",
+    "accounted_usd": 0.01008745,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 101823,
+      "completion_tokens": 2010,
+      "total_tokens": 103833,
+      "cost": 0.01008745,
+      "prompt_tokens_details": {
+        "cached_tokens": 99200,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1446,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00308745,
+        "upstream_inference_prompt_cost": 0.0018814499999999998,
+        "upstream_inference_completions_cost": 0.001206
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 1,
+        "tool_calls_requested": 1,
+        "tool_calls_executed": 1
+      }
+    },
+    "provider": "DigitalOcean",
+    "finish_reason": "stop",
+    "web_search_requests": 1,
+    "finished_at_utc": "2026-11-24T04:08:00.400364+00:00",
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M06",
+    "web_sources": [
+      {
+        "url": "https://www.sports-reference.com/cfb/schools/georgia/2026-schedule.html",
+        "title": "2026 Georgia Bulldogs Schedule and Results | College Football at Sports-Reference.com"
+      },
+      {
+        "url": "https://www.espn.com/college-football/team/schedule/_/id/61/georgia-bulldogs",
+        "title": "Georgia Bulldogs 2026 Regular Season NCAAF Schedule - ESPN"
+      },
+      {
+        "url": "https://www.sports-reference.com/cfb/schools/georgia/2026/gamelog/",
+        "title": "Georgia Bulldogs 2026 Game Log | College Football at Sports-Reference.com"
+      }
+    ]
+  },
+  {
+    "attempt": 1,
+    "model": "minimax/minimax-m3.1-flash",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:06:34.703205+00:00",
+    "accounted_usd": 0.02572388,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 102352,
+      "completion_tokens": 5155,
+      "total_tokens": 107507,
+      "cost": 0.02572388,
+      "prompt_tokens_details": {
+        "cached_tokens": 49792,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 5085,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.01172388,
+        "upstream_inference_prompt_cost": 0.00863088,
+        "upstream_inference_completions_cost": 0.0030930000000000003
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "DigitalOcean",
+    "finish_reason": "length",
+    "web_search_requests": 0,
+    "finished_at_utc": "2026-11-24T04:06:45.334802+00:00",
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M07",
+    "web_sources": [
+      {
+        "url": "https://www.secsports.com/news/2026/11/no-1-georgia-vaporizes-no-21-south-carolina-to-secure-spot-in-sec-championship",
+        "title": "No. 1 Georgia vaporizes No. 21 South Carolina to secure spot in SEC Championship - Southeastern Conference"
+      },
+      {
+        "url": "https://cfbstats.com/2026/team/648/scoring/offense/gamelog.html",
+        "title": "cfbstats.com - 2026 South Carolina Gamecocks Scoring Offense Game Log"
+      },
+      {
+        "url": "https://www.sports-reference.com/cfb/schools/south-carolina/2026-schedule.html",
+        "title": "2026 South Carolina Gamecocks Schedule and Results | College Football at Sports-Reference.com"
+      },
+      {
+        "url": "https://www.espn.com/college-football/game/_/gameId/401856864/utah-arizona",
+        "title": "Utah 40-39 Arizona (Nov 14, 2026) Final Score - ESPN"
+      },
+      {
+        "url": "https://www.sports-reference.com/cfb/boxscores/2026-11-14-arizona.html",
+        "title": "Utah at Arizona Box Score, November 14, 2026 | College Football at Sports-Reference.com"
+      },
+      {
+        "url": "https://africa.espn.com/college-football/story/_/id/50488650/no-2-utah-survives-late-70-yard-td-thriller-vs-arizona",
+        "title": "No. 2 Utah survives on late 70-yard TD in thriller vs. Arizona - ESPN"
+      }
+    ]
+  },
+  {
+    "attempt": 2,
+    "model": "minimax/minimax-m3.1-flash",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:06:45.335598+00:00",
+    "accounted_usd": 0.13,
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M07"
+  },
+  {
+    "attempt": 3,
+    "model": "minimax/minimax-m3.1-flash",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:08:25.108483+00:00",
+    "accounted_usd": 0.01668455,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 103653,
+      "completion_tokens": 881,
+      "total_tokens": 104534,
+      "cost": 0.01668455,
+      "prompt_tokens_details": {
+        "cached_tokens": 99200,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 266,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00268455,
+        "upstream_inference_prompt_cost": 0.00215595,
+        "upstream_inference_completions_cost": 0.0005286
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "DigitalOcean",
+    "finish_reason": "stop",
+    "web_search_requests": 2,
+    "finished_at_utc": "2026-11-24T04:08:32.467004+00:00",
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M07",
+    "web_sources": [
+      {
+        "url": "https://www.espn.com/college-football/rankings",
+        "title": "2026 College Football Rankings - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50545207/2026-college-football-power-rankings-top-25-week-12",
+        "title": "College football Power Rankings - Week 12 chaos shifts top 25 - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/scoreboard/_/week/12/year/2026/seasontype/2/group/80",
+        "title": "College Football Scores Week 12, FBS 2026 Regular Season - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/game/_/gameId/401858514/oregon-ohio-state",
+        "title": "Oregon 41-28 Ohio State (Nov 7, 2026) Final Score - ESPN"
+      },
+      {
+        "url": "https://bigten.org/news/2026/11/23/football-far-from-finished.aspx",
+        "title": "Far From Finished - Big Ten Conference"
+      },
+      {
+        "url": "https://www.espn.com/college-football/recap/_/gameId/401858528",
+        "title": "Michigan 18-16 UCLA (Nov 21, 2026) Game Recap - ESPN"
+      }
+    ]
+  },
+  {
+    "attempt": 1,
+    "model": "z-ai/glm-5.3-flash",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:08:32.470832+00:00",
+    "accounted_usd": 0.0140469997,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 101911,
+      "completion_tokens": 2259,
+      "total_tokens": 104170,
+      "cost": 0.0140469997,
+      "prompt_tokens_details": {
+        "cached_tokens": 49152,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 972,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0070469997,
+        "upstream_inference_prompt_cost": 0.0062902347,
+        "upstream_inference_completions_cost": 0.000756765
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 1,
+        "tool_calls_requested": 1,
+        "tool_calls_executed": 1
+      }
+    },
+    "provider": "DeepInfra",
+    "finish_reason": "stop",
+    "web_search_requests": 1,
+    "finished_at_utc": "2026-11-24T04:08:51.901170+00:00",
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M08",
+    "web_sources": [
+      {
+        "url": "https://www.espn.com/college-football/rankings",
+        "title": "2026 College Football Rankings - ESPN"
+      },
+      {
+        "url": "https://www.sports-reference.com/cfb/years/2026-polls.html",
+        "title": "2026 College Football Polls  | College Football at Sports-Reference.com"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50448424",
+        "title": "Georgia takes CFP's top spot, Notre Dame leaps up to No. 5 - ESPN"
+      }
+    ]
+  },
+  {
+    "attempt": 1,
+    "model": "deepseek/deepseek-v4.1-flash-1017",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:08:37.924492+00:00",
+    "accounted_usd": 0.0488021,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 110783,
+      "completion_tokens": 1306,
+      "total_tokens": 112089,
+      "cost": 0.0488021,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0348021,
+        "upstream_inference_prompt_cost": 0.0332349,
+        "upstream_inference_completions_cost": 0.0015672000000000001
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "CoreWeave",
+    "finish_reason": "stop",
+    "web_search_requests": 2,
+    "finished_at_utc": "2026-11-24T04:08:46.145561+00:00",
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M09",
+    "web_sources": [
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50416773/",
+        "title": "Freeman, Fighting Irish revel in 'special' win over Miami - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/recap?gameId=401858291",
+        "title": "Notre Dame 31-24 Miami (Nov 7, 2026) Game Recap - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/recap/_/gameId/401858291",
+        "title": "Notre Dame 31-24 Miami (Nov 7, 2026) Game Recap - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50207876/no-8-byu-rallies-outlasts-no-2-notre-dame-move-6-0",
+        "title": "No. 8 BYU rallies, outlasts No. 2 Notre Dame to move to 6-0 - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/recap?gameId=401856809",
+        "title": "BYU 28-24 Notre Dame (Oct 17, 2026) Game Recap - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50219575/byu-respect-beat-notre-dame",
+        "title": "BYU won't 'demand respect' but now the Cougars have it - ESPN"
+      }
+    ]
+  },
+  {
+    "attempt": 2,
+    "model": "deepseek/deepseek-v4.1-flash-1017",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:08:46.146323+00:00",
+    "accounted_usd": 0.018219584,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 112152,
+      "completion_tokens": 1758,
+      "total_tokens": 113910,
+      "cost": 0.018219584,
+      "prompt_tokens_details": {
+        "cached_tokens": 107264,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.004219584,
+        "upstream_inference_prompt_cost": 0.002109984,
+        "upstream_inference_completions_cost": 0.0021096
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "CoreWeave",
+    "finish_reason": "stop",
+    "web_search_requests": 2,
+    "finished_at_utc": "2026-11-24T04:08:53.937765+00:00",
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M09",
+    "web_sources": [
+      {
+        "url": "https://www.sports-reference.com/cfb/schools/utah/2026-schedule.html",
+        "title": "2026 Utah Utes Schedule and Results | College Football at Sports-Reference.com"
+      },
+      {
+        "url": "https://www.espn.com/college-football/team/schedule/_/id/254",
+        "title": "Utah Utes 2026 Regular Season NCAAF Schedule - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/recap/_/gameId/401856849",
+        "title": "Utah 28-20 BYU (Nov 7, 2026) Game Recap - ESPN"
+      },
+      {
+        "url": "https://www.sports-reference.com/cfb/schools/georgia/2026-schedule.html",
+        "title": "2026 Georgia Bulldogs Schedule and Results | College Football at Sports-Reference.com"
+      },
+      {
+        "url": "https://www.secsports.com/championships/football-championship",
+        "title": "SEC Football Championship - Southeastern Conference"
+      },
+      {
+        "url": "https://www.espn.com/college-football/team/schedule/_/id/61/georgia-bulldogs",
+        "title": "Georgia Bulldogs 2026 Regular Season NCAAF Schedule - ESPN"
+      }
+    ]
+  },
+  {
+    "attempt": 1,
+    "model": "google/gemini-3.8-flash",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:08:47.501712+00:00",
+    "accounted_usd": 0.03284365,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 118029,
+      "completion_tokens": 476,
+      "total_tokens": 118505,
+      "cost": 0.03284365,
+      "prompt_tokens_details": {
+        "cached_tokens": 57214,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.02584365,
+        "upstream_inference_prompt_cost": 0.02495115,
+        "upstream_inference_completions_cost": 0.0008925000000000001
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 1,
+        "tool_calls_requested": 1,
+        "tool_calls_executed": 1
+      }
+    },
+    "provider": "Google",
+    "finish_reason": "stop",
+    "web_search_requests": 1,
+    "finished_at_utc": "2026-11-24T04:09:18.591605+00:00",
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M10",
+    "web_sources": [
+      {
+        "url": "https://www.sports-reference.com/cfb/schools/wake-forest/2026.html",
+        "title": "2026 Wake Forest Demon Deacons Stats | College Football at Sports-Reference.com"
+      },
+      {
+        "url": "https://www.sports-reference.com/cfb/schools/wake-forest/2026-schedule.html",
+        "title": "2026 Wake Forest Demon Deacons Schedule and Results | College Football at Sports-Reference.com"
+      },
+      {
+        "url": "https://www.teamrankings.com/college-football/team/wake-forest-demon-deacons",
+        "title": "Wake Forest Demon Deacons: Results, Picks, Power Rankings, Odds & Stats on TeamRankings.com"
+      }
+    ]
+  },
+  {
+    "attempt": 1,
+    "model": "anthropic/claude-haiku-5.5",
+    "requested_temperature": null,
+    "started_at_utc": "2026-11-24T04:08:53.940371+00:00",
+    "accounted_usd": 0.027052975,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 152619,
+      "completion_tokens": 1952,
+      "total_tokens": 154571,
+      "cost": 0.027052975,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 152603,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.020052975,
+        "upstream_inference_prompt_cost": 0.019076975,
+        "upstream_inference_completions_cost": 0.0009760000000000001
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 1,
+        "tool_calls_requested": 1,
+        "tool_calls_executed": 1
+      }
+    },
+    "provider": "Anthropic",
+    "finish_reason": "stop",
+    "web_search_requests": 1,
+    "finished_at_utc": "2026-11-24T04:09:05.295624+00:00",
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M11",
+    "web_sources": [
+      {
+        "url": "https://www.espn.com/story/_/id/50446572",
+        "title": "College Football Playoff 2026 - Byes, bracket and new top 25 - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50448424",
+        "title": "Georgia takes CFP's top spot, Notre Dame leaps up to No. 5 - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50446592/cfp-top-25-strengths-every-team",
+        "title": "CFP Top 25: Strengths to know for every ranked team - ESPN"
+      }
+    ]
+  },
+  {
+    "attempt": 2,
+    "model": "anthropic/claude-haiku-5.5",
+    "requested_temperature": null,
+    "started_at_utc": "2026-11-24T04:09:05.296123+00:00",
+    "accounted_usd": 0.02690836,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 233816,
+      "completion_tokens": 2486,
+      "total_tokens": 236302,
+      "cost": 0.02690836,
+      "prompt_tokens_details": {
+        "cached_tokens": 152706,
+        "cache_write_tokens": 81092,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.01290836,
+        "upstream_inference_prompt_cost": 0.01166536,
+        "upstream_inference_completions_cost": 0.001243
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "Anthropic",
+    "finish_reason": "stop",
+    "web_search_requests": 2,
+    "finished_at_utc": "2026-11-24T04:09:20.198239+00:00",
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M11",
+    "web_sources": [
+      {
+        "url": "https://www.espn.com/college-football/rankings",
+        "title": "2026 College Football Rankings - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50514170/cfp-2026-third-committee-top-25-bracket",
+        "title": "College Football Playoff 2026 - Byes, bracket and new top 25 - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50448424",
+        "title": "Georgia takes CFP's top spot, Notre Dame leaps up to No. 5 - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/recap/_/gameId/401856740",
+        "title": "Alabama 31-13 LSU (Nov 7, 2026) Game Recap - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/recap?gameId=401856741",
+        "title": "Georgia 42-7 Ole Miss (Nov 7, 2026) Game Recap - ESPN"
+      },
+      {
+        "url": "https://www.secsports.com/news/2026/11/no-2-georgias-defense-smothers-no-10-ole-miss",
+        "title": "No. 2 Georgia's defense smothers No. 10 Ole Miss - Southeastern Conference"
+      }
+    ]
+  },
+  {
+    "attempt": 1,
+    "model": "openai/gpt-6-luna",
+    "requested_temperature": null,
+    "started_at_utc": "2026-11-24T04:09:18.259162+00:00",
+    "accounted_usd": 0.021938480000000003,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 154232,
+      "completion_tokens": 741,
+      "total_tokens": 154973,
+      "cost": 0.021938480000000003,
+      "prompt_tokens_details": {
+        "cached_tokens": 101833,
+        "cache_write_tokens": 52390,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.007938480000000001,
+        "upstream_inference_prompt_cost": 0.00756798,
+        "upstream_inference_completions_cost": 0.0003705
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "OpenAI",
+    "finish_reason": "stop",
+    "web_search_requests": 2,
+    "finished_at_utc": "2026-11-24T04:09:29.172636+00:00",
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M12",
+    "web_sources": [
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50562947/week-12-ap-college-football-poll-reaction-next-top-25",
+        "title": "AP college football Week 12 poll What's next for Top 25 - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50545207/2026-college-football-power-rankings-top-25-week-12",
+        "title": "College football Power Rankings - Week 12 chaos shifts top 25 - ESPN"
+      },
+      {
+        "url": "https://www.sports-reference.com/cfb/years/2026-polls.html",
+        "title": "2026 College Football Polls  | College Football at Sports-Reference.com"
+      }
+    ]
+  },
+  {
+    "attempt": 1,
+    "model": "z-ai/glm-5.3-flash",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:09:20.200935+00:00",
+    "accounted_usd": 0.0087094,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 49366,
+      "completion_tokens": 2609,
+      "total_tokens": 51975,
+      "cost": 0.0087094,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1635,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0087094,
+        "upstream_inference_prompt_cost": 0.0074049,
+        "upstream_inference_completions_cost": 0.0013045
+      }
+    },
+    "provider": "Together",
+    "finish_reason": "stop",
+    "web_search_requests": 0,
+    "finished_at_utc": "2026-11-24T04:09:35.703007+00:00",
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M13",
+    "web_sources": []
+  },
+  {
+    "attempt": 2,
+    "model": "z-ai/glm-5.3-flash",
+    "requested_temperature": 0.3,
+    "started_at_utc": "2026-11-24T04:09:35.703470+00:00",
+    "accounted_usd": 0.0110274,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 101604,
+      "completion_tokens": 1228,
+      "total_tokens": 102832,
+      "cost": 0.0110274,
+      "prompt_tokens_details": {
+        "cached_tokens": 98560,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 635,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0040274,
+        "upstream_inference_prompt_cost": 0.0034134,
+        "upstream_inference_completions_cost": 0.000614
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 1,
+        "tool_calls_requested": 1,
+        "tool_calls_executed": 1
+      }
+    },
+    "provider": "Together",
+    "finish_reason": "stop",
+    "web_search_requests": 1,
+    "finished_at_utc": "2026-11-24T04:09:43.994175+00:00",
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M13",
+    "web_sources": [
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50562947/week-12-ap-college-football-poll-reaction-next-top-25",
+        "title": "AP college football Week 12 poll What's next for Top 25 - ESPN"
+      },
+      {
+        "url": "https://www.sports-reference.com/cfb/years/2026-polls.html",
+        "title": "2026 College Football Polls  | College Football at Sports-Reference.com"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50563638/no-big-ten-football-teams-ap-top-5-first-21",
+        "title": "No Big Ten football teams in AP top 5 for first time since '21 - ESPN"
+      }
+    ]
+  },
+  {
+    "attempt": 1,
+    "model": "openai/gpt-6-luna",
+    "requested_temperature": null,
+    "started_at_utc": "2026-11-24T04:09:30.409382+00:00",
+    "accounted_usd": 0.022087555000000002,
+    "http_status": 200,
+    "usage": {
+      "prompt_tokens": 153278,
+      "completion_tokens": 1173,
+      "total_tokens": 154451,
+      "cost": 0.022087555000000002,
+      "prompt_tokens_details": {
+        "cached_tokens": 101378,
+        "cache_write_tokens": 51891,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.008087555,
+        "upstream_inference_prompt_cost": 0.007501055,
+        "upstream_inference_completions_cost": 0.0005865
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2,
+        "tool_calls_requested": 2,
+        "tool_calls_executed": 2
+      }
+    },
+    "provider": "OpenAI",
+    "finish_reason": "stop",
+    "web_search_requests": 2,
+    "finished_at_utc": "2026-11-24T04:09:43.409966+00:00",
+    "group": "mixed|statistical_research|0.3",
+    "agent_id": "M14",
+    "web_sources": [
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50564492/2026-week-12-college-football-playoff-bowl-projections",
+        "title": "2026-27 Week 12 College Football Playoff, bowl projections - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/story/_/id/50545207/2026-college-football-power-rankings-top-25-week-12",
+        "title": "College football Power Rankings - Week 12 chaos shifts top 25 - ESPN"
+      },
+      {
+        "url": "https://www.espn.com/college-football/scoreboard/_/week/12/year/2026/seasontype/2/group/80",
+        "title": "College Football Scores Week 12, FBS 2026 Regular Season - ESPN"
+      }
+    ]
+  }
+]

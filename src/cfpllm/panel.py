@@ -7,7 +7,7 @@ from hashlib import sha256
 import json
 import os
 from pathlib import Path
-from threading import Lock
+from threading import Condition
 from zoneinfo import ZoneInfo
 
 import requests
@@ -58,7 +58,11 @@ def plan(profile: str = DEFAULT_WEEKLY_PROFILE):
                     yield group, condition, temperature, member, model
 
 
-def normalize_ballot(content, candidates, member):
+def normalize_ballot(content, candidates, member, *, allow_search_preamble=False):
+    if allow_search_preamble:
+        first, separator, remainder = content.strip().partition("\n\n")
+        if separator and len(first) <= 300 and "{" not in first and remainder.startswith(("{", "```")):
+            content = remainder
     parsed = parse_ballot(content)
     if parsed.get("agent_id") is None:
         parsed["agent_id"] = member.agent_id
@@ -83,7 +87,10 @@ def main(argv=None):
     parser.add_argument("--profile", choices=WEEKLY_PROFILES, default=DEFAULT_WEEKLY_PROFILE,
                         help="Committee roster version (default: %(default)s).")
     parser.add_argument("--config", default="config.yaml")
+    parser.add_argument("--budget", type=float, default=BUDGET, help="Maximum USD for this run.")
     args = parser.parse_args(argv)
+    if not 0 < args.budget <= BUDGET:
+        parser.error(f"--budget must be positive and no more than {BUDGET:g}.")
     config = load_config(args.config)
     output_dir = {"weekly-v1": "weekly-panel", "weekly-v2": "weekly-panel-v2", "weekly-v3": "weekly-panel-v3"}[args.profile]
     root = config.ballot_dir / output_dir
@@ -100,7 +107,7 @@ def main(argv=None):
     prompts = {condition: user_prompt(packet, condition) for condition in CONDITIONS}
     experiment = {
         "release_id": config.release_id, "packet_sha256": packet_hash, "lock_deadline": deadline.isoformat(),
-        "requested_ballots": len(expected), "max_model_cost_usd": BUDGET,
+        "requested_ballots": len(expected), "max_model_cost_usd": args.budget,
         "model_settings": describe_models(MODELS),
         "conditions": CONDITIONS, "max_attempts_per_ballot": MAX_ATTEMPTS, "max_output_tokens": MAX_OUTPUT,
         "system_prompts": {member.agent_id: system_prompt(member, ordered_rationales=True,
@@ -121,14 +128,22 @@ def run_panel(root, packet, expected, prompts, experiment):
     max_output = experiment["max_output_tokens"]
     max_attempts = experiment["max_attempts_per_ballot"]
     models = experiment["model_settings"]
+    searches = experiment.get("search_by_condition", {})
+    concurrency = 4 if searches else 30
     if datetime.now(timezone.utc) >= deadline:
         raise SystemExit("The pre-release lock deadline has passed.")
     manifest_file = root / "experiment.json"
     if manifest_file.exists():
         original = json.loads(manifest_file.read_text())
-        fixed = set(experiment) - {"model_settings"}
+        fixed = set(experiment) - {"model_settings", "max_model_cost_usd"}
         if any(original.get(k) != experiment[k] for k in fixed):
             raise SystemExit("Existing weekly artifacts use a different packet or configuration.")
+        if original["max_model_cost_usd"] != budget:
+            original.setdefault("budget_changes", []).append({
+                "from_usd": original["max_model_cost_usd"], "to_usd": budget, "at_utc": stamp(),
+            })
+            original["max_model_cost_usd"] = budget
+            save(manifest_file, original)
         if original["model_settings"] != experiment["model_settings"]:
             previous = original["model_settings"]
             changes = [model for model in models if previous.get(model) != models[model]]
@@ -146,12 +161,13 @@ def run_panel(root, packet, expected, prompts, experiment):
         experiment["started_at_utc"] = stamp()
         save(manifest_file, experiment)
     candidates = packet["candidates"]
-    budget_lock = Lock()
+    budget_lock = Condition()
+    in_flight = 0
     accounted = sum(a.get("accounted_usd", 0) for path in (root / "calls").glob("*/*.json")
                     for a in json.loads(path.read_text()))
 
     def collect(case, one_attempt=False):
-        nonlocal accounted
+        nonlocal accounted, in_flight
         group, condition, temperature, member, model = case
         settings = models[model]
         model_id, providers, effort = settings["id"], settings["providers"], settings["reasoning_effort"]
@@ -163,11 +179,14 @@ def run_panel(root, packet, expected, prompts, experiment):
             validate_ballot(ballot, candidates, member.agent_id, member.persona)
             return case, ballot, []
         attempts = json.loads(raw_path.read_text()) if raw_path.exists() else []
+        search = searches.get(condition)
         for attempt in reversed(attempts):
             if attempt.get("model") != model_id or not attempt.get("content"):
                 continue
+            if search and not attempt.get("web_search_requests"):
+                continue
             try:
-                ballot = normalize_ballot(attempt["content"], candidates, member)
+                ballot = normalize_ballot(attempt["content"], candidates, member, allow_search_preamble=bool(search))
             except (ValueError, TypeError, KeyError, IndexError):
                 continue
             save(result_path, ballot)
@@ -178,13 +197,21 @@ def run_panel(root, packet, expected, prompts, experiment):
         # A byte-per-token bound, with chat framing and cache-write headroom.
         reserved = ((len(system.encode()) + len(user.encode()) + 2048) * price_in * 1.5
                     + max_output * price_out) / 1_000_000
-        sent = sum(attempt["model"] == model_id for attempt in attempts)
+        if search:
+            reserved = max(reserved, search["reservation_usd"])
+        sent = sum(attempt["model"] == model_id and not (
+            search and attempt.get("error") == "Provider usage reports no completed web searches."
+            and "content" not in attempt
+        ) for attempt in attempts)
         remaining = min(1, max_attempts - sent) if one_attempt else max_attempts - sent
         for number in range(len(attempts) + 1, len(attempts) + remaining + 1):
             with budget_lock:
+                while accounted + reserved > budget and in_flight and datetime.now(timezone.utc) < deadline:
+                    budget_lock.wait(timeout=2)
                 if accounted + reserved > budget or datetime.now(timezone.utc) >= deadline:
                     return case, None, ["budget or deadline reached"]
                 accounted += reserved
+                in_flight += 1
             attempt = {"attempt": number, "model": model_id, "requested_temperature": temperature,
                        "started_at_utc": stamp(), "accounted_usd": reserved}
             attempts.append(attempt)
@@ -203,6 +230,12 @@ def run_panel(root, packet, expected, prompts, experiment):
                     # These routes omit temperature from advertised capabilities.
                     payload.pop("temperature")
                     attempt["requested_temperature"] = None
+                if search:
+                    payload.update(search["payload"])
+                    if model == "haiku":
+                        # Allow the model to emit a tool call before drafting JSON.
+                        payload.pop("response_format")
+                        payload["tool_choice"] = "required"
                 response = requests.post(
                     "https://openrouter.ai/api/v1/chat/completions",
                     json=payload, headers={"Authorization": f"Bearer {key}"}, timeout=(10, 105),
@@ -218,14 +251,27 @@ def run_panel(root, packet, expected, prompts, experiment):
                     attempt["accounted_usd"] = float(attempt["usage"]["cost"])
                 choice = body["choices"][0]
                 attempt["finish_reason"] = choice.get("finish_reason")
-                attempt["content"] = choice["message"]["content"]
-                ballot = normalize_ballot(attempt["content"] or "", candidates, member)
+                message = choice["message"]
+                attempt["content"] = message["content"]
+                if search:
+                    tool_usage = (attempt["usage"].get("server_tool_use_details")
+                                  or attempt["usage"].get("server_tool_use") or {})
+                    attempt["web_search_requests"] = (
+                        tool_usage.get("web_search_requests", 0)
+                    )
+                    attempt["source_annotations"] = message.get("annotations") or []
+                    if not attempt["web_search_requests"]:
+                        raise ValueError("Provider usage reports no completed web searches.")
+                ballot = normalize_ballot(attempt["content"] or "", candidates, member,
+                                           allow_search_preamble=bool(search))
             except (requests.RequestException, ValueError, TypeError, KeyError, IndexError) as exc:
                 attempt["error"] = str(exc).replace(key, "[redacted]")[:280]
             attempt["finished_at_utc"] = stamp()
             save(raw_path, attempts)
             with budget_lock:
                 accounted += attempt["accounted_usd"] - reserved
+                in_flight -= 1
+                budget_lock.notify_all()
             if ballot is not None:
                 save(result_path, ballot)
                 return case, ballot, attempts
@@ -234,12 +280,12 @@ def run_panel(root, packet, expected, prompts, experiment):
         return case, None, attempts
 
     smoke = [next(case for case in expected if case[-1] == name) for name in models]
-    with ThreadPoolExecutor(max_workers=6) as pool:
+    with ThreadPoolExecutor(max_workers=min(6, concurrency)) as pool:
         for case, ballot, attempts in pool.map(lambda case: collect(case, one_attempt=True), smoke):
             detail = "" if ballot or not attempts else str(attempts[-1])[:420]
             print("Preflight", case[-1], "valid" if ballot else detail, flush=True)
     completed = {}
-    with ThreadPoolExecutor(max_workers=30) as pool:
+    with ThreadPoolExecutor(max_workers=concurrency) as pool:
         futures = [pool.submit(collect, case) for case in expected]
         for index, future in enumerate(as_completed(futures), 1):
             case, result, _ = future.result()
@@ -269,7 +315,18 @@ def run_panel(root, packet, expected, prompts, experiment):
     }
     save(root / "aggregates.json", result)
     save(root / "valid-ballots.json", ballots)
-    save(root / "usage.json", [{key: value for key, value in call.items() if key not in {"content", "error", "completion_id"}} for call in call_log])
+    usage = []
+    for call in call_log:
+        row = {key: value for key, value in call.items()
+               if key not in {"content", "error", "completion_id", "source_annotations"}}
+        if "source_annotations" in call:
+            row["web_sources"] = [
+                {"url": citation["url"], "title": citation.get("title")}
+                for annotation in call["source_annotations"]
+                if (citation := annotation.get("url_citation")) and citation.get("url")
+            ]
+        usage.append(row)
+    save(root / "usage.json", usage)
     print(f"Complete: {len(ballots)} valid of {len(expected)} seats, {len(aggregates)}/{len(counts)} qualifying groups, ${result['cost_usd']:.4f} provider-reported.", flush=True)
     return result, ballots
 

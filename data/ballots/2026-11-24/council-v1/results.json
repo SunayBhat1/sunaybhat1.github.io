@@ -1,0 +1,1453 @@
+{
+  "release_id": "2026-11-24",
+  "packet_sha256": "02361a0d858b38cda40e19bbf4848cc1e63a629e9db32c7d9ac864076afc36ff",
+  "lock_deadline": "2026-11-24T16:00:00-05:00",
+  "models": {
+    "sol": "openai/gpt-6.2-sol",
+    "sonnet": "anthropic/claude-sonnet-5.5",
+    "hydrogen": "google/gemini-4-hydrogen"
+  },
+  "groups": {
+    "mixed|cfp_on_ap_on|0.3": {
+      "poll_ranking": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Miami",
+        "Texas",
+        "Alabama",
+        "Tennessee",
+        "Indiana",
+        "UCLA",
+        "Texas Tech",
+        "Oregon",
+        "Wake Forest",
+        "BYU",
+        "Iowa",
+        "Ohio State",
+        "USC",
+        "Louisville",
+        "Arizona",
+        "Oklahoma",
+        "Houston",
+        "Boise State",
+        "Ole Miss",
+        "Missouri",
+        "Florida",
+        "Kentucky"
+      ],
+      "poll_ballots": 14,
+      "agenda": [
+        {
+          "id": "P1",
+          "teams": [
+            "Miami",
+            "Texas"
+          ],
+          "games": [],
+          "winner": null,
+          "poll_prefers_first": 11,
+          "poll_prefers_second": 3
+        },
+        {
+          "id": "P2",
+          "teams": [
+            "Wake Forest",
+            "BYU"
+          ],
+          "games": [],
+          "winner": null,
+          "poll_prefers_first": 8,
+          "poll_prefers_second": 6
+        },
+        {
+          "id": "P3",
+          "teams": [
+            "Alabama",
+            "Tennessee"
+          ],
+          "games": [
+            {
+              "winner": "Tennessee",
+              "score": "Tennessee 26, Alabama 10",
+              "date": "2026-10-17"
+            }
+          ],
+          "winner": "Tennessee",
+          "poll_prefers_first": 12,
+          "poll_prefers_second": 2
+        },
+        {
+          "id": "P4",
+          "teams": [
+            "Iowa",
+            "Ohio State"
+          ],
+          "games": [
+            {
+              "winner": "Ohio State",
+              "score": "Iowa 14, Ohio State 31",
+              "date": "2026-10-03"
+            }
+          ],
+          "winner": "Ohio State",
+          "poll_prefers_first": 6,
+          "poll_prefers_second": 8
+        }
+      ],
+      "proposed": {
+        "sol": {
+          "ranking": [
+            "Georgia",
+            "Utah",
+            "Notre Dame",
+            "Miami",
+            "Texas",
+            "Tennessee",
+            "Alabama",
+            "UCLA",
+            "Texas Tech",
+            "Wake Forest",
+            "BYU",
+            "Oregon",
+            "Indiana",
+            "USC",
+            "Ohio State",
+            "Iowa",
+            "Oklahoma",
+            "Arizona",
+            "Houston",
+            "Boise State",
+            "Missouri",
+            "Florida",
+            "Ole Miss",
+            "Louisville",
+            "Liberty"
+          ],
+          "pair_decisions": [
+            {
+              "id": "P1",
+              "higher": "Miami",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "Miami and Texas both won nine FBS games against schedules with similar strength proxies (.571 and .588). Miami won 33–20 at Wake Forest and lost only at Notre Dame. Texas won at Tennessee and LSU, but lost to Oklahoma at a neutral site and to Florida at home."
+            },
+            {
+              "id": "P2",
+              "higher": "Wake Forest",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "BYU beat Notre Dame 28–24 and played the stronger schedule by the packet’s proxy (.541 to .430). Wake Forest went 9–1 against FBS opponents with six road wins, including 30–27 at Louisville and 49–7 at SMU. Its only loss was to Miami, while BYU lost at Utah and UCF."
+            },
+            {
+              "id": "P3",
+              "higher": "Tennessee",
+              "winner": "Tennessee",
+              "basis": "direct_game",
+              "evidence": "Tennessee beat Alabama 26–10 on October 17. Both went 8–2 against FBS opponents and beat LSU, Kentucky and Texas A&M. Alabama had a modest schedule-strength edge and beat South Carolina, which beat Tennessee, but those differences do not outweigh the 16-point direct result."
+            },
+            {
+              "id": "P4",
+              "higher": "Ohio State",
+              "winner": "Ohio State",
+              "basis": "direct_game",
+              "evidence": "Ohio State won 31–14 at Iowa on October 3 and 19–15 at Indiana on October 17. Iowa went 8–2 against FBS opponents to Ohio State’s 7–4, but Ohio State faced the stronger schedule by the packet’s proxy (.559 to .448) and won their direct matchup by 17 on the road."
+            }
+          ],
+          "review_note": "Georgia’s road wins at Alabama and Ole Miss and its 41–13 win over Oklahoma outweigh Utah’s unbeaten record."
+        },
+        "sonnet": {
+          "ranking": [
+            "Georgia",
+            "Utah",
+            "Notre Dame",
+            "Miami",
+            "Texas",
+            "Alabama",
+            "Tennessee",
+            "Indiana",
+            "UCLA",
+            "Texas Tech",
+            "BYU",
+            "Wake Forest",
+            "Oregon",
+            "Ohio State",
+            "Iowa",
+            "USC",
+            "Louisville",
+            "Arizona",
+            "Houston",
+            "Oklahoma",
+            "Boise State",
+            "Ole Miss",
+            "Missouri",
+            "Florida",
+            "Kentucky"
+          ],
+          "pair_decisions": [
+            {
+              "id": "P1",
+              "higher": "Miami",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "Miami is 10-1 with only a seven-point loss at Notre Dame, a road win at Wake Forest, and FPI 24.3 and SP+ 24.4. Texas is 9-2 with one-score losses to Oklahoma and Florida."
+            },
+            {
+              "id": "P2",
+              "higher": "BYU",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "BYU beat Notre Dame and Arizona and has wins over Arizona State and Iowa State. Wake Forest has the cleaner record but a weaker schedule (SOS proxy 0.43), and BYU is ranked just ahead on schedule and quality wins."
+            },
+            {
+              "id": "P3",
+              "higher": "Alabama",
+              "winner": "Tennessee",
+              "basis": "overall_resume",
+              "evidence": "Tennessee beat Alabama 26-10 at home, but Alabama's résumé is stronger overall. Alabama's loss to Georgia was by only 3 points on the road, and it has a 16.9 mean margin, FPI 24.2, SP+ 22.9, and wins at LSU and over Kentucky and South Carolina. Tennessee lost to South Carolina."
+            },
+            {
+              "id": "P4",
+              "higher": "Ohio State",
+              "winner": "Ohio State",
+              "basis": "direct_game",
+              "evidence": "Ohio State beat Iowa 31-14 at Iowa and has stronger ratings (FPI 23.2, SP+ 24.1), plus a road win at Indiana."
+            }
+          ],
+          "review_note": "Alabama stays above Tennessee despite the head-to-head loss because of the Georgia loss margin, ratings, and Tennessee's South Carolina defeat."
+        },
+        "hydrogen": {
+          "ranking": [
+            "Georgia",
+            "Utah",
+            "Notre Dame",
+            "Miami",
+            "Texas",
+            "Tennessee",
+            "Alabama",
+            "Wake Forest",
+            "Indiana",
+            "UCLA",
+            "Texas Tech",
+            "BYU",
+            "Oregon",
+            "Ohio State",
+            "Iowa",
+            "USC",
+            "Louisville",
+            "Arizona",
+            "Houston",
+            "Oklahoma",
+            "Boise State",
+            "Ole Miss",
+            "Florida",
+            "Missouri",
+            "Liberty"
+          ],
+          "pair_decisions": [
+            {
+              "id": "P1",
+              "higher": "Miami",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "Miami (9-1 FBS, SP+ 24.4, +18.1 mean margin) has one fewer loss than Texas (9-2 FBS, SP+ 22.4, +15.1 mean margin) and owns a road win over Wake Forest."
+            },
+            {
+              "id": "P2",
+              "higher": "Wake Forest",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "Wake Forest (9-1 FBS, FPI 20.156, SP+ 22.6, +23.3 mean margin) holds a stronger record and efficiency profile than BYU (8-2 FBS, FPI 15.318, SP+ 18.0, +6.8 mean margin)."
+            },
+            {
+              "id": "P3",
+              "higher": "Tennessee",
+              "winner": "Tennessee",
+              "basis": "direct_game",
+              "evidence": "Both teams are 8-2 against FBS opponents with comparable SEC resumes, and Tennessee defeated Alabama 26-10 head-to-head on 2026-10-17."
+            },
+            {
+              "id": "P4",
+              "higher": "Ohio State",
+              "winner": "Ohio State",
+              "basis": "direct_game",
+              "evidence": "Ohio State defeated Iowa 31-14 on the road on 2026-10-03 and holds stronger efficiency metrics (FPI 23.2 vs 15.651, SP+ 24.1 vs 17.4) and schedule strength (0.5587 vs 0.4482)."
+            }
+          ],
+          "review_note": "I reversed the poll's preference for Alabama over Tennessee because both are 8-2 FBS in the SEC and Tennessee won the direct game 26-10."
+        }
+      },
+      "revised": {
+        "sol": {
+          "ranking": [
+            "Georgia",
+            "Utah",
+            "Notre Dame",
+            "Miami",
+            "Texas",
+            "Tennessee",
+            "Alabama",
+            "UCLA",
+            "Texas Tech",
+            "Wake Forest",
+            "BYU",
+            "Oregon",
+            "Indiana",
+            "USC",
+            "Ohio State",
+            "Iowa",
+            "Oklahoma",
+            "Arizona",
+            "Houston",
+            "Boise State",
+            "Missouri",
+            "Florida",
+            "Ole Miss",
+            "Louisville",
+            "Liberty"
+          ],
+          "pair_decisions": [
+            {
+              "id": "P1",
+              "higher": "Miami",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "Both won nine FBS games, and their schedule-strength proxies were close (.571 for Miami, .588 for Texas). Miami won 33–20 at Wake Forest and lost only at Notre Dame. Texas won at Tennessee and LSU but lost to Oklahoma at a neutral site and to Florida at home."
+            },
+            {
+              "id": "P2",
+              "higher": "Wake Forest",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "BYU beat Notre Dame 28–24 and faced the stronger schedule by the packet’s proxy (.541 to .430). Wake Forest went 9–1 against FBS opponents to BYU’s 8–2, won six road games including 30–27 at Louisville and 49–7 at SMU, and averaged a 23.3-point FBS margin to BYU’s 6.8."
+            },
+            {
+              "id": "P3",
+              "higher": "Tennessee",
+              "winner": "Tennessee",
+              "basis": "direct_game",
+              "evidence": "Tennessee won 26–10 at home on October 17. Both teams went 8–2 against FBS opponents and beat LSU, Kentucky and Texas A&M. Alabama beat South Carolina, which beat Tennessee, and had a modest schedule-strength edge (.530 to .502), but those advantages do not outweigh the 16-point direct result."
+            },
+            {
+              "id": "P4",
+              "higher": "Ohio State",
+              "winner": "Ohio State",
+              "basis": "direct_game",
+              "evidence": "Ohio State won 31–14 at Iowa on October 3 and also won 19–15 at Indiana. Iowa had the better FBS record (8–2 to 7–4), but Ohio State faced the stronger schedule by the packet’s proxy (.559 to .448) and won the direct matchup by 17 on the road."
+            }
+          ],
+          "review_note": "Georgia’s road wins at Alabama and Ole Miss and its 41–13 win over Oklahoma outweigh Utah’s unbeaten record."
+        },
+        "sonnet": {
+          "ranking": [
+            "Georgia",
+            "Utah",
+            "Notre Dame",
+            "Miami",
+            "Texas",
+            "Tennessee",
+            "Alabama",
+            "UCLA",
+            "Indiana",
+            "Texas Tech",
+            "Wake Forest",
+            "BYU",
+            "Oregon",
+            "Ohio State",
+            "Iowa",
+            "USC",
+            "Louisville",
+            "Arizona",
+            "Houston",
+            "Oklahoma",
+            "Boise State",
+            "Ole Miss",
+            "Florida",
+            "Missouri",
+            "Kentucky"
+          ],
+          "pair_decisions": [
+            {
+              "id": "P1",
+              "higher": "Miami",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "Miami is 9-1 against FBS opponents with a road win at Wake Forest and its only loss at Notre Dame. Texas has two one-score losses, to Oklahoma and Florida."
+            },
+            {
+              "id": "P2",
+              "higher": "Wake Forest",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "Wake Forest is 9-1 against FBS opponents with a +23.3 mean margin and six road wins, including 30-27 at Louisville. BYU's win over Notre Dame is a real counterweight, but its 6.8 mean margin and losses at Utah and UCF leave it behind."
+            },
+            {
+              "id": "P3",
+              "higher": "Tennessee",
+              "winner": "Tennessee",
+              "basis": "direct_game",
+              "evidence": "Tennessee beat Alabama 26-10 at home on 2026-10-17. Both teams are 8-2 against FBS opponents with comparable SEC schedules, and Alabama's better ratings and its win over South Carolina do not outweigh a 16-point direct loss."
+            },
+            {
+              "id": "P4",
+              "higher": "Ohio State",
+              "winner": "Ohio State",
+              "basis": "direct_game",
+              "evidence": "Ohio State won 31-14 at Iowa on 2026-10-03 and also won 19-15 at Indiana. Its schedule proxy is stronger (0.559 vs 0.448), and its FPI and SP+ are higher."
+            }
+          ],
+          "review_note": "Tennessee moves above Alabama because it won the direct game 26-10 and the two have comparable 8-2 FBS records."
+        },
+        "hydrogen": {
+          "ranking": [
+            "Georgia",
+            "Utah",
+            "Notre Dame",
+            "Miami",
+            "Texas",
+            "Tennessee",
+            "Alabama",
+            "Wake Forest",
+            "Indiana",
+            "UCLA",
+            "Texas Tech",
+            "BYU",
+            "Oregon",
+            "Ohio State",
+            "Iowa",
+            "USC",
+            "Louisville",
+            "Arizona",
+            "Houston",
+            "Oklahoma",
+            "Boise State",
+            "Ole Miss",
+            "Florida",
+            "Missouri",
+            "Liberty"
+          ],
+          "pair_decisions": [
+            {
+              "id": "P1",
+              "higher": "Miami",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "Miami (9-1 FBS, SP+ 24.4, +18.1 mean margin) has one fewer loss than Texas (9-2 FBS, SP+ 22.4, +15.1 mean margin) and owns a road win over Wake Forest."
+            },
+            {
+              "id": "P2",
+              "higher": "Wake Forest",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "Wake Forest (9-1 FBS, FPI 20.156, SP+ 22.6, +23.3 mean margin) holds a stronger record and efficiency profile than BYU (8-2 FBS, FPI 15.318, SP+ 18.0, +6.8 mean margin)."
+            },
+            {
+              "id": "P3",
+              "higher": "Tennessee",
+              "winner": "Tennessee",
+              "basis": "direct_game",
+              "evidence": "Both teams are 8-2 against FBS opponents with comparable SEC resumes, and Tennessee defeated Alabama 26-10 head-to-head on 2026-10-17."
+            },
+            {
+              "id": "P4",
+              "higher": "Ohio State",
+              "winner": "Ohio State",
+              "basis": "direct_game",
+              "evidence": "Ohio State defeated Iowa 31-14 on the road on 2026-10-03 and holds stronger efficiency metrics (FPI 23.2 vs 15.651, SP+ 24.1 vs 17.4) and schedule strength (0.5587 vs 0.4482)."
+            }
+          ],
+          "review_note": "I reversed the poll's preference for Alabama over Tennessee because both are 8-2 FBS in the SEC and Tennessee won the direct game 26-10."
+        }
+      },
+      "ranking": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Miami",
+        "Texas",
+        "Tennessee",
+        "Alabama",
+        "UCLA",
+        "Indiana",
+        "Texas Tech",
+        "Wake Forest",
+        "BYU",
+        "Oregon",
+        "Ohio State",
+        "Iowa",
+        "USC",
+        "Louisville",
+        "Arizona",
+        "Houston",
+        "Oklahoma",
+        "Boise State",
+        "Ole Miss",
+        "Florida",
+        "Missouri",
+        "Liberty"
+      ]
+    },
+    "mixed|statistical_research|0.3": {
+      "poll_ranking": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Miami",
+        "Texas",
+        "Alabama",
+        "Tennessee",
+        "Texas Tech",
+        "Wake Forest",
+        "UCLA",
+        "Indiana",
+        "BYU",
+        "Oregon",
+        "Iowa",
+        "USC",
+        "Louisville",
+        "Arizona",
+        "Oklahoma",
+        "Boise State",
+        "Houston",
+        "Ohio State",
+        "Ole Miss",
+        "Florida",
+        "Missouri",
+        "Liberty"
+      ],
+      "poll_ballots": 14,
+      "agenda": [
+        {
+          "id": "P1",
+          "teams": [
+            "Miami",
+            "Texas"
+          ],
+          "games": [],
+          "winner": null,
+          "poll_prefers_first": 10,
+          "poll_prefers_second": 4
+        },
+        {
+          "id": "P2",
+          "teams": [
+            "BYU",
+            "Oregon"
+          ],
+          "games": [],
+          "winner": null,
+          "poll_prefers_first": 9,
+          "poll_prefers_second": 5
+        },
+        {
+          "id": "P3",
+          "teams": [
+            "Alabama",
+            "Tennessee"
+          ],
+          "games": [
+            {
+              "winner": "Tennessee",
+              "score": "Tennessee 26, Alabama 10",
+              "date": "2026-10-17"
+            }
+          ],
+          "winner": "Tennessee",
+          "poll_prefers_first": 12,
+          "poll_prefers_second": 2
+        },
+        {
+          "id": "P4",
+          "teams": [
+            "Texas",
+            "Tennessee"
+          ],
+          "games": [
+            {
+              "winner": "Texas",
+              "score": "Tennessee 17, Texas 20",
+              "date": "2026-09-26"
+            }
+          ],
+          "winner": "Texas",
+          "poll_prefers_first": 14,
+          "poll_prefers_second": 0
+        }
+      ],
+      "proposed": {
+        "sol": {
+          "ranking": [
+            "Georgia",
+            "Utah",
+            "Notre Dame",
+            "Miami",
+            "Texas",
+            "Tennessee",
+            "Alabama",
+            "Wake Forest",
+            "UCLA",
+            "Texas Tech",
+            "BYU",
+            "Indiana",
+            "Oregon",
+            "Iowa",
+            "USC",
+            "Ohio State",
+            "Oklahoma",
+            "Arizona",
+            "Houston",
+            "Missouri",
+            "Florida",
+            "Ole Miss",
+            "Louisville",
+            "Boise State",
+            "Liberty"
+          ],
+          "pair_decisions": [
+            {
+              "id": "P1",
+              "higher": "Miami",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "Miami went 9–1 against FBS opponents, won 33–20 at Wake Forest, and lost only at Notre Dame, 31–24. Texas won at Tennessee and LSU and had a slightly higher schedule-strength proxy (.5884 to .5709), but went 9–2 with losses to Oklahoma and Florida."
+            },
+            {
+              "id": "P2",
+              "higher": "BYU",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "BYU went 8–2 against FBS opponents and beat Notre Dame 28–24, with road losses at unbeaten Utah and UCF. Oregon played the tougher schedule by the packet's proxy (.6091 to .5409) and won at Ohio State and USC, but went 7–3 in FBS play with losses to UCLA, Oklahoma State, and Illinois."
+            },
+            {
+              "id": "P3",
+              "higher": "Tennessee",
+              "winner": "Tennessee",
+              "basis": "direct_game",
+              "evidence": "Tennessee beat Alabama 26–10 at home on October 17. Both went 8–2 against FBS opponents and beat LSU, Kentucky, and Texas A&M. Alabama had a better average FBS margin (+16.9 to +13.8) and beat South Carolina 49–18, while Tennessee lost there 27–24; those differences were not enough to outweigh the 16-point direct result."
+            },
+            {
+              "id": "P4",
+              "higher": "Texas",
+              "winner": "Texas",
+              "basis": "direct_game",
+              "evidence": "Texas won 20–17 at Tennessee on September 26. Both teams had two losses, and Texas added wins over Ohio State, Ole Miss, and Missouri while playing the tougher schedule by the packet's proxy (.5884 to .5018)."
+            }
+          ],
+          "review_note": "Tennessee’s 16-point win over Alabama overturned the first ballot’s order because both teams went 8–2 against FBS opponents and shared three quality wins."
+        },
+        "sonnet": {
+          "ranking": [
+            "Georgia",
+            "Utah",
+            "Notre Dame",
+            "Miami",
+            "Texas",
+            "Tennessee",
+            "Alabama",
+            "Texas Tech",
+            "Wake Forest",
+            "UCLA",
+            "BYU",
+            "Indiana",
+            "Oregon",
+            "Iowa",
+            "USC",
+            "Arizona",
+            "Houston",
+            "Louisville",
+            "Oklahoma",
+            "Boise State",
+            "Ohio State",
+            "Florida",
+            "Ole Miss",
+            "Missouri",
+            "Liberty"
+          ],
+          "pair_decisions": [
+            {
+              "id": "P1",
+              "higher": "Miami",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "Miami is 10-1 with its only loss a 24-31 road game at Notre Dame. It has road wins at Wake Forest and Clemson and the best SP+ (24.4) of the two. Texas is 9-2 with one-score losses to Oklahoma and Florida. The teams did not play."
+            },
+            {
+              "id": "P2",
+              "higher": "BYU",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "BYU is 9-2 with a 28-24 win over Notre Dame and wins over Arizona and TCU. Oregon is 8-3 with losses to UCLA, Illinois and Oklahoma State. Oregon's schedule is stronger and it beat Ohio State and USC, but BYU has fewer losses and a better top win. The teams did not play."
+            },
+            {
+              "id": "P3",
+              "higher": "Tennessee",
+              "winner": "Tennessee",
+              "basis": "direct_game",
+              "evidence": "Tennessee beat Alabama 26-10 at home on 2026-10-17. Alabama has a better margin and ratings, but the 16-point direct result and Tennessee's later LSU win separate two comparable résumés. Alabama's own wins over LSU and Texas A&M do not override that."
+            },
+            {
+              "id": "P4",
+              "higher": "Texas",
+              "winner": "Texas",
+              "basis": "direct_game",
+              "evidence": "Texas beat Tennessee 20-17 at Tennessee on 2026-09-26. Texas also has wins over Ohio State, Ole Miss, Missouri and LSU. Tennessee's loss at South Carolina and Texas's losses to Oklahoma and Florida are of similar weight, so the direct road win decides it."
+            }
+          ],
+          "review_note": "I kept Georgia first and Utah second, and put Notre Dame above Miami because of the direct 31-24 win, while Tennessee edges Alabama on their head-to-head."
+        },
+        "hydrogen": {
+          "ranking": [
+            "Georgia",
+            "Utah",
+            "Notre Dame",
+            "Miami",
+            "Texas",
+            "Tennessee",
+            "Alabama",
+            "Wake Forest",
+            "Texas Tech",
+            "UCLA",
+            "Indiana",
+            "BYU",
+            "Oregon",
+            "Iowa",
+            "USC",
+            "Louisville",
+            "Arizona",
+            "Houston",
+            "Oklahoma",
+            "Boise State",
+            "Ohio State",
+            "Ole Miss",
+            "Florida",
+            "Missouri",
+            "Liberty"
+          ],
+          "pair_decisions": [
+            {
+              "id": "P1",
+              "higher": "Miami",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "Miami (10-1, 9-1 FBS, +18.1 margin) has only a 7-point road loss at Notre Dame and road wins over Wake Forest and Clemson, whereas Texas (9-2) has two losses to 7-4 teams (Oklahoma and Florida)."
+            },
+            {
+              "id": "P2",
+              "higher": "BYU",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "BYU (9-2, 8-2 FBS) owns a head-to-head win over Notre Dame and has one fewer loss than Oregon (8-3, 7-3 FBS)."
+            },
+            {
+              "id": "P3",
+              "higher": "Tennessee",
+              "winner": "Tennessee",
+              "basis": "direct_game",
+              "evidence": "With both teams at 9-2 (8-2 FBS), Tennessee defeated Alabama 26-10 head-to-head on October 17."
+            },
+            {
+              "id": "P4",
+              "higher": "Texas",
+              "winner": "Texas",
+              "basis": "direct_game",
+              "evidence": "With both teams at 9-2, Texas defeated Tennessee 20-17 on the road on September 26 and holds superior schedule strength (0.5884 vs. 0.5018) and efficiency ratings."
+            }
+          ],
+          "review_note": "Honored Tennessee's 26-10 head-to-head victory over Alabama to place the Volunteers ahead of the Crimson Tide among 9-2 SEC contenders, while keeping 10-1 Miami ahead of 9-2 Texas."
+        }
+      },
+      "revised": {
+        "sol": {
+          "ranking": [
+            "Georgia",
+            "Utah",
+            "Notre Dame",
+            "Miami",
+            "Texas",
+            "Tennessee",
+            "Alabama",
+            "Wake Forest",
+            "UCLA",
+            "Texas Tech",
+            "BYU",
+            "Indiana",
+            "Oregon",
+            "Iowa",
+            "USC",
+            "Ohio State",
+            "Arizona",
+            "Houston",
+            "Oklahoma",
+            "Missouri",
+            "Florida",
+            "Ole Miss",
+            "Louisville",
+            "Boise State",
+            "Liberty"
+          ],
+          "pair_decisions": [
+            {
+              "id": "P1",
+              "higher": "Miami",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "Miami went 9–1 against FBS opponents, won 33–20 at Wake Forest and 41–13 at Clemson, and lost only at Notre Dame, 31–24. Texas beat Tennessee and LSU on the road and had a slightly stronger schedule-strength proxy (.5884 vs. .5709), but went 9–2 with losses to Oklahoma and Florida."
+            },
+            {
+              "id": "P2",
+              "higher": "BYU",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "BYU went 8–2 against FBS opponents and beat Notre Dame 28–24 and Arizona 28–17. Oregon had the stronger schedule-strength proxy (.6091 vs. .5409) and won at Ohio State and USC, but went 7–3 in FBS play with losses to UCLA, Illinois, and Oklahoma State."
+            },
+            {
+              "id": "P3",
+              "higher": "Tennessee",
+              "winner": "Tennessee",
+              "basis": "direct_game",
+              "evidence": "Tennessee beat Alabama 26–10 at home on October 17. Both went 8–2 against FBS opponents and beat LSU, Kentucky, and Texas A&M. Alabama averaged a larger FBS scoring margin (+16.9 vs. +13.8) and beat South Carolina 49–18 at home, while Tennessee lost 27–24 at South Carolina."
+            },
+            {
+              "id": "P4",
+              "higher": "Texas",
+              "winner": "Texas",
+              "basis": "direct_game",
+              "evidence": "Texas won 20–17 at Tennessee on September 26. Both finished 9–2 overall, and Texas added wins over Ohio State, Ole Miss, Missouri, and LSU while posting the stronger schedule-strength proxy (.5884 vs. .5018)."
+            }
+          ],
+          "review_note": "Tennessee’s 16-point head-to-head win was decisive because both teams went 8–2 against FBS opponents and beat LSU, Kentucky, and Texas A&M."
+        },
+        "sonnet": {
+          "ranking": [
+            "Georgia",
+            "Utah",
+            "Notre Dame",
+            "Miami",
+            "Texas",
+            "Tennessee",
+            "Alabama",
+            "Wake Forest",
+            "Texas Tech",
+            "UCLA",
+            "BYU",
+            "Indiana",
+            "Oregon",
+            "Iowa",
+            "USC",
+            "Arizona",
+            "Houston",
+            "Louisville",
+            "Oklahoma",
+            "Boise State",
+            "Ohio State",
+            "Florida",
+            "Ole Miss",
+            "Missouri",
+            "Liberty"
+          ],
+          "pair_decisions": [
+            {
+              "id": "P1",
+              "higher": "Miami",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "Miami is 10-1 and its only loss was 24-31 at Notre Dame. It has road wins at Wake Forest (33-20) and Clemson (41-13). Texas is 9-2 with one-score losses to Oklahoma and Florida. The teams did not play."
+            },
+            {
+              "id": "P2",
+              "higher": "BYU",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "BYU is 9-2 and beat Notre Dame 28-24 and Arizona 28-17. Oregon is 8-3 with losses to UCLA, Illinois and Oklahoma State. Oregon has the stronger schedule and wins at Ohio State and USC, but BYU has fewer losses and the better top win. The teams did not play."
+            },
+            {
+              "id": "P3",
+              "higher": "Tennessee",
+              "winner": "Tennessee",
+              "basis": "direct_game",
+              "evidence": "Tennessee beat Alabama 26-10 at home on 2026-10-17. Both teams are 8-2 against FBS opponents and share wins over LSU, Kentucky and Texas A&M. Alabama's better margin and its 49-18 win over South Carolina (Tennessee lost 24-27 there) do not outweigh a 16-point direct result."
+            },
+            {
+              "id": "P4",
+              "higher": "Texas",
+              "winner": "Texas",
+              "basis": "direct_game",
+              "evidence": "Texas won 20-17 at Tennessee on 2026-09-26. Texas also beat Ohio State, Ole Miss, Missouri and LSU, and its schedule-strength proxy is higher (0.588 vs 0.502). Both teams have two losses, so the direct road win decides it."
+            }
+          ],
+          "review_note": "I kept Georgia first, Utah second and Notre Dame above Miami on the direct 31-24 win, and put Tennessee above Alabama and Texas above Tennessee on direct results."
+        },
+        "hydrogen": {
+          "ranking": [
+            "Georgia",
+            "Utah",
+            "Notre Dame",
+            "Miami",
+            "Texas",
+            "Tennessee",
+            "Alabama",
+            "Wake Forest",
+            "Texas Tech",
+            "UCLA",
+            "Indiana",
+            "BYU",
+            "Oregon",
+            "Iowa",
+            "USC",
+            "Louisville",
+            "Arizona",
+            "Houston",
+            "Oklahoma",
+            "Boise State",
+            "Ohio State",
+            "Ole Miss",
+            "Florida",
+            "Missouri",
+            "Liberty"
+          ],
+          "pair_decisions": [
+            {
+              "id": "P1",
+              "higher": "Miami",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "Miami (10-1, 9-1 FBS, +18.1 margin) has only a 7-point road loss at Notre Dame and road wins over Wake Forest and Clemson, whereas Texas (9-2) has two losses to 7-4 teams (Oklahoma and Florida)."
+            },
+            {
+              "id": "P2",
+              "higher": "BYU",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "BYU (9-2, 8-2 FBS) owns a head-to-head win over Notre Dame and has one fewer loss than Oregon (8-3, 7-3 FBS)."
+            },
+            {
+              "id": "P3",
+              "higher": "Tennessee",
+              "winner": "Tennessee",
+              "basis": "direct_game",
+              "evidence": "With both teams at 9-2 (8-2 FBS), Tennessee defeated Alabama 26-10 head-to-head on October 17."
+            },
+            {
+              "id": "P4",
+              "higher": "Texas",
+              "winner": "Texas",
+              "basis": "direct_game",
+              "evidence": "With both teams at 9-2, Texas defeated Tennessee 20-17 on the road on September 26 and holds superior schedule strength (0.5884 vs. 0.5018) and efficiency ratings."
+            }
+          ],
+          "review_note": "Honored Tennessee's 26-10 head-to-head victory over Alabama to place the Volunteers ahead of the Crimson Tide among 9-2 SEC contenders, while keeping 10-1 Miami ahead of 9-2 Texas."
+        }
+      },
+      "ranking": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Miami",
+        "Texas",
+        "Tennessee",
+        "Alabama",
+        "Wake Forest",
+        "Texas Tech",
+        "UCLA",
+        "BYU",
+        "Indiana",
+        "Oregon",
+        "Iowa",
+        "USC",
+        "Arizona",
+        "Houston",
+        "Louisville",
+        "Oklahoma",
+        "Boise State",
+        "Ohio State",
+        "Florida",
+        "Ole Miss",
+        "Missouri",
+        "Liberty"
+      ]
+    },
+    "mixed|pundit_research|0.3": {
+      "poll_ranking": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Texas",
+        "Miami",
+        "Alabama",
+        "Tennessee",
+        "Wake Forest",
+        "Texas Tech",
+        "UCLA",
+        "Indiana",
+        "BYU",
+        "Oregon",
+        "Iowa",
+        "Arizona",
+        "USC",
+        "Oklahoma",
+        "Louisville",
+        "Houston",
+        "Ole Miss",
+        "Florida",
+        "Boise State",
+        "Ohio State",
+        "Missouri",
+        "Liberty"
+      ],
+      "poll_ballots": 14,
+      "agenda": [
+        {
+          "id": "P1",
+          "teams": [
+            "Texas",
+            "Miami"
+          ],
+          "games": [],
+          "winner": null,
+          "poll_prefers_first": 7,
+          "poll_prefers_second": 7
+        },
+        {
+          "id": "P2",
+          "teams": [
+            "BYU",
+            "Oregon"
+          ],
+          "games": [],
+          "winner": null,
+          "poll_prefers_first": 8,
+          "poll_prefers_second": 6
+        },
+        {
+          "id": "P3",
+          "teams": [
+            "Alabama",
+            "Tennessee"
+          ],
+          "games": [
+            {
+              "winner": "Tennessee",
+              "score": "Tennessee 26, Alabama 10",
+              "date": "2026-10-17"
+            }
+          ],
+          "winner": "Tennessee",
+          "poll_prefers_first": 13,
+          "poll_prefers_second": 1
+        },
+        {
+          "id": "P4",
+          "teams": [
+            "Texas",
+            "Tennessee"
+          ],
+          "games": [
+            {
+              "winner": "Texas",
+              "score": "Tennessee 17, Texas 20",
+              "date": "2026-09-26"
+            }
+          ],
+          "winner": "Texas",
+          "poll_prefers_first": 14,
+          "poll_prefers_second": 0
+        }
+      ],
+      "proposed": {
+        "sol": {
+          "ranking": [
+            "Georgia",
+            "Utah",
+            "Notre Dame",
+            "Miami",
+            "Texas",
+            "Tennessee",
+            "Alabama",
+            "Wake Forest",
+            "UCLA",
+            "Texas Tech",
+            "BYU",
+            "Oregon",
+            "Indiana",
+            "Iowa",
+            "USC",
+            "Ohio State",
+            "Arizona",
+            "Houston",
+            "Oklahoma",
+            "Missouri",
+            "Florida",
+            "Ole Miss",
+            "Louisville",
+            "Boise State",
+            "Liberty"
+          ],
+          "pair_decisions": [
+            {
+              "id": "P1",
+              "higher": "Miami",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "Miami's only loss was 31–24 at Notre Dame, and it won 33–20 at Wake Forest and 41–13 at Clemson. Texas beat Tennessee and LSU on the road and faced a slightly stronger FBS schedule by the packet's proxy (0.5884 vs. 0.5709), but lost to both Oklahoma and Florida."
+            },
+            {
+              "id": "P2",
+              "higher": "BYU",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "BYU went 8–2 against FBS opponents and beat Notre Dame 28–24 and Arizona 28–17. Oregon won at Ohio State and USC and had the stronger FBS schedule proxy (0.6091 vs. 0.5409), but went 7–3 against FBS opponents, with losses to UCLA, Oklahoma State and Illinois."
+            },
+            {
+              "id": "P3",
+              "higher": "Tennessee",
+              "winner": "Tennessee",
+              "basis": "direct_game",
+              "evidence": "Tennessee beat Alabama 26–10 on October 17. Both went 8–2 against FBS opponents and beat LSU, Kentucky and Texas A&M. Alabama's stronger schedule proxy (0.5300 vs. 0.5018) and 49–18 win over South Carolina, which beat Tennessee 27–24, were not enough to offset the 16-point direct result."
+            },
+            {
+              "id": "P4",
+              "higher": "Texas",
+              "winner": "Texas",
+              "basis": "direct_game",
+              "evidence": "Texas won 20–17 at Tennessee on September 26. It also went 9–2 against FBS opponents to Tennessee's 8–2 and added a 24–23 win over Ohio State and a 22–21 road win at LSU."
+            }
+          ],
+          "review_note": "Tennessee's 16-point win over Alabama broke the tie between two teams with the same FBS record and three quality wins in common."
+        },
+        "sonnet": {
+          "ranking": [
+            "Georgia",
+            "Utah",
+            "Notre Dame",
+            "Miami",
+            "Texas",
+            "Tennessee",
+            "Alabama",
+            "Wake Forest",
+            "BYU",
+            "Texas Tech",
+            "UCLA",
+            "Indiana",
+            "Oregon",
+            "Iowa",
+            "USC",
+            "Arizona",
+            "Houston",
+            "Louisville",
+            "Oklahoma",
+            "Ole Miss",
+            "Florida",
+            "Boise State",
+            "Ohio State",
+            "Missouri",
+            "Liberty"
+          ],
+          "pair_decisions": [
+            {
+              "id": "P1",
+              "higher": "Miami",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "Texas and Miami have no direct game. Miami is 10-1 with its only loss a 24-31 road defeat to Notre Dame, and it has wins at Wake Forest and Clemson. Texas has two losses, to Oklahoma and Florida, despite wins over Ohio State and Tennessee."
+            },
+            {
+              "id": "P2",
+              "higher": "BYU",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "BYU and Oregon did not play. BYU is 9-2 with a 28-24 win over Notre Dame and a win over Arizona. Oregon has three losses, including to UCLA, Oklahoma State and Illinois, though its wins over Ohio State and USC are strong."
+            },
+            {
+              "id": "P3",
+              "higher": "Tennessee",
+              "winner": "Tennessee",
+              "basis": "direct_game",
+              "evidence": "Tennessee beat Alabama 26-10 at home on 2026-10-17. Alabama has stronger ratings (FPI 24.2 vs 19.1) and wins over LSU and Texas A&M, but the records are comparable and that does not outweigh a 16-point head-to-head loss. Tennessee also beat LSU 27-13."
+            },
+            {
+              "id": "P4",
+              "higher": "Texas",
+              "winner": "Texas",
+              "basis": "direct_game",
+              "evidence": "Texas won 20-17 at Tennessee on 2026-09-26. Texas also has wins over Ohio State and LSU, and its record is 9-2, equal to Tennessee's."
+            }
+          ],
+          "review_note": "I ranked Tennessee above Alabama because its 26-10 head-to-head win outweighs Alabama's ratings edge, with Texas above both on its win at Tennessee."
+        },
+        "hydrogen": {
+          "ranking": [
+            "Georgia",
+            "Utah",
+            "Notre Dame",
+            "Miami",
+            "Texas",
+            "Tennessee",
+            "Alabama",
+            "Wake Forest",
+            "Texas Tech",
+            "BYU",
+            "UCLA",
+            "Indiana",
+            "Oregon",
+            "Iowa",
+            "USC",
+            "Arizona",
+            "Houston",
+            "Louisville",
+            "Oklahoma",
+            "Ohio State",
+            "Ole Miss",
+            "Florida",
+            "Missouri",
+            "Boise State",
+            "Liberty"
+          ],
+          "pair_decisions": [
+            {
+              "id": "P1",
+              "higher": "Miami",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "Miami is 10-1 (9-1 FBS) with a 0.5709 FBS SOS proxy, +18.1 FBS scoring margin, and only one loss (at Notre Dame), whereas Texas is 9-2 with two losses (Oklahoma and Florida)."
+            },
+            {
+              "id": "P2",
+              "higher": "BYU",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "BYU is 9-2 (8-2 FBS) with wins over Notre Dame and Arizona, outweighing 8-3 (7-3 FBS) Oregon's three losses despite Oregon's higher FPI (21.349) and SOS (0.6091)."
+            },
+            {
+              "id": "P3",
+              "higher": "Tennessee",
+              "winner": "Tennessee",
+              "basis": "direct_game",
+              "evidence": "With both teams at 9-2 (8-2 FBS) and comparable résumés, Tennessee's 26-10 head-to-head victory over Alabama on 2026-10-17 is decisive."
+            },
+            {
+              "id": "P4",
+              "higher": "Texas",
+              "winner": "Texas",
+              "basis": "direct_game",
+              "evidence": "Texas defeated Tennessee 20-17 on the road on 2026-09-26 and also holds a stronger SOS proxy (0.5884 vs. 0.5018) and FPI (25.373 vs. 19.071)."
+            }
+          ],
+          "review_note": "Honoring Tennessee's 26-10 head-to-head win over Alabama among 9-2 SEC peers while keeping 10-1 Miami ahead of two-loss Texas."
+        }
+      },
+      "revised": {
+        "sol": {
+          "ranking": [
+            "Georgia",
+            "Utah",
+            "Notre Dame",
+            "Miami",
+            "Texas",
+            "Tennessee",
+            "Alabama",
+            "Wake Forest",
+            "UCLA",
+            "Texas Tech",
+            "BYU",
+            "Oregon",
+            "Indiana",
+            "Iowa",
+            "USC",
+            "Ohio State",
+            "Arizona",
+            "Houston",
+            "Oklahoma",
+            "Missouri",
+            "Florida",
+            "Ole Miss",
+            "Louisville",
+            "Boise State",
+            "Liberty"
+          ],
+          "pair_decisions": [
+            {
+              "id": "P1",
+              "higher": "Miami",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "Miami's only loss was 31–24 at Notre Dame, and it won 33–20 at Wake Forest and 41–13 at Clemson. Texas won at Tennessee and LSU and had a slightly stronger FBS schedule by the packet's proxy (0.5884 vs. 0.5709), but lost to Oklahoma and Florida."
+            },
+            {
+              "id": "P2",
+              "higher": "BYU",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "BYU went 8–2 against FBS opponents and beat Notre Dame 28–24 and Arizona 28–17. Oregon won at Ohio State and USC and had the stronger schedule proxy (0.6091 vs. 0.5409), but went 7–3 against FBS opponents, with losses to UCLA, Oklahoma State and Illinois."
+            },
+            {
+              "id": "P3",
+              "higher": "Tennessee",
+              "winner": "Tennessee",
+              "basis": "direct_game",
+              "evidence": "Tennessee beat Alabama 26–10 at home on October 17. Both went 8–2 against FBS opponents and beat LSU, Kentucky and Texas A&M. Alabama's modest schedule edge (0.5300 vs. 0.5018) and 49–18 win over South Carolina, which beat Tennessee 27–24, did not outweigh the 16-point direct result."
+            },
+            {
+              "id": "P4",
+              "higher": "Texas",
+              "winner": "Texas",
+              "basis": "direct_game",
+              "evidence": "Texas won 20–17 at Tennessee on September 26. Both finished 9–2 overall, but Texas went 9–2 against FBS opponents to Tennessee's 8–2 and also beat Ohio State 24–23 and LSU 22–21 on the road."
+            }
+          ],
+          "review_note": "Tennessee's 16-point win over Alabama settled the comparison between teams with identical FBS records and three quality wins in common."
+        },
+        "sonnet": {
+          "ranking": [
+            "Georgia",
+            "Utah",
+            "Notre Dame",
+            "Miami",
+            "Texas",
+            "Tennessee",
+            "Alabama",
+            "Wake Forest",
+            "BYU",
+            "Texas Tech",
+            "UCLA",
+            "Indiana",
+            "Oregon",
+            "Iowa",
+            "USC",
+            "Arizona",
+            "Houston",
+            "Louisville",
+            "Oklahoma",
+            "Ohio State",
+            "Ole Miss",
+            "Florida",
+            "Missouri",
+            "Boise State",
+            "Liberty"
+          ],
+          "pair_decisions": [
+            {
+              "id": "P1",
+              "higher": "Miami",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "No direct game. Miami is 10-1 with its only loss a 24-31 road defeat to Notre Dame, plus wins at Wake Forest and Clemson and an 18.1 FBS scoring margin. Texas has two one-score losses, to Oklahoma and Florida, despite wins over Ohio State, Tennessee and LSU."
+            },
+            {
+              "id": "P2",
+              "higher": "BYU",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "No direct game. BYU is 9-2 with a 28-24 win over Notre Dame and a 28-17 win over Arizona. Oregon has three losses, to UCLA, Oklahoma State and Illinois, and its wins over Ohio State and USC plus its higher schedule proxy (0.6091 vs. 0.5409) do not close that gap."
+            },
+            {
+              "id": "P3",
+              "higher": "Tennessee",
+              "winner": "Tennessee",
+              "basis": "direct_game",
+              "evidence": "Tennessee beat Alabama 26-10 on 2026-10-17. Both are 8-2 against FBS opponents with wins over LSU and Kentucky. Alabama's ratings edge (FPI 24.2 vs. 19.1) and schedule proxy (0.53 vs. 0.50) do not outweigh a 16-point head-to-head loss."
+            },
+            {
+              "id": "P4",
+              "higher": "Texas",
+              "winner": "Texas",
+              "basis": "direct_game",
+              "evidence": "Texas won 20-17 at Tennessee on 2026-09-26. Texas is 9-2 against FBS opponents to Tennessee's 8-2, with a 24-23 win over Ohio State and a 22-21 road win at LSU, and it has the stronger schedule proxy (0.5884 vs. 0.5018)."
+            }
+          ],
+          "review_note": "Tennessee's 26-10 head-to-head win over Alabama, a team with similar results, outweighs Alabama's ratings edge, and Texas stays above both on its win at Tennessee."
+        },
+        "hydrogen": {
+          "ranking": [
+            "Georgia",
+            "Utah",
+            "Notre Dame",
+            "Miami",
+            "Texas",
+            "Tennessee",
+            "Alabama",
+            "Wake Forest",
+            "Texas Tech",
+            "BYU",
+            "UCLA",
+            "Indiana",
+            "Oregon",
+            "Iowa",
+            "USC",
+            "Arizona",
+            "Houston",
+            "Louisville",
+            "Oklahoma",
+            "Ohio State",
+            "Ole Miss",
+            "Florida",
+            "Missouri",
+            "Boise State",
+            "Liberty"
+          ],
+          "pair_decisions": [
+            {
+              "id": "P1",
+              "higher": "Miami",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "Miami is 10-1 (9-1 FBS) with a 0.5709 FBS SOS proxy, +18.1 FBS scoring margin, and only one loss (at Notre Dame), whereas Texas is 9-2 with two losses (Oklahoma and Florida)."
+            },
+            {
+              "id": "P2",
+              "higher": "BYU",
+              "winner": null,
+              "basis": "overall_resume",
+              "evidence": "BYU is 9-2 (8-2 FBS) with wins over Notre Dame and Arizona, outweighing 8-3 (7-3 FBS) Oregon's three losses despite Oregon's higher FPI (21.349) and SOS (0.6091)."
+            },
+            {
+              "id": "P3",
+              "higher": "Tennessee",
+              "winner": "Tennessee",
+              "basis": "direct_game",
+              "evidence": "With both teams at 9-2 (8-2 FBS) and comparable résumés, Tennessee's 26-10 head-to-head victory over Alabama on 2026-10-17 is decisive."
+            },
+            {
+              "id": "P4",
+              "higher": "Texas",
+              "winner": "Texas",
+              "basis": "direct_game",
+              "evidence": "Texas defeated Tennessee 20-17 on the road on 2026-09-26 and also holds a stronger SOS proxy (0.5884 vs. 0.5018) and FPI (25.373 vs. 19.071)."
+            }
+          ],
+          "review_note": "Honoring Tennessee's 26-10 head-to-head win over Alabama among 9-2 SEC peers while keeping 10-1 Miami ahead of two-loss Texas."
+        }
+      },
+      "ranking": [
+        "Georgia",
+        "Utah",
+        "Notre Dame",
+        "Miami",
+        "Texas",
+        "Tennessee",
+        "Alabama",
+        "Wake Forest",
+        "Texas Tech",
+        "BYU",
+        "UCLA",
+        "Indiana",
+        "Oregon",
+        "Iowa",
+        "USC",
+        "Arizona",
+        "Houston",
+        "Louisville",
+        "Oklahoma",
+        "Ohio State",
+        "Ole Miss",
+        "Florida",
+        "Missouri",
+        "Boise State",
+        "Liberty"
+      ]
+    }
+  },
+  "finished_at": "2026-11-24T06:01:47.098345+00:00",
+  "cost_usd": 3.704988,
+  "accounted_usd": 3.704988,
+  "calls": 27
+}

@@ -4,6 +4,12 @@ Six AI models forecast the College Football Playoff rankings from a frozen set o
 
 [Read the forecast and download the results](https://sunaybhat.me/cfp-committee/). The downloadable skill and results JSON let you analyze the ballots without paid API calls.
 
+## Model polls and final decisions
+
+The [November 24 mixed panel](data/ballots/2026-11-24/weekly-panel-v3/) and [two research committees](data/ballots/2026-11-24/weekly-web-v1/) include the original ballots, aggregate rankings, prompt manifests, and checksums. The [final council results](data/ballots/2026-11-24/council-v1/results.json) contain the agenda, independent proposals, revised votes, and final rankings for the three headline forecasts.
+
+Run `python -m cfpllm.weekly_web --help` for the statistical and pundit search committees. Run `python -m cfpllm.council --help` for the final review. It takes the original locked poll and web run directories plus a local copy of the authorized frozen packet. Three reviewers rank independently, revise after viewing the other two anonymous proposals, and get equal votes in a ranked-pairs tally. The council validates each agenda decision against the frozen game results and the reviewer's own ordering. Runs stop at the original pre-release deadline.
+
 ## Explore the archived run
 
 The [original roster](data/ballots/2026-11-24/weekly-panel/) and [Head-to-Head First roster](data/ballots/2026-11-24/weekly-panel-v2/) each include their aggregate rankings, individual ballots, prompt metadata, run costs, and file checksums. Download the [agent skill](dashboard/SKILL.md) and the full results JSON from the dashboard to explore both the forecast and the roster comparison in a chatbot.
