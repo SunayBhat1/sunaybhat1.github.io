@@ -52,7 +52,6 @@ jobs:
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
-          HUGO_PARAMS_UMAMIWEBSITEID: ${{ vars.UMAMI_WEBSITE_ID }}
         run: |
           hugo \
             --minify \

@@ -31,7 +31,7 @@ menu:
 params:
     description: "Sunay Bhat — CTO, AI researcher, and writer. Building at the intersection of AI and product."
     author: Sunay Bhat
-    umamiWebsiteId: ""
+    umamiWebsiteId: "252814d3-9e83-428e-add4-419a60b677a5"
     DateFormat: "January 2006"
     defaultTheme: light
     hideFooter: false
