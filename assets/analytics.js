@@ -1,18 +1,11 @@
 (() => {
-  const site = {{ . | jsonify }};
-  if (!/^[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$/.test(site)) return;
+  const token = {{ . | jsonify }};
+  if (!/^[a-f0-9]{32}$/i.test(token)) return;
 
-  window.goatcounter = {
-    path: window.location.pathname,
-    title: "",
-    referrer: "",
-    no_session: true,
-    no_events: true,
-  };
   const script = document.createElement("script");
-  script.async = true;
+  script.type = "module";
   script.referrerPolicy = "no-referrer";
-  script.src = "https://gc.zgo.at/count.js";
-  script.dataset.goatcounter = "https://" + site + ".goatcounter.com/count";
+  script.src = "https://static.cloudflareinsights.com/beacon.min.js";
+  script.dataset.cfBeacon = JSON.stringify({token, spa: false});
   document.head.append(script);
 })();

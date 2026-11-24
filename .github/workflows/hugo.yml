@@ -52,7 +52,7 @@ jobs:
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
-          HUGO_PARAMS_GOATCOUNTERSITE: ${{ vars.GOATCOUNTER_SITE }}
+          HUGO_PARAMS_CLOUDFLAREANALYTICSTOKEN: ${{ vars.CLOUDFLARE_WEB_ANALYTICS_TOKEN }}
         run: |
           hugo \
             --minify \
