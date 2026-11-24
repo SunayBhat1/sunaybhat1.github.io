@@ -6,6 +6,7 @@ from copy import deepcopy
 import json
 from typing import Any
 
+from .packet import local_date
 from .personas import Member, PERSONA_TEXT
 
 
@@ -54,10 +55,15 @@ def packet_slice(packet: dict[str, Any], condition: str) -> dict[str, Any]:
             resume.pop("ap_rank", None)
         if not permitted["cfp"]:
             resume.pop("prior_cfp_rank", None)
+        if "ranked_opponents" in resume:
+            resume["ranked_opponents"] = {kind: rows for kind, rows in resume["ranked_opponents"].items()
+                                           if permitted[kind]}
+            if not resume["ranked_opponents"]:
+                del resume["ranked_opponents"]
     return output
 
 
-def system_prompt(member: Member, *, ordered_rationales: bool = False) -> str:
+def system_prompt(member: Member, *, ordered_rationales: bool = False, reassess_polls: bool = False) -> str:
     schema = SCHEMA
     if ordered_rationales:
         schema = {
@@ -70,10 +76,16 @@ def system_prompt(member: Member, *, ordered_rationales: bool = False) -> str:
         if ordered_rationales else
         "For exactly the first 12, give a 1-3 sentence rationale citing packet facts only."
     )
+    reassess = (
+        "Produce a new CFP top 25 accounting for all results through the supplied game cutoff. "
+        "Treat any visible polls as dated reference points. Identify major results since those polls "
+        "and explain how they change a team's case when relevant.",
+    ) if reassess_polls else ()
     return "\n".join((
         "You are one member of the 2026-27 College Football Playoff Selection Committee.",
         "The playoff has 12 teams, straight seeding, and byes for the top four.",
         "Use only the supplied frozen packet. If it disagrees with your memory, the packet wins.",
+        *reassess,
         "Use body of work, strength of schedule, head-to-head, common opponents, and other relevant on-field factors.",
         "Evaluate teams rather than conferences, though packet schedule context may matter.",
         "Do not infer or use withheld ranking information, web knowledge, tools, or outside facts.",
@@ -86,16 +98,44 @@ def system_prompt(member: Member, *, ordered_rationales: bool = False) -> str:
     ))
 
 
-def user_prompt(packet: dict[str, Any], condition: str) -> str:
+def user_prompt(
+    packet: dict[str, Any], condition: str, *, opening_spreads: dict[int, float] | None = None,
+    include_packet_odds: bool = True,
+) -> str:
     evidence = packet_slice(packet, condition)
     games = evidence.pop("games", [])
-    evidence["games"] = {
-        "columns": GAME_COLUMNS,
-        "rows": [[game.get(column) for column in GAME_COLUMNS] for game in games],
-    }
+    packet_spreads = evidence.pop("opening_spreads", None)
+    if include_packet_odds and opening_spreads is None and packet_spreads is not None:
+        opening_spreads = {int(game_id): spread for game_id, spread in packet_spreads.items()}
+    columns = GAME_COLUMNS
+    resume_note = ""
+    if packet["meta"].get("resume_schema") == 2:
+        # Conferences repeat hundreds of times in the old game table.
+        columns = ("week", "start_date", "home_team", "away_team", "home_points", "away_points", "neutral_site",
+                   "home_classification", "away_classification")
+        evidence["games_through"] = packet["meta"]["games_through"]
+        resume_note = (
+            "Game dates are Eastern. Overall records include FCS and FBS opponents. FBS records, schedule "
+            "strength, and scoring summaries use games between FBS teams. Ranked-opponent rows contain game "
+            "date, opponent, candidate score first, venue (H/A/N), reference-poll rank, and kickoff rank. "
+            "A null kickoff rank means either unranked or no dated poll available before the game.\n"
+        )
+    rows = [[local_date(game[column]).isoformat() if column == "start_date" and resume_note else game.get(column)
+             for column in columns] for game in games]
+    odds_note = ""
+    if opening_spreads is not None:
+        columns += ("opening_home_spread",)
+        for row, game in zip(rows, games, strict=True):
+            row.append(opening_spreads.get(game["id"]))
+        odds_note = (
+            "Opening_home_spread is the median available pregame opening spread for the home team. "
+            "A negative value means the home team was favored. For example, with a spread of -7, "
+            "a home win by 17 beat opening expectations by 10 points.\n"
+        )
+    evidence["games"] = {"columns": columns, "rows": rows}
     return (
         "Frozen packet (this is all the evidence you may use). Each games row follows games.columns in order. "
         "The home and away labels identify score columns; neutral_site takes precedence for venue. "
         "Null means unavailable. Candidates are listed alphabetically.\n"
-        + json.dumps(evidence, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
+        + resume_note + odds_note + json.dumps(evidence, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
     )

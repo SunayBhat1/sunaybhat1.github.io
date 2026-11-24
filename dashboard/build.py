@@ -23,6 +23,7 @@ PERSONA_NAMES = {
     "metrics_heavy": "Metrics heavy", "sec_tilt": "SEC tilt", "big_ten_tilt": "Big Ten tilt",
     "performatively_unbiased": "Performatively neutral", "eye_test": "Eye test", "ap_anchored": "AP anchored",
     "head_to_head_first": "Head-to-Head First",
+    "brand_bias": "Brand Bias",
 }
 CONDITION_NAMES = {
     "cfp_on_ap_on": "Previous CFP + AP", "cfp_on_ap_off": "Previous CFP only",
@@ -63,6 +64,10 @@ def analysis(packet, runs, ballots, official, members, persona_ids):
     for condition in CONDITION_NAMES:
         available = {m: runs[f"{m}|{condition}|0.3"]["ranking"] for m in MODEL_NAMES
                      if f"{m}|{condition}|0.3" in runs}
+        reference_runs = available or {
+            f"mixed|{temperature}": runs[f"mixed|{condition}|{temperature}"]["ranking"]
+            for temperature in ("0.3", "0.7") if f"mixed|{condition}|{temperature}" in runs
+        }
         agreement = {}
         for a, b in combinations(available, 2):
             left, right = available[a], available[b]
@@ -91,7 +96,7 @@ def analysis(packet, runs, ballots, official, members, persona_ids):
             "consensus": [{"team": team, "count": count} for team, count in
                           sorted(consensus.items(), key=lambda pair: (-pair[1], pair[0]))],
             "reference_scores": {model: {name: score_ranking(ranking, source) for name, source in references.items()}
-                                 for model, ranking in available.items()},
+                                 for model, ranking in reference_runs.items()},
         }
     sensitivity = {}
     for model in MODEL_NAMES:
@@ -149,6 +154,10 @@ def main():
         "games_through": meta["games_through"], "prior_cfp_release": meta["prior_cfp_release"],
         "ap_week": meta.get("ap_week_tied_to_games"), "fetched_at_utc": meta["fetched_at_utc"],
         "game_count": len(packet["games"]), "candidate_count": len(packet["candidates"]),
+        "record_scope": meta.get("record_scope", "fbs_only"),
+        "evidence_through": meta.get("evidence_through", meta["games_through"]),
+        "ap_published_on": packet["rankings"].get("ap", {}).get("published_on"),
+        "opening_spreads": meta.get("opening_spreads"),
         "source_data_distribution": "Source records omitted from the downloadable derived-data bundle.",
     }
     provenance = {key: val for key, val in result.items() if key != "runs"}

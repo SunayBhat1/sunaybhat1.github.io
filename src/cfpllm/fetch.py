@@ -4,14 +4,17 @@ from __future__ import annotations
 
 from collections import Counter, defaultdict
 from datetime import date, datetime, timezone
+from math import isfinite
 import os
 from pathlib import Path
+from statistics import median
 from typing import Any
 
 import requests
 
 from .config import Config
 from .packet import local_date, write_packet
+from .resume import dated_polls, enrich_resume
 
 
 API_BASE = "https://api.collegefootballdata.com"
@@ -42,6 +45,24 @@ def _optional_get(session: requests.Session, endpoint: str, config: Config, note
     except FetchError as exc:
         notes.append(f"Optional {endpoint} omitted: {exc}")
         return []
+
+
+def fetch_opening_quotes(session, config, game_ids):
+    """Whitelist only provider opening spreads for games in the frozen slate."""
+    rows = _get(session, "/lines", {"year": config.season, "seasonType": "regular"}, config.timeout_s)
+    market = {}
+    for row in rows:
+        if row["id"] not in game_ids:
+            continue
+        if row["id"] in market:
+            raise FetchError("CFBD returned duplicate game IDs for opening lines.")
+        quotes = {}
+        for line in row["lines"]:
+            value = line.get("spreadOpen")
+            if line.get("provider") and type(value) in (int, float) and isfinite(value):
+                quotes[line["provider"]] = value
+        market[row["id"]] = quotes
+    return {str(game_id): quotes for game_id, quotes in sorted(market.items()) if quotes}
 
 
 def _field(row: dict[str, Any], *names: str) -> Any:
@@ -195,13 +216,18 @@ def _resume(
 
 
 def fetch_packet(config: Config) -> tuple[Path, str]:
+    if any(config.ballot_dir.glob("*/panel-lock.json")):
+        raise FetchError("This release already has a locked panel. Fetch a new packet in a separate working directory.")
     key = os.getenv("CFBD_API_KEY")
     if not key:
         raise FetchError("CFBD_API_KEY is required for fetch; it was not set.")
     session = requests.Session()
     session.headers.update({"Authorization": f"Bearer {key}", "Accept": "application/json"})
     endpoints = ["/games", "/records", "/rankings"]
-    raw_games = _get(session, "/games", {"year": config.season, "seasonType": "regular", "classification": "fbs"}, config.timeout_s)
+    game_params = {"year": config.season, "seasonType": "regular"}
+    if not config.evidence_through:
+        game_params["classification"] = "fbs"
+    raw_games = _get(session, "/games", game_params, config.timeout_s)
     _get(session, "/records", {"year": config.season}, config.timeout_s)  # endpoint is retained in provenance; games are canonical records
     raw_rankings = _get(session, "/rankings", {"year": config.season, "seasonType": "regular"}, config.timeout_s)
     notes: list[str] = [
@@ -211,16 +237,47 @@ def fetch_packet(config: Config) -> tuple[Path, str]:
     sp_rows = _optional_get(session, "/ratings/sp", config, notes, endpoints)
     fpi_rows = _optional_get(session, "/ratings/fpi", config, notes, endpoints)
     games = [_game(row) for row in raw_games if isinstance(row, dict)]
-    games = [game for game in games if _is_fbs_game(game) and local_date(game["start_date"]) <= date.fromisoformat(config.games_through)]
-    if not games:
+    games_cutoff = date.fromisoformat(config.games_through)
+    games = [game for game in games if local_date(game["start_date"]) <= games_cutoff]
+    fbs_games = [game for game in games if _is_fbs_game(game)]
+    fbs_teams = None
+    if config.evidence_through:
+        fbs_teams = {team["school"] for team in _get(session, "/teams/fbs", {"year": config.season}, config.timeout_s)}
+        if not fbs_teams:
+            raise FetchError("CFBD returned no official FBS membership for the configured season.")
+        endpoints.append("/teams/fbs")
+        fbs_games = [game for game in games if {game["home_team"], game["away_team"]} <= fbs_teams]
+    if not fbs_games:
         raise FetchError("CFBD returned no FBS games through the configured cutoff; packet not written.")
-    game_week = max(int(game.get("week") or 0) for game in games)
-    ap_poll = _rankings(raw_rankings, "AP", config.ap_week or game_week)
+    game_week = max(int(game.get("week") or 0) for game in fbs_games)
+    records, opponents = _records_from_games(fbs_games)
+    history = {}
+    overall_records = records
+    if config.evidence_through:
+        evidence_cutoff = date.fromisoformat(config.evidence_through)
+        prior_cutoff = date.fromisoformat(config.prior_cfp_release)
+        if not max(games_cutoff, prior_cutoff) <= evidence_cutoff < date.fromisoformat(config.release_id):
+            raise FetchError("The evidence cutoff must cover games and the prior CFP poll, and precede the target release.")
+        weeks = sorted({int(row["week"] or 0) for row in raw_rankings})
+        for kind, label, cutoff in (("ap", "AP", evidence_cutoff), ("cfp", "Playoff", prior_cutoff)):
+            polls = (_rankings(raw_rankings, label, week) for week in weeks)
+            history[kind] = dated_polls((poll for poll in polls if poll), cutoff, config.poll_dates.get(kind, {}))
+        if not history["ap"] or not history["cfp"]:
+            raise FetchError("The richer packet needs verified publication dates for both AP and CFP polls.")
+        ap_poll, cfp_poll = (history[kind][-1] for kind in ("ap", "cfp"))
+        if config.ap_week is None or ap_poll["week"] != config.ap_week or local_date(cfp_poll["published_on"]) != prior_cutoff:
+            raise FetchError("Selected polls differ from the verified AP week or prior CFP publication date.")
+        games = [game for game in games if {game["home_team"], game["away_team"]} & fbs_teams]
+        overall_records, _ = _records_from_games(games)
+        notes.append("Overall records include FCS opponents. Schedule strength and scoring summary use FBS games.")
+    else:
+        games = fbs_games
+        ap_poll = _rankings(raw_rankings, "AP", config.ap_week or game_week)
+        cfp_poll = _rankings(raw_rankings, "Playoff", config.ap_week or game_week) or _rankings(raw_rankings, "CFP", config.ap_week or game_week)
     if not ap_poll or len(ap_poll["entries"]) < 25:
         raise FetchError(f"Could not find a 25-team AP poll for CFBD week {config.ap_week or game_week}; packet not written.")
     # CFBD currently calls this poll "Playoff Committee Rankings"; older payloads used
     # "College Football Playoff" or "CFP", so match the stable shared term.
-    cfp_poll = _rankings(raw_rankings, "Playoff", config.ap_week or game_week) or _rankings(raw_rankings, "CFP", config.ap_week or game_week)
     if cfp_poll is None:
         raise FetchError(f"Could not find the prior CFP poll for CFBD week {config.ap_week or game_week}; packet not written.")
     # CFBD ranking payloads historically expose week but not publication date. The configured date is an asserted selection cutoff,
@@ -230,17 +287,25 @@ def fetch_packet(config: Config) -> tuple[Path, str]:
         cfp_poll["publication_date_source"] = "configured prior_cfp_release (CFBD response had no date)"
     if not ap_poll.get("published_on"):
         ap_poll["publication_date_source"] = "CFBD week association (CFBD response had no date)"
-    records, opponents = _records_from_games(games)
     sp, fpi = _ratings_by_team(sp_rows), _ratings_by_team(fpi_rows)
     ap_names = [entry["team"] for entry in ap_poll["entries"]]
-    extra = [name for name, row in records.items() if int(row.get("losses", 0)) <= 2 and name not in ap_names]
-    extra.sort(key=lambda name: (records[name]["losses"], -(0 if records[name].get("wins") is None else records[name]["wins"] / max(1, records[name]["wins"] + records[name]["losses"])), -(sp.get(name, float("-inf"))), name))
-    candidates = (ap_names + extra)[: config.candidate_cap]
+    poll_names = ap_names
+    if config.evidence_through:
+        poll_names = list(dict.fromkeys([*ap_names, *(entry["team"] for entry in cfp_poll["entries"])]))
+        if not set(poll_names) <= fbs_teams:
+            raise FetchError("A selected AP or CFP school is absent from the official FBS team list.")
+        if len(poll_names) > config.candidate_cap:
+            raise FetchError("The candidate cap is too low to retain both eligible poll lists.")
+    extra = [name for name in records if overall_records[name]["losses"] <= 2 and name not in poll_names]
+    extra.sort(key=lambda name: (overall_records[name]["losses"], -(0 if overall_records[name].get("wins") is None else overall_records[name]["wins"] / max(1, overall_records[name]["wins"] + overall_records[name]["losses"])), -(sp.get(name, float("-inf"))), name))
+    candidates = (poll_names + extra)[: config.candidate_cap]
     if len(candidates) < 25:
         raise FetchError("Candidate construction produced fewer than 25 teams; packet not written.")
     ap_map = {entry["team"]: entry["rank"] for entry in ap_poll["entries"]}
     cfp_map = {entry["team"]: entry["rank"] for entry in cfp_poll["entries"]}
     candidate_set = set(candidates)
+    odds = fetch_opening_quotes(session, config, {game["id"] for game in games if game.get("id") is not None})
+    endpoints.append("/lines")
     packet = {
         "meta": {
             "release_id": config.release_id,
@@ -251,12 +316,26 @@ def fetch_packet(config: Config) -> tuple[Path, str]:
             "endpoints_used": endpoints,
             "notes": notes,
             "ap_week_tied_to_games": game_week,
-            "candidate_rule": "AP top 25, then FBS teams with <=2 losses; overflow ordered by fewest losses, better FBS SOS proxy, SP+ and alphabetically.",
+            "candidate_rule": ("AP and prior CFP top 25, then confirmed FBS teams with at most two overall losses."
+                               if config.evidence_through else "AP top 25, then FBS teams with at most two losses."),
+            "opening_spreads": {
+                "games_with_spread": len(odds), "games": len(games),
+                "providers": sorted({source for quotes in odds.values() for source in quotes}),
+                "source": "CFBD /lines, median available opening spreads from the home team's perspective",
+            },
         },
         "games": games,
+        "opening_spreads": {game_id: median(quotes.values()) for game_id, quotes in odds.items()},
         "rankings": {"ap": ap_poll, "cfp": cfp_poll},
         "ratings": {"sp_plus": sp, "fpi": fpi if fpi else None, "sor": None},
         "candidates": candidates,
-        "resumes": {name: _resume(name, candidate_set, games, records, opponents, sp, fpi, ap_map, cfp_map) for name in candidates},
+        "resumes": {name: _resume(name, candidate_set, fbs_games, records, opponents, sp, fpi, ap_map, cfp_map) for name in candidates},
     }
+    if config.evidence_through:
+        packet["meta"].update(
+            resume_schema=2, evidence_through=config.evidence_through, record_scope="all_games",
+            poll_history_dates={kind: [poll["published_on"] for poll in polls] for kind, polls in history.items()},
+        )
+        for name, resume in packet["resumes"].items():
+            enrich_resume(name, resume, overall_records.get(name, {"wins": 0, "losses": 0}), games, fbs_games, history)
     return write_packet(packet, config.packet_dir)

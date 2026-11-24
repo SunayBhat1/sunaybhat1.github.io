@@ -10,7 +10,7 @@ The [original roster](data/ballots/2026-11-24/weekly-panel/) and [Head-to-Head F
 
 ## Six-model weekly dashboard
 
-Run `python -m cfpllm.panel` with an authorized frozen packet and `OPENROUTER_API_KEY`. The weekly matrix uses six solo-model committees and one mixed committee at two temperature labels across all four information conditions. The default `weekly-v2` roster assigns two of 13 seats to Head-to-Head First, replacing one metrics-heavy seat and one performatively neutral seat. It keeps the same 416-call plan and writes to `data/ballots/<release>/weekly-panel-v2/`. Use `--profile weekly-v1` for the original roster and output folder `weekly-panel/`.
+Run `python -m cfpllm.panel` with an authorized frozen packet and `OPENROUTER_API_KEY`. The default `weekly-v3` profile uses only the mixed committee, with 14 seats across four poll settings and two voting rounds for 112 requested ballots. The 14th seat is Brand Bias. The two Head-to-Head First seats remain. The archived `weekly-v1` and `weekly-v2` profiles preserve the earlier 416-ballot matrix.
 
 Build the static dashboard with `python dashboard/build.py --packet <packet.json> --run <weekly-panel-dir> --output <directory>`. Add `--lock <verification.json>` after verifying the timestamp proof, `--official <official.json>` once the matching official release is available, and `--unlisted` for a noindex page. Open the generated `index.html` alongside its assets. The download bundle contains derived results and the agent skill. Keep the source packet local under [CFBD's terms](https://collegefootballdata.com/terms).
 
@@ -18,7 +18,7 @@ To compare both roster versions for a release, run `python dashboard/compare_ros
 
 ## Run a new weekly forecast
 
-Set the new release and evidence cutoff in `config.yaml` and export `CFBD_API_KEY` and `OPENROUTER_API_KEY` in your shell.
+Set the release, game cutoff, evidence cutoff, verified AP week, and AP/CFP publication dates in the YAML configuration. The game cutoff determines which scores count. The evidence cutoff can be the following Sunday or Monday so the packet includes the AP poll published after those games. Run an audited re-creation of a locked release from a separate working directory. Keep the keys in your environment.
 
 ```bash
 git clone --single-branch --branch cfp-committee-lab https://github.com/SunayBhat1/sunaybhat1.github.io.git cfp-committee-lab
@@ -27,10 +27,16 @@ python -m venv .venv
 .venv/bin/pip install -e '.[test]'
 .venv/bin/cfpllm fetch
 .venv/bin/cfpllm lint
-.venv/bin/python -m cfpllm.panel --profile weekly-v2
+.venv/bin/python -m cfpllm.panel --profile weekly-v3
 ```
 
 The archived November 24 forecasts use a 4:00 PM ET cutoff ahead of the 7:30 PM ET rankings release. This repository's `lock/2026-11-24-v2-dfeed91d` tag records the released source and results snapshot. The run manifest records the original runner commit and frozen source fingerprint.
+
+New packets include overall and FBS records, opponent record and scoring context, separately dated AP and CFP ranks, and available pregame opening spreads. The poll switches omit that poll's rankings everywhere in the prompt, including opponent context. Kickoff ranks require a verified dated poll from before the game and appear only where coverage is available.
+
+### Research comparisons
+
+`python -m cfpllm.research_pilot --config <file> --research <notes.json>` runs the same mixed committee with a packet-only vote and two dated research supplements. The notes contain a source, URL, publication date, and a short factual summary for each entry. Use the statistical set for game flow, efficiency, schedule strength, and strength of record. Use the pundit set for independent pre-release rankings and bracket projections with differing views. Keep actual target rankings and post-release material out of both. The pilot records its supplied search notes and role-specific instructions. Its model calls have no autonomous browser tools.
 
 ## Setup
 

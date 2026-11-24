@@ -1,0 +1,23 @@
+# Build in a separate working directory to preserve the original Nov. 24 packet.
+season: 2026
+release_id: "2026-11-24"
+games_through: "2026-11-21"
+evidence_through: "2026-11-22"
+prior_cfp_release: "2026-11-17"
+ap_week: 13
+poll_dates:
+  ap:
+    10: "2026-11-01"
+    11: "2026-11-08"
+    12: "2026-11-15"
+    13: "2026-11-22"
+  cfp:
+    10: "2026-11-03"
+    11: "2026-11-10"
+    12: "2026-11-17"
+candidate_cap: 40
+model: "openai/gpt-4.1-mini"
+temperature_seeds: [0.3, 0.7, 1.0]
+max_budget_usd: 20
+timeout_s: 120
+max_retries: 3

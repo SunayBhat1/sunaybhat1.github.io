@@ -70,6 +70,21 @@ def lint_errors(packet_path: str | Path, config: Config) -> list[str]:
 
     rankings = packet.get("rankings", {})
     prior_cutoff = date.fromisoformat(config.prior_cfp_release)
+    meta = packet.get("meta", {})
+    rich = meta.get("resume_schema") == 2
+    evidence_cutoff = games_cutoff
+    if rich:
+        try:
+            evidence_cutoff = local_date(meta["evidence_through"])
+            if (str(evidence_cutoff) != config.evidence_through
+                    or not max(games_cutoff, prior_cutoff) <= evidence_cutoff < date.fromisoformat(config.release_id)):
+                errors.append("Packet evidence cutoff differs from config or falls outside the pre-release window")
+            for kind, ceiling in (("ap", evidence_cutoff), ("cfp", prior_cutoff)):
+                dates = [local_date(value) for value in meta["poll_history_dates"][kind]]
+                if not dates or max(dates) > ceiling:
+                    errors.append(f"{kind} poll history is empty or extends past its cutoff")
+        except (KeyError, TypeError, ValueError):
+            errors.append("The résumé packet needs valid evidence and poll history dates")
     cfp = rankings.get("cfp", {})
     if cfp:
         published = _poll_date(cfp)
@@ -88,15 +103,17 @@ def lint_errors(packet_path: str | Path, config: Config) -> list[str]:
         if published:
             try:
                 ap_date = local_date(published)
-                if ap_date > games_cutoff:
-                    errors.append(f"AP poll date {ap_date} is after games_through {games_cutoff}")
+                if ap_date > evidence_cutoff:
+                    errors.append(f"AP poll date {ap_date} is after the evidence cutoff {evidence_cutoff}")
             except ValueError:
                 errors.append(f"AP poll has invalid date {published!r}")
         if config.ap_week is not None and ap.get("week") != config.ap_week:
             errors.append(f"AP poll week {ap.get('week')!r} does not equal configured ap_week {config.ap_week}")
         expected_week = packet.get("meta", {}).get("ap_week_tied_to_games")
-        if expected_week is not None and ap.get("week") != expected_week:
+        if not rich and expected_week is not None and ap.get("week") != expected_week:
             errors.append(f"AP poll week {ap.get('week')!r} is not the packet's games-through week {expected_week!r}")
+        if rich and not published:
+            errors.append("The résumé packet needs a dated AP poll")
 
     # Catch an accidentally retained raw ranking response even if its shape changed.
     for trail, node in _walk(packet.get("rankings", {}), "rankings"):
@@ -109,7 +126,10 @@ def lint_errors(packet_path: str | Path, config: Config) -> list[str]:
     for team in packet.get("resumes", {}):
         if team not in candidate_set:
             errors.append(f"resume team {team!r} is absent from candidates")
-    meta = packet.get("meta", {})
+    if "opening_spreads" in packet:
+        game_ids = {str(row["id"]) for row in packet["games"] if row.get("id") is not None}
+        if not isinstance(packet["opening_spreads"], dict) or not packet["opening_spreads"].keys() <= game_ids:
+            errors.append("Opening spreads include IDs outside the frozen games")
     for key in ("games_through", "prior_cfp_release", "release_id", "fetched_at_utc", "endpoints_used", "notes"):
         if key not in meta:
             errors.append(f"packet meta is missing {key}")

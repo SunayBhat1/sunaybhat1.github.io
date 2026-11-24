@@ -9,7 +9,7 @@ from cfpllm.personas import DEFAULT_WEEKLY_PROFILE, WEEKLY_PROFILES, committee_m
 from cfpllm.prompts import system_prompt
 
 
-@pytest.mark.parametrize("profile", WEEKLY_PROFILES)
+@pytest.mark.parametrize("profile", ("weekly-v1", "weekly-v2"))
 def test_weekly_panel_has_the_intended_models_and_seats(profile):
     cases = list(plan(profile))
     assert len(cases) == 416
@@ -20,7 +20,7 @@ def test_weekly_panel_has_the_intended_models_and_seats(profile):
 
 
 def test_head_to_head_has_two_seats_per_group_on_the_new_roster_only():
-    assert DEFAULT_WEEKLY_PROFILE == "weekly-v2"
+    assert "weekly-v2" in WEEKLY_PROFILES
     original = weekly_committee("weekly-v1")
     updated = weekly_committee("weekly-v2")
     assert original == committee_mix("balanced")
@@ -37,6 +37,16 @@ def test_head_to_head_has_two_seats_per_group_on_the_new_roster_only():
         prompt = system_prompt(member, ordered_rationales=True)
         assert "Prefer the winner" in prompt
         assert "Resolve split series, cycles" in prompt
+
+
+def test_new_weekly_profile_runs_only_mixed_committees():
+    assert DEFAULT_WEEKLY_PROFILE == "weekly-v3"
+    cases = list(plan())
+    assert len(cases) == 112
+    assert set(Counter(case[0] for case in cases).values()) == {14}
+    assert all(case[0].startswith("mixed|") for case in cases)
+    assert weekly_committee("weekly-v3")[:-1] == weekly_committee("weekly-v2")
+    assert weekly_committee("weekly-v3")[-1].persona == "brand_bias"
 
 
 def test_normalization_preserves_rank_order_and_requires_distinct_teams(packet):

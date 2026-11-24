@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 import os
 from typing import Any
@@ -25,6 +25,8 @@ class Config:
     max_retries: int
     pricing_usd_per_million: dict[str, float]
     assumed_output_tokens: int
+    evidence_through: str | None = None
+    poll_dates: dict[str, dict[int, str]] = field(default_factory=dict)
 
     @property
     def packet_dir(self) -> Path:
@@ -60,6 +62,11 @@ def load_config(path: str | Path = "config.yaml") -> Config:
         max_retries=int(raw["max_retries"]),
         pricing_usd_per_million={"input": float(price["input"]), "output": float(price["output"])},
         assumed_output_tokens=int(raw.get("assumed_output_tokens", 1700)),
+        evidence_through=str(raw["evidence_through"]) if raw.get("evidence_through") else None,
+        poll_dates={
+            kind: {int(week): str(published) for week, published in dates.items()}
+            for kind, dates in (raw.get("poll_dates") or {}).items()
+        },
     )
 
 

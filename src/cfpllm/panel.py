@@ -47,8 +47,9 @@ def save(path, value):
 def plan(profile: str = DEFAULT_WEEKLY_PROFILE):
     members = weekly_committee(profile)
     mixed_models = ("luna", "haiku", "gemini", "deepseek", "glm", "minimax",
-                    "minimax", "glm", "deepseek", "gemini", "haiku", "luna", "glm")
-    for variant in (*MODELS, "mixed"):
+                    "minimax", "glm", "deepseek", "gemini", "haiku", "luna", "glm", "luna")
+    variants = ("mixed",) if profile == "weekly-v3" else (*MODELS, "mixed")
+    for variant in variants:
         for condition in CONDITIONS:
             for temperature in ((0.3, 0.7) if variant == "mixed" else (0.3,)):
                 group = f"{variant}|{condition}|{temperature:g}"
@@ -72,18 +73,25 @@ def normalize_ballot(content, candidates, member):
     return {field: parsed[field] for field in ("agent_id", "persona", "ranking", "rationales")}
 
 
+def describe_models(names):
+    fields = ("id", "providers", "reasoning_effort", "max_input_per_m", "max_output_per_m")
+    return {name: dict(zip(fields, MODELS[name], strict=True)) for name in names}
+
+
 def main(argv=None):
     parser = ArgumentParser(description="Run the six-model weekly CFP panel.")
     parser.add_argument("--profile", choices=WEEKLY_PROFILES, default=DEFAULT_WEEKLY_PROFILE,
                         help="Committee roster version (default: %(default)s).")
+    parser.add_argument("--config", default="config.yaml")
     args = parser.parse_args(argv)
-    key = os.environ["OPENROUTER_API_KEY"]
-    config = load_config()
-    output_dir = "weekly-panel" if args.profile == "weekly-v1" else "weekly-panel-v2"
+    config = load_config(args.config)
+    output_dir = {"weekly-v1": "weekly-panel", "weekly-v2": "weekly-panel-v2", "weekly-v3": "weekly-panel-v3"}[args.profile]
     root = config.ballot_dir / output_dir
     packet_file = config.packet_dir / "packet.json"
     lint_packet(packet_file, config)
     packet = read_packet(packet_file)
+    if args.profile == "weekly-v3" and (packet["meta"].get("resume_schema") != 2 or not packet.get("opening_spreads")):
+        raise SystemExit("Weekly-v3 requires a dated résumé packet with opening spreads.")
     packet_hash = sha256(packet_file.read_bytes()).hexdigest()
     expected = list(plan(args.profile))
     deadline = datetime.fromisoformat(f"{config.release_id}T16:00:00").replace(tzinfo=ZoneInfo("America/New_York"))
@@ -93,15 +101,28 @@ def main(argv=None):
     experiment = {
         "release_id": config.release_id, "packet_sha256": packet_hash, "lock_deadline": deadline.isoformat(),
         "requested_ballots": len(expected), "max_model_cost_usd": BUDGET,
-        "model_settings": {name: dict(zip(("id", "providers", "reasoning_effort", "max_input_per_m", "max_output_per_m"), values))
-                           for name, values in MODELS.items()},
+        "model_settings": describe_models(MODELS),
         "conditions": CONDITIONS, "max_attempts_per_ballot": MAX_ATTEMPTS, "max_output_tokens": MAX_OUTPUT,
-        "system_prompts": {member.agent_id: system_prompt(member, ordered_rationales=True)
+        "system_prompts": {member.agent_id: system_prompt(member, ordered_rationales=True,
+                                                         reassess_polls=packet["meta"].get("resume_schema") == 2)
                            for member in weekly_committee(args.profile)},
         "user_prompt_sha256": {name: sha256(prompt.encode()).hexdigest() for name, prompt in prompts.items()},
         "output_schema": "Top 25 canonical names; array of 12 ordered rationales normalized to team-keyed strings.",
         "profile": args.profile,
     }
+    run_panel(root, packet, expected, prompts, experiment)
+
+
+def run_panel(root, packet, expected, prompts, experiment):
+    """Collect and aggregate a planned set of OpenRouter ballots with a shared budget."""
+    key = os.environ["OPENROUTER_API_KEY"]
+    deadline = datetime.fromisoformat(experiment["lock_deadline"])
+    budget = experiment["max_model_cost_usd"]
+    max_output = experiment["max_output_tokens"]
+    max_attempts = experiment["max_attempts_per_ballot"]
+    models = experiment["model_settings"]
+    if datetime.now(timezone.utc) >= deadline:
+        raise SystemExit("The pre-release lock deadline has passed.")
     manifest_file = root / "experiment.json"
     if manifest_file.exists():
         original = json.loads(manifest_file.read_text())
@@ -110,8 +131,8 @@ def main(argv=None):
             raise SystemExit("Existing weekly artifacts use a different packet or configuration.")
         if original["model_settings"] != experiment["model_settings"]:
             previous = original["model_settings"]
-            changes = [model for model in MODELS if previous.get(model) != experiment["model_settings"][model]]
-            if changes != ["glm"] or previous["glm"]["id"] != "z-ai/glm-5.3-flashx":
+            changes = [model for model in models if previous.get(model) != models[model]]
+            if previous.keys() != models.keys() or changes != ["glm"] or previous["glm"]["id"] != "z-ai/glm-5.3-flashx":
                 raise SystemExit("Existing weekly artifacts use a different model configuration.")
             original["routing_changes"] = [{
                 "from": previous["glm"]["id"], "to": experiment["model_settings"]["glm"]["id"],
@@ -132,7 +153,9 @@ def main(argv=None):
     def collect(case, one_attempt=False):
         nonlocal accounted
         group, condition, temperature, member, model = case
-        model_id, providers, effort, price_in, price_out = MODELS[model]
+        settings = models[model]
+        model_id, providers, effort = settings["id"], settings["providers"], settings["reasoning_effort"]
+        price_in, price_out = settings["max_input_per_m"], settings["max_output_per_m"]
         raw_path = root / "calls" / group / f"{member.agent_id}.json"
         result_path = root / "ballots" / group / f"{member.agent_id}.json"
         if result_path.exists():
@@ -149,16 +172,17 @@ def main(argv=None):
                 continue
             save(result_path, ballot)
             return case, ballot, attempts
-        system = experiment["system_prompts"][member.agent_id]
+        variant_prompts = experiment.get("arm_system_prompts", {}).get(condition, {})
+        system = variant_prompts.get(member.agent_id, experiment["system_prompts"][member.agent_id])
         user = prompts[condition]
         # A byte-per-token bound, with chat framing and cache-write headroom.
         reserved = ((len(system.encode()) + len(user.encode()) + 2048) * price_in * 1.5
-                    + MAX_OUTPUT * price_out) / 1_000_000
+                    + max_output * price_out) / 1_000_000
         sent = sum(attempt["model"] == model_id for attempt in attempts)
-        remaining = min(1, MAX_ATTEMPTS - sent) if one_attempt else MAX_ATTEMPTS - sent
+        remaining = min(1, max_attempts - sent) if one_attempt else max_attempts - sent
         for number in range(len(attempts) + 1, len(attempts) + remaining + 1):
             with budget_lock:
-                if accounted + reserved > BUDGET or datetime.now(timezone.utc) >= deadline:
+                if accounted + reserved > budget or datetime.now(timezone.utc) >= deadline:
                     return case, None, ["budget or deadline reached"]
                 accounted += reserved
             attempt = {"attempt": number, "model": model_id, "requested_temperature": temperature,
@@ -168,7 +192,7 @@ def main(argv=None):
             ballot = None
             try:
                 payload = {
-                    "model": model_id, "max_tokens": MAX_OUTPUT, "temperature": temperature,
+                    "model": model_id, "max_tokens": max_output, "temperature": temperature,
                     "reasoning": {"effort": effort, "exclude": True},
                     "response_format": {"type": "json_object"},
                     "provider": {"only": providers, "allow_fallbacks": len(providers) > 1,
@@ -209,7 +233,7 @@ def main(argv=None):
                 break
         return case, None, attempts
 
-    smoke = [next(case for case in expected if case[-1] == name) for name in MODELS]
+    smoke = [next(case for case in expected if case[-1] == name) for name in models]
     with ThreadPoolExecutor(max_workers=6) as pool:
         for case, ballot, attempts in pool.map(lambda case: collect(case, one_attempt=True), smoke):
             detail = "" if ballot or not attempts else str(attempts[-1])[:420]
@@ -247,6 +271,7 @@ def main(argv=None):
     save(root / "valid-ballots.json", ballots)
     save(root / "usage.json", [{key: value for key, value in call.items() if key not in {"content", "error", "completion_id"}} for call in call_log])
     print(f"Complete: {len(ballots)} valid of {len(expected)} seats, {len(aggregates)}/{len(counts)} qualifying groups, ${result['cost_usd']:.4f} provider-reported.", flush=True)
+    return result, ballots
 
 
 if __name__ == "__main__":

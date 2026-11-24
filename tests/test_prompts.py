@@ -49,3 +49,23 @@ def test_compact_prompt_preserves_evidence_and_respects_condition(packet, condit
         assert resume == expected
     assert payload["ratings"] == original["ratings"]
     assert packet == original
+
+
+def test_rich_packet_never_leaks_withheld_opponent_ranks(packet):
+    game = packet["games"][0]
+    game["id"] = 421
+    packet["meta"]["resume_schema"] = 2
+    packet["opening_spreads"] = {"421": -7.0}
+    packet["resumes"]["Team 01"]["ranked_opponents"] = {
+        "ap": [["2026-11-21", "Team 02", "31-24", "H", 12, 6]],
+        "cfp": [["2026-11-21", "Team 02", "31-24", "H", 8, 8]],
+    }
+    ap_only = packet_slice(packet, "cfp_off_ap_on")
+    assert set(ap_only["resumes"]["Team 01"]["ranked_opponents"]) == {"ap"}
+    hidden = packet_slice(packet, "cfp_off_ap_off")
+    assert "ranked_opponents" not in hidden["resumes"]["Team 01"]
+    prompt = user_prompt(packet, "cfp_off_ap_off")
+    games = json.loads(prompt.splitlines()[-1])["games"]
+    assert games["columns"][-1] == "opening_home_spread"
+    assert games["rows"][0][-1] == -7.0
+    assert "opening_home_spread" not in user_prompt(packet, "cfp_off_ap_off", include_packet_odds=False)

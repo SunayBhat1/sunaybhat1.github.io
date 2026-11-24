@@ -44,6 +44,13 @@ PERSONA_TEXT: dict[str, str] = {
         "schedule strength, and quality of wins. Do not infer a head-to-head result from common opponents. "
         "Cite the direct game when it drives a rationale."
     ),
+    "brand_bias": (
+        "When two teams have closely comparable resumes, give a modest benefit of the doubt to "
+        "an eligible member of this fixed treatment list: Alabama, Michigan, Nebraska, Notre Dame, "
+        "Ohio State, Oklahoma, Texas, and USC. Use on-field evidence for clear resume differences. "
+        "If the brand preference breaks a tie in your top 12, say so alongside the relevant packet facts. "
+        "Treat this list as a voting preference only and do not add any historical facts."
+    ),
     "neutral_protocol": (
         "Apply the official criteria as written: body of work, strength of schedule, head-to-head, common opponents, "
         "and other relevant on-field factors. Do not apply conference preference, AP loyalty, or performed neutrality."
@@ -64,8 +71,9 @@ def committee_mix(name: str) -> list[Member]:
     raise ValueError(f"unknown committee mix: {name}")
 
 
-WEEKLY_PROFILES = ("weekly-v1", "weekly-v2")
+WEEKLY_PROFILES = ("weekly-v1", "weekly-v2", "weekly-v3")
 DEFAULT_WEEKLY_PROFILE = WEEKLY_PROFILES[-1]
+BRAND_SEAT = Member("M14", "brand_bias")
 
 
 def weekly_committee(profile: str) -> list[Member]:
@@ -75,10 +83,13 @@ def weekly_committee(profile: str) -> list[Member]:
     members = committee_mix("balanced")
     if profile == "weekly-v1":
         return members
-    return [
+    updated = [
         Member(member.agent_id, "head_to_head_first") if member.agent_id in {"M03", "M09"} else member
         for member in members
     ]
+    if profile == "weekly-v3":
+        updated.append(BRAND_SEAT)
+    return updated
 
 
 def mixes() -> tuple[str, ...]:
