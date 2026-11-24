@@ -31,7 +31,7 @@ menu:
 params:
     description: "Sunay Bhat — CTO, AI researcher, and writer. Building at the intersection of AI and product."
     author: Sunay Bhat
-    googleAnalyticsID: ""
+    goatCounterSite: ""
     DateFormat: "January 2006"
     defaultTheme: light
     hideFooter: false

@@ -52,7 +52,7 @@ jobs:
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
-          HUGO_PARAMS_GOOGLEANALYTICSID: ${{ vars.GOOGLE_ANALYTICS_ID }}
+          HUGO_PARAMS_GOATCOUNTERSITE: ${{ vars.GOATCOUNTER_SITE }}
         run: |
           hugo \
             --minify \

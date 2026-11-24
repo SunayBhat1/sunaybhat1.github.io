@@ -1,22 +1,18 @@
 (() => {
-  const measurementId = {{ . | jsonify }};
-  if (!/^G-[A-Z0-9]+$/.test(measurementId)) return;
+  const site = {{ . | jsonify }};
+  if (!/^[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$/.test(site)) return;
 
-  window.dataLayer = window.dataLayer || [];
-  const gtag = function () { window.dataLayer.push(arguments); };
-  gtag("js", new Date());
-  gtag("config", measurementId, {
-    send_page_view: false,
-    allow_google_signals: false,
-    allow_ad_personalization_signals: false,
-  });
-  gtag("event", "page_view", {
-    page_location: window.location.origin + window.location.pathname,
-    page_title: document.title,
-  });
-
+  window.goatcounter = {
+    path: window.location.pathname,
+    title: "",
+    referrer: "",
+    no_session: true,
+    no_events: true,
+  };
   const script = document.createElement("script");
   script.async = true;
-  script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(measurementId);
+  script.referrerPolicy = "no-referrer";
+  script.src = "https://gc.zgo.at/count.js";
+  script.dataset.goatcounter = "https://" + site + ".goatcounter.com/count";
   document.head.append(script);
 })();
