@@ -22,3 +22,8 @@
 .deep-section{padding-top:14px}.expand{border:1px solid var(--line);border-radius:9px;background:white;padding:0 16px}.expand>summary{padding:14px 0;cursor:pointer;font-weight:730;color:var(--green)}.expand[open]{padding-bottom:14px}.expand .method-grid,.expand .chart-grid{gap:10px}.expand .download-list{border-top:1px solid var(--line)}.expand .download-list a{padding-inline:0}.expand .attribution{margin-top:5px}.download-more{margin-top:12px}.disclosure-intro{color:var(--muted);margin-bottom:11px}
 @media(max-width:790px){.hero-inner{gap:24px;padding-block:37px}.hero h1{font-size:clamp(3.1rem,10vw,4.7rem)}}
 @media(max-width:580px){.download-pair{grid-template-columns:1fr;gap:8px}.file-card{padding:13px}.expand{padding-inline:12px}}
+.evidence-note{color:var(--muted);font-size:.9rem;margin:-8px 0 14px}
+.color-legend{display:flex;align-items:center;flex-wrap:wrap;gap:6px 10px;margin-top:12px;color:var(--muted);font-size:.82rem}
+.color-track{display:flex;width:118px;height:9px;overflow:hidden;border:1px solid var(--line);border-radius:4px}
+.color-track span{flex:1}
+.color-range{font-weight:700;font-variant-numeric:tabular-nums}

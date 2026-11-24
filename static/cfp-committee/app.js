@@ -47,6 +47,15 @@ if (!info) {
   const defaultGroup = "mixed|cfp_on_ap_on|0.3";
   $("release-label").textContent = "CFP forecast · " + releaseDate.format(new Date(p.release_id + "T12:00:00Z"));
   $("headline-team").textContent = runs[defaultGroup]?.ranking[0] ?? "—";
+  const gamesThrough = releaseDate.format(new Date(p.source.games_through + "T12:00:00Z"));
+  const recordNote = p.source.record_scope === "all_games"
+    ? "Overall records include games against non-FBS opponents."
+    : "Records in the ballots count FBS opponents only.";
+  $("evidence-note").textContent = "Games through " + gamesThrough + ". " + recordNote;
+  $("record-scope").textContent = recordNote;
+  if (p.release_id === "2026-11-24" && p.source.ap_week === 12) {
+    $("evidence-note").append(" The AP poll shown predates the Nov. 21 games.");
+  }
   for (const [id, path, format] of [
     ["skill-size","SKILL.md","MD"],["results-size","data/results.json","JSON"],
   ]) {
@@ -227,6 +236,7 @@ if (!info) {
         if (value) {
           td.title=value.title || value.text;
           td.style.background=value.fill || "#eef4ee";
+          if (value.ink) td.style.color=value.ink;
         }
         tr.append(td);
       }
@@ -239,6 +249,33 @@ if (!info) {
   function shade(x, warm = false) {
     return warm ? "hsl(31 74% "+(96-23*Math.min(Math.abs(x),1))+"%)" :
       "hsl(154 42% "+(97-27*Math.min(Math.abs(x),1))+"%)";
+  }
+
+  function agreementScale(values, format) {
+    const min = Math.min(...values);
+    const max = Math.max(...values);
+    const ramp = ["#edf5ed", "#c7e6d8", "#8fc9b4", "#337765", "#18483b"];
+    return {
+      style(value) {
+        if (max === min) return {fill:ramp[2]};
+        const band = Math.min(ramp.length - 1, Math.floor((value-min)/(max-min)*ramp.length));
+        return {fill:ramp[band], ink:band >= 3 ? "#fff" : "#132820"};
+      },
+      show(target) {
+        if (!values.length) return;
+        const legend = el("div",undefined,"color-legend");
+        const track = el("div",undefined,"color-track");
+        track.setAttribute("aria-hidden","true");
+        for (const color of max === min ? [ramp[2]] : ramp) {
+          const step = el("span");
+          step.style.backgroundColor = color;
+          track.append(step);
+        }
+        legend.append(el("span","Color scale across poll settings"),track,
+          el("span",max === min ? format(min) : format(min)+" to "+format(max),"color-range"));
+        $(target).append(legend);
+      },
+    };
   }
 
   function bars(target, items, max) {
@@ -264,12 +301,18 @@ if (!info) {
     const available=a.models.map(model=>[model,models[model]]);
     const metric=$("agreement-metric").value;
     const fraction=metric==="overlap";
+    const formatAgreement = value => fraction ? value+"/12" : fmtNum(value);
+    const modelScale = agreementScale(
+      Object.values(analysis).flatMap(report=>Object.values(report.agreement).map(pair=>pair[metric])),
+      formatAgreement
+    );
     matrix("model-chart",available,available,"Solo committee agreement", (left,right)=>{
-      const value=left===right ? (fraction?12:1) :
-        (a.agreement[left+"|"+right] || a.agreement[right+"|"+left])?.[metric];
+      if (left===right) return null;
+      const value=(a.agreement[left+"|"+right] || a.agreement[right+"|"+left])?.[metric];
       if(value===undefined) return null;
-      return {text:fraction?value+"/12":fmtNum(value),fill:shade(fraction?(value-7)/5:(value-.5)*2)};
+      return {text:formatAgreement(value),...modelScale.style(value)};
     });
+    modelScale.show("model-chart");
     const conferences=a.conferences.map(conference=>[conference,conference]);
     matrix("persona-chart",Object.entries(personas).map(([id,p])=>[id,p.name]),conferences,
       "Mean rank gain by persona and conference",(persona,conf)=>{
@@ -289,10 +332,14 @@ if (!info) {
       label:team.team,value:team.count,text:team.count+"/"+available.length,
     })),available.length||1);
     const refs=[...new Set(Object.values(a.reference_scores).flatMap(Object.keys))];
+    const referenceScale = agreementScale(Object.values(analysis).flatMap(report=>
+      Object.values(report.reference_scores).flatMap(scores=>Object.values(scores).map(score=>score.kendall_tau_b))
+    ),fmtNum);
     matrix("reference-chart",available,refs.map(name=>[name,name+" · τ-b"]),"Agreement with reference polls",(model,ref)=>{
       const s=a.reference_scores[model][ref];
-      return s ? {text:fmtNum(s.kendall_tau_b),fill:shade(s.kendall_tau_b),title:"Spearman "+fmtNum(s.spearman)+" · Top-12 overlap "+s.top_12_overlap} : null;
+      return s ? {text:fmtNum(s.kendall_tau_b),...referenceScale.style(s.kendall_tau_b),title:"Spearman "+fmtNum(s.spearman)+" · Top-12 overlap "+s.top_12_overlap} : null;
     });
+    referenceScale.show("reference-chart");
     if(p.official_status!=="available") $("reference-chart").append(el("p","Target-release accuracy is pending the official rankings.","chart-detail"));
     matrix("validation-chart",Object.entries(models),Object.entries(conditions),"Ballot validity by condition",(model,c)=>{
       const value=p.valid_by_group[model+"|"+c+"|0.3"];

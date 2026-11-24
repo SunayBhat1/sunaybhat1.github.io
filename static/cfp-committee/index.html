@@ -47,6 +47,7 @@
       <section id="rankings" class="section">
         <div class="section-heading"><div><h2>Rankings</h2><p>The combined committee is shown first. The playoff bracket also accounts for automatic bids.</p></div>
         </div>
+        <p class="evidence-note" id="evidence-note"></p>
         <aside id="roster-note" class="roster-note" hidden></aside>
         <div class="card rankings">
           <div class="controls">
@@ -106,7 +107,7 @@
         <details class="expand"><summary>How the committee worked</summary>
         <div class="method-grid">
           <article class="card method-card"><h3>Timing</h3><ol id="timeline"></ol></article>
-          <article class="card method-card"><h3>Information diet</h3><p>All agents see the same alphabetized set of 31 candidates, compact game rows, team résumés, and available ratings. The four conditions cross prior CFP and AP visibility. Poll-off conditions omit the relevant poll table and résumé rank fields. AP helped define the candidate pool, so its influence on eligibility persists across conditions.</p></article>
+          <article class="card method-card"><h3>Information diet</h3><p>All agents see the same alphabetized candidate list, compact game rows, team résumés, and available ratings. <span id="record-scope"></span> The four conditions cross prior CFP and AP visibility. Poll-off conditions omit the relevant poll table and résumé rank fields. AP helped define the candidate pool, so its influence on eligibility persists across conditions.</p></article>
           <article class="card method-card"><h3>Leakage controls</h3><p>The runner verifies the frozen packet SHA-256 and date cutoffs before calling models. Agents receive no search, tools, or retrieval. The input packet predates the target CFP release. Prior CFP publication date is a configured mapping because the source has no timestamp. Prompt instructions cannot erase knowledge already in model weights.</p></article>
           <article class="card method-card"><h3>Ballots and comparisons</h3><p>Each ballot ranks exactly 25 unique eligible teams and explains its top 12. A committee needs at least 10 valid ballots. Borda awards 25 points for first through 1 for 25th, breaking ties on available SP+ then alphabetically. Persona contrasts are descriptive. The mixed seats are fixed across conditions, and temperature support varies by provider.</p></article>
         </div>
