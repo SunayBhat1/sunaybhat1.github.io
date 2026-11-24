@@ -38,10 +38,15 @@ if (!info) {
   const {results, ballots} = info;
   const {provenance: p, runs, condition_names: conditions, personas, analysis, sensitivity} = results;
   const models = modelNames(info);
+  const seats = Object.values(personas).reduce((total, persona) => total + persona.seats, 0);
   const committees = {
     "mixed|0.3":"Combined committee",
     "mixed|0.7":"Combined committee · second vote",
     ...Object.fromEntries(Object.entries(models).map(([id,name]) => [id+"|0.3",name])),
+  };
+  const committeeDescription = {
+    "mixed|0.3": "The combined committee assigns different AI models to fixed seats with different voting styles.",
+    "mixed|0.7": "The same mixed committee votes again. Models that support a creativity setting use a higher setting.",
   };
 
   const defaultGroup = "mixed|cfp_on_ap_on|0.3";
@@ -124,12 +129,37 @@ if (!info) {
     $("timeline").append(item);
   }
   $("personas").className = "persona-list";
-  for (const persona of Object.values(personas)) {
+  for (const [id, persona] of Object.entries(personas)) {
     const item = el("article");
     item.append(el("strong",persona.name+" · "+persona.seats+" seats"),el("p",persona.description));
+    const prompts = Object.entries(p.system_prompts ?? {}).filter(([, prompt]) =>
+      prompt.match(/; your persona is (\w+)\./)?.[1] === id
+    );
+    if (prompts.length) {
+      const disclosure = el("details");
+      disclosure.append(el("summary","Full system prompt"));
+      const content = el("pre",prompts[0][1],"persona-prompt");
+      if (prompts.length > 1) {
+        const label = el("label","Voting seat");
+        const select = el("select");
+        options(select,Object.fromEntries(prompts.map(([seat]) => [seat,seat])));
+        select.addEventListener("change", () => {
+          content.textContent = prompts.find(([seat]) => seat === select.value)[1];
+        });
+        label.append(select);
+        disclosure.append(label);
+      }
+      disclosure.append(content);
+      item.append(disclosure);
+    }
     $("personas").append(item);
   }
-  options($("committee"), committees, "mixed|0.3");
+  const availableCommittees = new Set(Object.keys(p.valid_by_group).map(group => {
+    const [model,,temp] = group.split("|");
+    return model+"|"+temp;
+  }));
+  options($("committee"),Object.fromEntries(Object.entries(committees)
+    .filter(([key]) => availableCommittees.has(key))),"mixed|0.3");
   options($("condition"),conditions,"cfp_on_ap_on");
 
   function selection() {
@@ -194,7 +224,9 @@ if (!info) {
     top.replaceChildren(); rest.replaceChildren();
     const subset = ballots.filter(b => b.group === key);
     $("selection-note").textContent = (p.valid_by_group[key] ?? 0) +
-      " of 13 ballots valid · "+conditions[selection().condition];
+      " of "+seats+" ballots valid · "+conditions[selection().condition];
+    $("committee-description").textContent = committeeDescription[$("committee").value] ??
+      "Every voter uses " + committees[$("committee").value] + " with a seat-specific voting style.";
     $("rank-more").hidden = !run || !!query;
     if (!run) {
       emptyRow(top,"This group did not meet the 10-ballot threshold.");
@@ -313,6 +345,7 @@ if (!info) {
       return {text:formatAgreement(value),...modelScale.style(value)};
     });
     modelScale.show("model-chart");
+    $("model-chart").closest("article").hidden = available.length < 2;
     const conferences=a.conferences.map(conference=>[conference,conference]);
     matrix("persona-chart",Object.entries(personas).map(([id,p])=>[id,p.name]),conferences,
       "Mean rank gain by persona and conference",(persona,conf)=>{

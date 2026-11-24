@@ -1,9 +1,3 @@
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.GoogleAnalyticsID }}"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', '{{ .Site.Params.GoogleAnalyticsID }}');
-</script>
+{{- $id := .Site.Params.googleAnalyticsID | default "" -}}
+{{- $script := resources.Get "analytics.js" | resources.ExecuteAsTemplate "analytics.js" $id -}}
+<script defer src="{{ $script.RelPermalink }}"></script>
