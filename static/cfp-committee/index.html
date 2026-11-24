@@ -74,8 +74,8 @@
       <section id="downloads" class="section">
         <div class="section-heading"><div><h2>Ask your own AI</h2><p>Download both files, attach them to your chatbot, and start with the prompt below.</p></div></div>
         <div class="download-pair">
-          <a class="card file-card" href="SKILL.md" download><span><strong>Agent skill</strong><small>How to read, verify, and reproduce the analysis</small></span><span class="filetype" id="skill-size">MD</span></a>
-          <a class="card file-card" href="data/results.json" download><span><strong>Full results JSON</strong><small>Every ranking, ballot, explanation, and run detail</small></span><span class="filetype" id="results-size">JSON</span></a>
+          <a class="card file-card" href="SKILL.md" download data-umami-event="cfp-skill-download"><span><strong>Agent skill</strong><small>How to read, verify, and reproduce the analysis</small></span><span class="filetype" id="skill-size">MD</span></a>
+          <a class="card file-card" href="data/results.json" download data-umami-event="cfp-results-download"><span><strong>Full results JSON</strong><small>Every ranking, ballot, explanation, and run detail</small></span><span class="filetype" id="results-size">JSON</span></a>
         </div>
         <div class="card starter">
           <div class="starter-head"><h3>Starter prompt</h3><button class="button secondary" id="copy-prompt" type="button">Copy prompt</button></div>
@@ -85,9 +85,9 @@
         <details class="expand download-more">
           <summary>Technical downloads and reproduction</summary>
           <div class="download-list">
-            <a href="data/cfp-data.zip" download><span><strong>Complete data bundle</strong><small>Skill, rankings, ballots, usage, and audit details</small></span><span class="filetype">ZIP</span></a>
-            <a href="data/rankings.csv" download><span><strong>Committee rankings</strong><small>Ranking and vote points for each version of the committee</small></span><span class="filetype">CSV</span></a>
-            <a href="data/provenance.json" download><span><strong>Run record and lock</strong><small>Input fingerprint, exact prompts, timestamps, and model settings</small></span><span class="filetype">JSON</span></a>
+            <a href="data/cfp-data.zip" download data-umami-event="cfp-bundle-download"><span><strong>Complete data bundle</strong><small>Skill, rankings, ballots, usage, and audit details</small></span><span class="filetype">ZIP</span></a>
+            <a href="data/rankings.csv" download data-umami-event="cfp-rankings-download"><span><strong>Committee rankings</strong><small>Ranking and vote points for each version of the committee</small></span><span class="filetype">CSV</span></a>
+            <a href="data/provenance.json" download data-umami-event="cfp-provenance-download"><span><strong>Run record and lock</strong><small>Input fingerprint, exact prompts, timestamps, and model settings</small></span><span class="filetype">JSON</span></a>
           </div>
           <p class="attribution">The source games come from <a href="https://collegefootballdata.com/">CollegeFootballData.com</a>. Its <a href="https://collegefootballdata.com/terms">API terms</a> restrict bulk redistribution. The skill shows how to rebuild the inputs with an authorized key.</p>
         </details>
