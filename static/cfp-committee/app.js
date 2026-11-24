@@ -355,28 +355,34 @@ if (!info) {
           fill:shade(edge.delta/4,edge.delta<0)};
     });
     $("persona-chart").append(el("p","Green = higher placements. Amber = lower placements. Hover for sample size.","chart-detail"));
+    $("persona-chart").closest("article").hidden = !Object.keys(a.tilt).length;
     const shifts=Object.entries(models).flatMap(([id,name])=>["ap","cfp"].filter(poll=>sensitivity[id]?.[poll]).map(poll=>{
       const s=sensitivity[id][poll];
       return {label:name+" · "+(poll==="ap"?"AP":"CFP"),value:s.distance,text:fmtNum(s.distance,3),
         color:poll==="ap"?"#488974":"#99703b",title:s.n+" matched ballot pairs"};
     }));
     bars("sensitivity-chart",shifts,Math.max(.2,...shifts.map(x=>x.value)));
+    $("sensitivity-chart").closest("article").hidden = !shifts.length;
     bars("consensus-chart",a.consensus.slice(0,12).map(team=>({
       label:team.team,value:team.count,text:team.count+"/"+available.length,
     })),available.length||1);
+    $("consensus-chart").closest("article").hidden = !available.length;
     const refs=[...new Set(Object.values(a.reference_scores).flatMap(Object.keys))];
+    const referenceRows=Object.keys(a.reference_scores).map(id=>[id,models[id] ?? committees[id]]);
     const referenceScale = agreementScale(Object.values(analysis).flatMap(report=>
       Object.values(report.reference_scores).flatMap(scores=>Object.values(scores).map(score=>score.kendall_tau_b))
     ),fmtNum);
-    matrix("reference-chart",available,refs.map(name=>[name,name+" · τ-b"]),"Agreement with reference polls",(model,ref)=>{
+    matrix("reference-chart",referenceRows,refs.map(name=>[name,name+" · τ-b"]),"Agreement with reference polls",(model,ref)=>{
       const s=a.reference_scores[model][ref];
       return s ? {text:fmtNum(s.kendall_tau_b),...referenceScale.style(s.kendall_tau_b),title:"Spearman "+fmtNum(s.spearman)+" · Top-12 overlap "+s.top_12_overlap} : null;
     });
     referenceScale.show("reference-chart");
     if(p.official_status!=="available") $("reference-chart").append(el("p","Target-release accuracy is pending the official rankings.","chart-detail"));
-    matrix("validation-chart",Object.entries(models),Object.entries(conditions),"Ballot validity by condition",(model,c)=>{
-      const value=p.valid_by_group[model+"|"+c+"|0.3"];
-      return value===undefined ? null : {text:value+"/13",fill:shade(value/13,value<10)};
+    const validationRows=Object.entries(committees).filter(([id])=>availableCommittees.has(id));
+    matrix("validation-chart",validationRows,Object.entries(conditions),"Ballot validity by condition",(committee,c)=>{
+      const [model,temp]=committee.split("|");
+      const value=p.valid_by_group[model+"|"+c+"|"+temp];
+      return value===undefined ? null : {text:value+"/"+seats,fill:shade(value/seats,value<10)};
     });
   }
 
