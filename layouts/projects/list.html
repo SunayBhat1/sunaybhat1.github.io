@@ -8,14 +8,15 @@
 
 <div class="project-collection">
 {{- range $index, $page := .RegularPages.ByDate.Reverse }}
+  {{- $projectURL := .Param "externalUrl" | default .RelPermalink }}
   <article class="project-card">
     <span class="project-index">{{ printf "%02d" (add $index 1) }}</span>
     <div>
       <p class="editorial-kicker">{{ with .Params.tags }}{{ index . 0 }}{{ else }}Project{{ end }}</p>
-      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <h2><a href="{{ $projectURL }}">{{ .Title }}</a></h2>
       {{- with .Summary }}<p>{{ . | plainify | htmlUnescape }}</p>{{ end }}
     </div>
-    <a class="project-arrow" href="{{ .RelPermalink }}" aria-label="Read {{ .Title }}">↗</a>
+    <a class="project-arrow" href="{{ $projectURL }}" aria-label="Read {{ .Title }}">↗</a>
   </article>
 {{- end }}
 </div>

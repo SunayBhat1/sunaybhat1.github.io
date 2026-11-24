@@ -1,801 +1,251 @@
 committee,condition,temperature_label,rank,team,borda_points,valid_ballots
-deepseek,cfp_off_ap_off,0.3,1,Utah,267,11
-deepseek,cfp_off_ap_off,0.3,2,Georgia,265,11
-deepseek,cfp_off_ap_off,0.3,3,Miami,250,11
-deepseek,cfp_off_ap_off,0.3,4,Texas,247,11
-deepseek,cfp_off_ap_off,0.3,5,Notre Dame,236,11
-deepseek,cfp_off_ap_off,0.3,6,Texas Tech,210,11
-deepseek,cfp_off_ap_off,0.3,7,BYU,198,11
-deepseek,cfp_off_ap_off,0.3,8,Indiana,193,11
-deepseek,cfp_off_ap_off,0.3,9,Oregon,183,11
-deepseek,cfp_off_ap_off,0.3,10,UCLA,180,11
-deepseek,cfp_off_ap_off,0.3,11,Wake Forest,172,11
-deepseek,cfp_off_ap_off,0.3,12,Tennessee,153,11
-deepseek,cfp_off_ap_off,0.3,13,Alabama,150,11
-deepseek,cfp_off_ap_off,0.3,14,Ole Miss,124,11
-deepseek,cfp_off_ap_off,0.3,15,USC,123,11
-deepseek,cfp_off_ap_off,0.3,16,Louisville,105,11
-deepseek,cfp_off_ap_off,0.3,17,Arizona,92,11
-deepseek,cfp_off_ap_off,0.3,18,Iowa,79,11
-deepseek,cfp_off_ap_off,0.3,19,Houston,78,11
-deepseek,cfp_off_ap_off,0.3,20,Boise State,69,11
-deepseek,cfp_off_ap_off,0.3,21,Ohio State,52,11
-deepseek,cfp_off_ap_off,0.3,22,New Mexico,48,11
-deepseek,cfp_off_ap_off,0.3,23,North Dakota State,36,11
-deepseek,cfp_off_ap_off,0.3,24,Air Force,26,11
-deepseek,cfp_off_ap_off,0.3,25,Florida,18,11
-deepseek,cfp_off_ap_on,0.3,1,Georgia,320,13
-deepseek,cfp_off_ap_on,0.3,2,Utah,312,13
-deepseek,cfp_off_ap_on,0.3,3,Miami,293,13
-deepseek,cfp_off_ap_on,0.3,4,Notre Dame,289,13
-deepseek,cfp_off_ap_on,0.3,5,Texas,270,13
-deepseek,cfp_off_ap_on,0.3,6,Indiana,245,13
-deepseek,cfp_off_ap_on,0.3,7,UCLA,243,13
-deepseek,cfp_off_ap_on,0.3,8,Texas Tech,235,13
-deepseek,cfp_off_ap_on,0.3,9,Alabama,212,13
-deepseek,cfp_off_ap_on,0.3,10,Tennessee,204,13
-deepseek,cfp_off_ap_on,0.3,11,BYU,204,13
-deepseek,cfp_off_ap_on,0.3,12,Oregon,191,13
-deepseek,cfp_off_ap_on,0.3,13,Wake Forest,184,13
-deepseek,cfp_off_ap_on,0.3,14,Iowa,141,13
-deepseek,cfp_off_ap_on,0.3,15,USC,137,13
-deepseek,cfp_off_ap_on,0.3,16,Boise State,113,13
-deepseek,cfp_off_ap_on,0.3,17,Louisville,106,13
-deepseek,cfp_off_ap_on,0.3,18,Ole Miss,100,13
-deepseek,cfp_off_ap_on,0.3,19,Arizona,90,13
-deepseek,cfp_off_ap_on,0.3,20,Houston,90,13
-deepseek,cfp_off_ap_on,0.3,21,Ohio State,79,13
-deepseek,cfp_off_ap_on,0.3,22,Florida,52,13
-deepseek,cfp_off_ap_on,0.3,23,Kentucky,43,13
-deepseek,cfp_off_ap_on,0.3,24,Liberty,34,13
-deepseek,cfp_off_ap_on,0.3,25,Memphis,32,13
-deepseek,cfp_on_ap_off,0.3,1,Georgia,324,13
-deepseek,cfp_on_ap_off,0.3,2,Utah,308,13
-deepseek,cfp_on_ap_off,0.3,3,Miami,292,13
-deepseek,cfp_on_ap_off,0.3,4,Texas,290,13
-deepseek,cfp_on_ap_off,0.3,5,Notre Dame,270,13
-deepseek,cfp_on_ap_off,0.3,6,Alabama,243,13
-deepseek,cfp_on_ap_off,0.3,7,Indiana,242,13
-deepseek,cfp_on_ap_off,0.3,8,BYU,224,13
-deepseek,cfp_on_ap_off,0.3,9,Tennessee,220,13
-deepseek,cfp_on_ap_off,0.3,10,Texas Tech,210,13
-deepseek,cfp_on_ap_off,0.3,11,Wake Forest,199,13
-deepseek,cfp_on_ap_off,0.3,12,UCLA,198,13
-deepseek,cfp_on_ap_off,0.3,13,Oregon,190,13
-deepseek,cfp_on_ap_off,0.3,14,Ohio State,139,13
-deepseek,cfp_on_ap_off,0.3,15,Iowa,136,13
-deepseek,cfp_on_ap_off,0.3,16,USC,125,13
-deepseek,cfp_on_ap_off,0.3,17,Boise State,106,13
-deepseek,cfp_on_ap_off,0.3,18,Louisville,97,13
-deepseek,cfp_on_ap_off,0.3,19,Arizona,93,13
-deepseek,cfp_on_ap_off,0.3,20,Ole Miss,91,13
-deepseek,cfp_on_ap_off,0.3,21,Houston,80,13
-deepseek,cfp_on_ap_off,0.3,22,Florida,59,13
-deepseek,cfp_on_ap_off,0.3,23,Kentucky,50,13
-deepseek,cfp_on_ap_off,0.3,24,New Mexico,25,13
-deepseek,cfp_on_ap_off,0.3,25,North Dakota State,10,13
-deepseek,cfp_on_ap_on,0.3,1,Georgia,325,13
-deepseek,cfp_on_ap_on,0.3,2,Utah,312,13
-deepseek,cfp_on_ap_on,0.3,3,Notre Dame,286,13
-deepseek,cfp_on_ap_on,0.3,4,Miami,285,13
-deepseek,cfp_on_ap_on,0.3,5,Texas,269,13
-deepseek,cfp_on_ap_on,0.3,6,UCLA,265,13
-deepseek,cfp_on_ap_on,0.3,7,Indiana,243,13
-deepseek,cfp_on_ap_on,0.3,8,Alabama,243,13
-deepseek,cfp_on_ap_on,0.3,9,Tennessee,220,13
-deepseek,cfp_on_ap_on,0.3,10,BYU,208,13
-deepseek,cfp_on_ap_on,0.3,11,Texas Tech,195,13
-deepseek,cfp_on_ap_on,0.3,12,Wake Forest,187,13
-deepseek,cfp_on_ap_on,0.3,13,Oregon,173,13
-deepseek,cfp_on_ap_on,0.3,14,Ohio State,154,13
-deepseek,cfp_on_ap_on,0.3,15,Iowa,144,13
-deepseek,cfp_on_ap_on,0.3,16,Boise State,123,13
-deepseek,cfp_on_ap_on,0.3,17,USC,122,13
-deepseek,cfp_on_ap_on,0.3,18,Arizona,96,13
-deepseek,cfp_on_ap_on,0.3,19,Houston,87,13
-deepseek,cfp_on_ap_on,0.3,20,Louisville,76,13
-deepseek,cfp_on_ap_on,0.3,21,Kentucky,70,13
-deepseek,cfp_on_ap_on,0.3,22,Ole Miss,58,13
-deepseek,cfp_on_ap_on,0.3,23,Florida,45,13
-deepseek,cfp_on_ap_on,0.3,24,Memphis,21,13
-deepseek,cfp_on_ap_on,0.3,25,Liberty,18,13
-gemini,cfp_off_ap_off,0.3,1,Georgia,319,13
-gemini,cfp_off_ap_off,0.3,2,Utah,306,13
-gemini,cfp_off_ap_off,0.3,3,Notre Dame,293,13
-gemini,cfp_off_ap_off,0.3,4,Texas,274,13
-gemini,cfp_off_ap_off,0.3,5,Miami,270,13
-gemini,cfp_off_ap_off,0.3,6,UCLA,260,13
-gemini,cfp_off_ap_off,0.3,7,Alabama,233,13
-gemini,cfp_off_ap_off,0.3,8,Tennessee,225,13
-gemini,cfp_off_ap_off,0.3,9,Texas Tech,218,13
-gemini,cfp_off_ap_off,0.3,10,Indiana,216,13
-gemini,cfp_off_ap_off,0.3,11,Wake Forest,216,13
-gemini,cfp_off_ap_off,0.3,12,BYU,181,13
-gemini,cfp_off_ap_off,0.3,13,Iowa,175,13
-gemini,cfp_off_ap_off,0.3,14,Oregon,164,13
-gemini,cfp_off_ap_off,0.3,15,USC,131,13
-gemini,cfp_off_ap_off,0.3,16,Boise State,124,13
-gemini,cfp_off_ap_off,0.3,17,Ohio State,123,13
-gemini,cfp_off_ap_off,0.3,18,Liberty,78,13
-gemini,cfp_off_ap_off,0.3,19,New Mexico,74,13
-gemini,cfp_off_ap_off,0.3,20,North Dakota State,59,13
-gemini,cfp_off_ap_off,0.3,21,Houston,42,13
-gemini,cfp_off_ap_off,0.3,22,Air Force,41,13
-gemini,cfp_off_ap_off,0.3,23,Louisiana Tech,39,13
-gemini,cfp_off_ap_off,0.3,24,UTSA,34,13
-gemini,cfp_off_ap_off,0.3,25,Louisville,30,13
-gemini,cfp_off_ap_on,0.3,1,Georgia,320,13
-gemini,cfp_off_ap_on,0.3,2,Utah,306,13
-gemini,cfp_off_ap_on,0.3,3,Notre Dame,294,13
-gemini,cfp_off_ap_on,0.3,4,Miami,279,13
-gemini,cfp_off_ap_on,0.3,5,Texas,265,13
-gemini,cfp_off_ap_on,0.3,6,UCLA,256,13
-gemini,cfp_off_ap_on,0.3,7,Alabama,240,13
-gemini,cfp_off_ap_on,0.3,8,Tennessee,240,13
-gemini,cfp_off_ap_on,0.3,9,Indiana,222,13
-gemini,cfp_off_ap_on,0.3,10,Wake Forest,218,13
-gemini,cfp_off_ap_on,0.3,11,Texas Tech,213,13
-gemini,cfp_off_ap_on,0.3,12,BYU,182,13
-gemini,cfp_off_ap_on,0.3,13,Iowa,172,13
-gemini,cfp_off_ap_on,0.3,14,Oregon,158,13
-gemini,cfp_off_ap_on,0.3,15,Boise State,131,13
-gemini,cfp_off_ap_on,0.3,16,Ohio State,130,13
-gemini,cfp_off_ap_on,0.3,17,USC,120,13
-gemini,cfp_off_ap_on,0.3,18,Houston,90,13
-gemini,cfp_off_ap_on,0.3,19,Arizona,83,13
-gemini,cfp_off_ap_on,0.3,20,Louisville,81,13
-gemini,cfp_off_ap_on,0.3,21,Ole Miss,57,13
-gemini,cfp_off_ap_on,0.3,22,Florida,54,13
-gemini,cfp_off_ap_on,0.3,23,Kentucky,51,13
-gemini,cfp_off_ap_on,0.3,24,Liberty,39,13
-gemini,cfp_off_ap_on,0.3,25,New Mexico,15,13
-gemini,cfp_on_ap_off,0.3,1,Georgia,321,13
-gemini,cfp_on_ap_off,0.3,2,Utah,305,13
-gemini,cfp_on_ap_off,0.3,3,Notre Dame,281,13
-gemini,cfp_on_ap_off,0.3,4,Texas,274,13
-gemini,cfp_on_ap_off,0.3,5,Miami,266,13
-gemini,cfp_on_ap_off,0.3,6,Alabama,265,13
-gemini,cfp_on_ap_off,0.3,7,UCLA,262,13
-gemini,cfp_on_ap_off,0.3,8,Tennessee,245,13
-gemini,cfp_on_ap_off,0.3,9,Texas Tech,209,13
-gemini,cfp_on_ap_off,0.3,10,BYU,205,13
-gemini,cfp_on_ap_off,0.3,11,Indiana,202,13
-gemini,cfp_on_ap_off,0.3,12,Wake Forest,200,13
-gemini,cfp_on_ap_off,0.3,13,Oregon,171,13
-gemini,cfp_on_ap_off,0.3,14,Iowa,154,13
-gemini,cfp_on_ap_off,0.3,15,Ohio State,129,13
-gemini,cfp_on_ap_off,0.3,16,USC,126,13
-gemini,cfp_on_ap_off,0.3,17,Boise State,119,13
-gemini,cfp_on_ap_off,0.3,18,Arizona,84,13
-gemini,cfp_on_ap_off,0.3,19,Houston,81,13
-gemini,cfp_on_ap_off,0.3,20,Florida,60,13
-gemini,cfp_on_ap_off,0.3,21,Ole Miss,57,13
-gemini,cfp_on_ap_off,0.3,22,Louisville,49,13
-gemini,cfp_on_ap_off,0.3,23,Kentucky,49,13
-gemini,cfp_on_ap_off,0.3,24,Liberty,40,13
-gemini,cfp_on_ap_off,0.3,25,New Mexico,28,13
-gemini,cfp_on_ap_on,0.3,1,Georgia,320,13
-gemini,cfp_on_ap_on,0.3,2,Utah,307,13
-gemini,cfp_on_ap_on,0.3,3,Notre Dame,289,13
-gemini,cfp_on_ap_on,0.3,4,Miami,271,13
-gemini,cfp_on_ap_on,0.3,5,UCLA,270,13
-gemini,cfp_on_ap_on,0.3,6,Texas,259,13
-gemini,cfp_on_ap_on,0.3,7,Alabama,255,13
-gemini,cfp_on_ap_on,0.3,8,Tennessee,232,13
-gemini,cfp_on_ap_on,0.3,9,Indiana,227,13
-gemini,cfp_on_ap_on,0.3,10,Wake Forest,208,13
-gemini,cfp_on_ap_on,0.3,11,Texas Tech,205,13
-gemini,cfp_on_ap_on,0.3,12,BYU,194,13
-gemini,cfp_on_ap_on,0.3,13,Iowa,163,13
-gemini,cfp_on_ap_on,0.3,14,Oregon,157,13
-gemini,cfp_on_ap_on,0.3,15,Ohio State,134,13
-gemini,cfp_on_ap_on,0.3,16,Boise State,127,13
-gemini,cfp_on_ap_on,0.3,17,USC,119,13
-gemini,cfp_on_ap_on,0.3,18,Houston,82,13
-gemini,cfp_on_ap_on,0.3,19,Kentucky,78,13
-gemini,cfp_on_ap_on,0.3,20,Arizona,74,13
-gemini,cfp_on_ap_on,0.3,21,Louisville,64,13
-gemini,cfp_on_ap_on,0.3,22,Florida,59,13
-gemini,cfp_on_ap_on,0.3,23,Ole Miss,47,13
-gemini,cfp_on_ap_on,0.3,24,Liberty,43,13
-gemini,cfp_on_ap_on,0.3,25,New Mexico,14,13
-glm,cfp_off_ap_off,0.3,1,Georgia,321,13
-glm,cfp_off_ap_off,0.3,2,Texas,300,13
-glm,cfp_off_ap_off,0.3,3,Notre Dame,290,13
-glm,cfp_off_ap_off,0.3,4,Miami,282,13
-glm,cfp_off_ap_off,0.3,5,Utah,274,13
-glm,cfp_off_ap_off,0.3,6,Alabama,241,13
-glm,cfp_off_ap_off,0.3,7,Indiana,232,13
-glm,cfp_off_ap_off,0.3,8,Wake Forest,232,13
-glm,cfp_off_ap_off,0.3,9,Tennessee,208,13
-glm,cfp_off_ap_off,0.3,10,Oregon,204,13
-glm,cfp_off_ap_off,0.3,11,Texas Tech,194,13
-glm,cfp_off_ap_off,0.3,12,Ohio State,191,13
-glm,cfp_off_ap_off,0.3,13,BYU,178,13
-glm,cfp_off_ap_off,0.3,14,Iowa,165,13
-glm,cfp_off_ap_off,0.3,15,UCLA,150,13
-glm,cfp_off_ap_off,0.3,16,USC,150,13
-glm,cfp_off_ap_off,0.3,17,Louisville,124,13
-glm,cfp_off_ap_off,0.3,18,Boise State,118,13
-glm,cfp_off_ap_off,0.3,19,Ole Miss,78,13
-glm,cfp_off_ap_off,0.3,20,Houston,66,13
-glm,cfp_off_ap_off,0.3,21,Florida,57,13
-glm,cfp_off_ap_off,0.3,22,Arizona,56,13
-glm,cfp_off_ap_off,0.3,23,Kentucky,42,13
-glm,cfp_off_ap_off,0.3,24,Liberty,40,13
-glm,cfp_off_ap_off,0.3,25,Memphis,22,13
-glm,cfp_off_ap_on,0.3,1,Georgia,325,13
-glm,cfp_off_ap_on,0.3,2,Utah,306,13
-glm,cfp_off_ap_on,0.3,3,Notre Dame,296,13
-glm,cfp_off_ap_on,0.3,4,Miami,280,13
-glm,cfp_off_ap_on,0.3,5,Texas,270,13
-glm,cfp_off_ap_on,0.3,6,Indiana,245,13
-glm,cfp_off_ap_on,0.3,7,Alabama,240,13
-glm,cfp_off_ap_on,0.3,8,Tennessee,230,13
-glm,cfp_off_ap_on,0.3,9,Wake Forest,221,13
-glm,cfp_off_ap_on,0.3,10,UCLA,208,13
-glm,cfp_off_ap_on,0.3,11,Texas Tech,203,13
-glm,cfp_off_ap_on,0.3,12,BYU,196,13
-glm,cfp_off_ap_on,0.3,13,Oregon,177,13
-glm,cfp_off_ap_on,0.3,14,Iowa,161,13
-glm,cfp_off_ap_on,0.3,15,Boise State,138,13
-glm,cfp_off_ap_on,0.3,16,Ohio State,122,13
-glm,cfp_off_ap_on,0.3,17,USC,118,13
-glm,cfp_off_ap_on,0.3,18,Louisville,100,13
-glm,cfp_off_ap_on,0.3,19,Houston,81,13
-glm,cfp_off_ap_on,0.3,20,Arizona,80,13
-glm,cfp_off_ap_on,0.3,21,Kentucky,69,13
-glm,cfp_off_ap_on,0.3,22,Florida,59,13
-glm,cfp_off_ap_on,0.3,23,Ole Miss,51,13
-glm,cfp_off_ap_on,0.3,24,Liberty,29,13
-glm,cfp_off_ap_on,0.3,25,Memphis,20,13
-glm,cfp_on_ap_off,0.3,1,Georgia,299,12
-glm,cfp_on_ap_off,0.3,2,Utah,277,12
-glm,cfp_on_ap_off,0.3,3,Texas,268,12
-glm,cfp_on_ap_off,0.3,4,Notre Dame,261,12
-glm,cfp_on_ap_off,0.3,5,Miami,257,12
-glm,cfp_on_ap_off,0.3,6,Alabama,231,12
-glm,cfp_on_ap_off,0.3,7,Indiana,225,12
-glm,cfp_on_ap_off,0.3,8,Tennessee,210,12
-glm,cfp_on_ap_off,0.3,9,Wake Forest,198,12
-glm,cfp_on_ap_off,0.3,10,BYU,188,12
-glm,cfp_on_ap_off,0.3,11,Texas Tech,181,12
-glm,cfp_on_ap_off,0.3,12,UCLA,171,12
-glm,cfp_on_ap_off,0.3,13,Oregon,171,12
-glm,cfp_on_ap_off,0.3,14,Ohio State,157,12
-glm,cfp_on_ap_off,0.3,15,Iowa,135,12
-glm,cfp_on_ap_off,0.3,16,USC,124,12
-glm,cfp_on_ap_off,0.3,17,Boise State,109,12
-glm,cfp_on_ap_off,0.3,18,Louisville,86,12
-glm,cfp_on_ap_off,0.3,19,Arizona,77,12
-glm,cfp_on_ap_off,0.3,20,Houston,71,12
-glm,cfp_on_ap_off,0.3,21,Kentucky,69,12
-glm,cfp_on_ap_off,0.3,22,Florida,53,12
-glm,cfp_on_ap_off,0.3,23,Ole Miss,43,12
-glm,cfp_on_ap_off,0.3,24,Liberty,24,12
-glm,cfp_on_ap_off,0.3,25,New Mexico,7,12
-glm,cfp_on_ap_on,0.3,1,Georgia,325,13
-glm,cfp_on_ap_on,0.3,2,Utah,312,13
-glm,cfp_on_ap_on,0.3,3,Notre Dame,294,13
-glm,cfp_on_ap_on,0.3,4,Miami,278,13
-glm,cfp_on_ap_on,0.3,5,Texas,273,13
-glm,cfp_on_ap_on,0.3,6,Indiana,251,13
-glm,cfp_on_ap_on,0.3,7,Alabama,250,13
-glm,cfp_on_ap_on,0.3,8,Tennessee,227,13
-glm,cfp_on_ap_on,0.3,9,Wake Forest,213,13
-glm,cfp_on_ap_on,0.3,10,Texas Tech,195,13
-glm,cfp_on_ap_on,0.3,11,UCLA,193,13
-glm,cfp_on_ap_on,0.3,12,Oregon,190,13
-glm,cfp_on_ap_on,0.3,13,BYU,186,13
-glm,cfp_on_ap_on,0.3,14,Iowa,159,13
-glm,cfp_on_ap_on,0.3,15,Ohio State,142,13
-glm,cfp_on_ap_on,0.3,16,USC,130,13
-glm,cfp_on_ap_on,0.3,17,Boise State,120,13
-glm,cfp_on_ap_on,0.3,18,Louisville,96,13
-glm,cfp_on_ap_on,0.3,19,Arizona,77,13
-glm,cfp_on_ap_on,0.3,20,Kentucky,76,13
-glm,cfp_on_ap_on,0.3,21,Houston,74,13
-glm,cfp_on_ap_on,0.3,22,Florida,60,13
-glm,cfp_on_ap_on,0.3,23,Ole Miss,52,13
-glm,cfp_on_ap_on,0.3,24,Liberty,33,13
-glm,cfp_on_ap_on,0.3,25,Memphis,18,13
-haiku,cfp_off_ap_off,0.3,1,Georgia,317,13
-haiku,cfp_off_ap_off,0.3,2,Ohio State,310,13
-haiku,cfp_off_ap_off,0.3,3,Texas,291,13
-haiku,cfp_off_ap_off,0.3,4,Notre Dame,281,13
-haiku,cfp_off_ap_off,0.3,5,Alabama,275,13
-haiku,cfp_off_ap_off,0.3,6,Miami,261,13
-haiku,cfp_off_ap_off,0.3,7,Oregon,251,13
-haiku,cfp_off_ap_off,0.3,8,Utah,241,13
-haiku,cfp_off_ap_off,0.3,9,Indiana,206,13
-haiku,cfp_off_ap_off,0.3,10,UCLA,196,13
-haiku,cfp_off_ap_off,0.3,11,Tennessee,194,13
-haiku,cfp_off_ap_off,0.3,12,Ole Miss,182,13
-haiku,cfp_off_ap_off,0.3,13,Texas Tech,175,13
-haiku,cfp_off_ap_off,0.3,14,Louisville,147,13
-haiku,cfp_off_ap_off,0.3,15,Boise State,140,13
-haiku,cfp_off_ap_off,0.3,16,BYU,136,13
-haiku,cfp_off_ap_off,0.3,17,Iowa,86,13
-haiku,cfp_off_ap_off,0.3,18,Arizona,80,13
-haiku,cfp_off_ap_off,0.3,19,Memphis,74,13
-haiku,cfp_off_ap_off,0.3,20,Wake Forest,73,13
-haiku,cfp_off_ap_off,0.3,21,Houston,61,13
-haiku,cfp_off_ap_off,0.3,22,Air Force,51,13
-haiku,cfp_off_ap_off,0.3,23,USC,47,13
-haiku,cfp_off_ap_off,0.3,24,Florida,43,13
-haiku,cfp_off_ap_off,0.3,25,North Dakota State,37,13
-haiku,cfp_off_ap_on,0.3,1,Georgia,294,12
-haiku,cfp_off_ap_on,0.3,2,Notre Dame,265,12
-haiku,cfp_off_ap_on,0.3,3,Utah,261,12
-haiku,cfp_off_ap_on,0.3,4,Miami,258,12
-haiku,cfp_off_ap_on,0.3,5,Ohio State,244,12
-haiku,cfp_off_ap_on,0.3,6,Texas,244,12
-haiku,cfp_off_ap_on,0.3,7,Alabama,243,12
-haiku,cfp_off_ap_on,0.3,8,Indiana,226,12
-haiku,cfp_off_ap_on,0.3,9,Tennessee,201,12
-haiku,cfp_off_ap_on,0.3,10,UCLA,190,12
-haiku,cfp_off_ap_on,0.3,11,Oregon,184,12
-haiku,cfp_off_ap_on,0.3,12,Texas Tech,177,12
-haiku,cfp_off_ap_on,0.3,13,BYU,144,12
-haiku,cfp_off_ap_on,0.3,14,Boise State,127,12
-haiku,cfp_off_ap_on,0.3,15,Iowa,122,12
-haiku,cfp_off_ap_on,0.3,16,Wake Forest,111,12
-haiku,cfp_off_ap_on,0.3,17,Liberty,89,12
-haiku,cfp_off_ap_on,0.3,18,Louisville,84,12
-haiku,cfp_off_ap_on,0.3,19,Ole Miss,82,12
-haiku,cfp_off_ap_on,0.3,20,Houston,82,12
-haiku,cfp_off_ap_on,0.3,21,Kentucky,73,12
-haiku,cfp_off_ap_on,0.3,22,Arizona,57,12
-haiku,cfp_off_ap_on,0.3,23,Florida,51,12
-haiku,cfp_off_ap_on,0.3,24,USC,47,12
-haiku,cfp_off_ap_on,0.3,25,Memphis,44,12
-haiku,cfp_on_ap_off,0.3,1,Georgia,325,13
-haiku,cfp_on_ap_off,0.3,2,Alabama,275,13
-haiku,cfp_on_ap_off,0.3,3,Utah,268,13
-haiku,cfp_on_ap_off,0.3,4,Notre Dame,264,13
-haiku,cfp_on_ap_off,0.3,5,Ohio State,260,13
-haiku,cfp_on_ap_off,0.3,6,Texas,260,13
-haiku,cfp_on_ap_off,0.3,7,Texas Tech,256,13
-haiku,cfp_on_ap_off,0.3,8,Miami,251,13
-haiku,cfp_on_ap_off,0.3,9,Indiana,238,13
-haiku,cfp_on_ap_off,0.3,10,Oregon,227,13
-haiku,cfp_on_ap_off,0.3,11,UCLA,207,13
-haiku,cfp_on_ap_off,0.3,12,Tennessee,202,13
-haiku,cfp_on_ap_off,0.3,13,BYU,152,13
-haiku,cfp_on_ap_off,0.3,14,Wake Forest,130,13
-haiku,cfp_on_ap_off,0.3,15,Boise State,126,13
-haiku,cfp_on_ap_off,0.3,16,Ole Miss,119,13
-haiku,cfp_on_ap_off,0.3,17,Louisville,113,13
-haiku,cfp_on_ap_off,0.3,18,Houston,100,13
-haiku,cfp_on_ap_off,0.3,19,USC,92,13
-haiku,cfp_on_ap_off,0.3,20,Florida,83,13
-haiku,cfp_on_ap_off,0.3,21,Iowa,74,13
-haiku,cfp_on_ap_off,0.3,22,Kentucky,69,13
-haiku,cfp_on_ap_off,0.3,23,Arizona,64,13
-haiku,cfp_on_ap_off,0.3,24,Memphis,25,13
-haiku,cfp_on_ap_off,0.3,25,Air Force,18,13
-haiku,cfp_on_ap_on,0.3,1,Georgia,318,13
-haiku,cfp_on_ap_on,0.3,2,Notre Dame,283,13
-haiku,cfp_on_ap_on,0.3,3,Utah,280,13
-haiku,cfp_on_ap_on,0.3,4,Miami,264,13
-haiku,cfp_on_ap_on,0.3,5,Alabama,259,13
-haiku,cfp_on_ap_on,0.3,6,Texas,255,13
-haiku,cfp_on_ap_on,0.3,7,Indiana,253,13
-haiku,cfp_on_ap_on,0.3,8,UCLA,242,13
-haiku,cfp_on_ap_on,0.3,9,Ohio State,232,13
-haiku,cfp_on_ap_on,0.3,10,Tennessee,219,13
-haiku,cfp_on_ap_on,0.3,11,Oregon,204,13
-haiku,cfp_on_ap_on,0.3,12,Texas Tech,203,13
-haiku,cfp_on_ap_on,0.3,13,Wake Forest,138,13
-haiku,cfp_on_ap_on,0.3,14,Boise State,132,13
-haiku,cfp_on_ap_on,0.3,15,BYU,117,13
-haiku,cfp_on_ap_on,0.3,16,Iowa,115,13
-haiku,cfp_on_ap_on,0.3,17,Houston,107,13
-haiku,cfp_on_ap_on,0.3,18,Arizona,102,13
-haiku,cfp_on_ap_on,0.3,19,Ole Miss,87,13
-haiku,cfp_on_ap_on,0.3,20,Louisville,85,13
-haiku,cfp_on_ap_on,0.3,21,Kentucky,85,13
-haiku,cfp_on_ap_on,0.3,22,USC,73,13
-haiku,cfp_on_ap_on,0.3,23,Liberty,65,13
-haiku,cfp_on_ap_on,0.3,24,Memphis,55,13
-haiku,cfp_on_ap_on,0.3,25,Florida,38,13
-luna,cfp_off_ap_off,0.3,1,Georgia,298,12
-luna,cfp_off_ap_off,0.3,2,Utah,290,12
-luna,cfp_off_ap_off,0.3,3,Miami,263,12
-luna,cfp_off_ap_off,0.3,4,Notre Dame,257,12
-luna,cfp_off_ap_off,0.3,5,Oregon,246,12
-luna,cfp_off_ap_off,0.3,6,Texas,242,12
-luna,cfp_off_ap_off,0.3,7,Indiana,221,12
-luna,cfp_off_ap_off,0.3,8,Texas Tech,212,12
-luna,cfp_off_ap_off,0.3,9,Tennessee,207,12
-luna,cfp_off_ap_off,0.3,10,BYU,193,12
-luna,cfp_off_ap_off,0.3,11,UCLA,189,12
-luna,cfp_off_ap_off,0.3,12,Alabama,173,12
-luna,cfp_off_ap_off,0.3,13,Wake Forest,162,12
-luna,cfp_off_ap_off,0.3,14,Iowa,123,12
-luna,cfp_off_ap_off,0.3,15,Ohio State,112,12
-luna,cfp_off_ap_off,0.3,16,Boise State,109,12
-luna,cfp_off_ap_off,0.3,17,Arizona,105,12
-luna,cfp_off_ap_off,0.3,18,Louisville,89,12
-luna,cfp_off_ap_off,0.3,19,North Dakota State,83,12
-luna,cfp_off_ap_off,0.3,20,Liberty,77,12
-luna,cfp_off_ap_off,0.3,21,USC,70,12
-luna,cfp_off_ap_off,0.3,22,New Mexico,57,12
-luna,cfp_off_ap_off,0.3,23,Ole Miss,49,12
-luna,cfp_off_ap_off,0.3,24,Air Force,36,12
-luna,cfp_off_ap_off,0.3,25,Houston,19,12
-luna,cfp_off_ap_on,0.3,1,Georgia,325,13
-luna,cfp_off_ap_on,0.3,2,Utah,312,13
-luna,cfp_off_ap_on,0.3,3,Notre Dame,298,13
-luna,cfp_off_ap_on,0.3,4,Miami,281,13
-luna,cfp_off_ap_on,0.3,5,UCLA,271,13
-luna,cfp_off_ap_on,0.3,6,Indiana,250,13
-luna,cfp_off_ap_on,0.3,7,Texas,250,13
-luna,cfp_off_ap_on,0.3,8,Tennessee,227,13
-luna,cfp_off_ap_on,0.3,9,Texas Tech,216,13
-luna,cfp_off_ap_on,0.3,10,Alabama,198,13
-luna,cfp_off_ap_on,0.3,11,Wake Forest,198,13
-luna,cfp_off_ap_on,0.3,12,Oregon,193,13
-luna,cfp_off_ap_on,0.3,13,BYU,190,13
-luna,cfp_off_ap_on,0.3,14,Iowa,153,13
-luna,cfp_off_ap_on,0.3,15,Ohio State,143,13
-luna,cfp_off_ap_on,0.3,16,Boise State,122,13
-luna,cfp_off_ap_on,0.3,17,Arizona,107,13
-luna,cfp_off_ap_on,0.3,18,Louisville,98,13
-luna,cfp_off_ap_on,0.3,19,USC,98,13
-luna,cfp_off_ap_on,0.3,20,Ole Miss,77,13
-luna,cfp_off_ap_on,0.3,21,Houston,69,13
-luna,cfp_off_ap_on,0.3,22,Liberty,49,13
-luna,cfp_off_ap_on,0.3,23,Florida,48,13
-luna,cfp_off_ap_on,0.3,24,Memphis,27,13
-luna,cfp_off_ap_on,0.3,25,Kentucky,18,13
-luna,cfp_on_ap_off,0.3,1,Georgia,325,13
-luna,cfp_on_ap_off,0.3,2,Utah,312,13
-luna,cfp_on_ap_off,0.3,3,Texas,280,13
-luna,cfp_on_ap_off,0.3,4,Miami,278,13
-luna,cfp_on_ap_off,0.3,5,Notre Dame,273,13
-luna,cfp_on_ap_off,0.3,6,UCLA,260,13
-luna,cfp_on_ap_off,0.3,7,Tennessee,241,13
-luna,cfp_on_ap_off,0.3,8,Indiana,237,13
-luna,cfp_on_ap_off,0.3,9,Oregon,217,13
-luna,cfp_on_ap_off,0.3,10,Alabama,206,13
-luna,cfp_on_ap_off,0.3,11,Texas Tech,204,13
-luna,cfp_on_ap_off,0.3,12,BYU,196,13
-luna,cfp_on_ap_off,0.3,13,Wake Forest,177,13
-luna,cfp_on_ap_off,0.3,14,Ohio State,153,13
-luna,cfp_on_ap_off,0.3,15,Iowa,145,13
-luna,cfp_on_ap_off,0.3,16,Boise State,123,13
-luna,cfp_on_ap_off,0.3,17,Arizona,108,13
-luna,cfp_on_ap_off,0.3,18,Louisville,103,13
-luna,cfp_on_ap_off,0.3,19,USC,91,13
-luna,cfp_on_ap_off,0.3,20,Ole Miss,62,13
-luna,cfp_on_ap_off,0.3,21,Houston,55,13
-luna,cfp_on_ap_off,0.3,22,Florida,41,13
-luna,cfp_on_ap_off,0.3,23,Liberty,39,13
-luna,cfp_on_ap_off,0.3,24,North Dakota State,38,13
-luna,cfp_on_ap_off,0.3,25,Kentucky,29,13
-luna,cfp_on_ap_on,0.3,1,Georgia,325,13
-luna,cfp_on_ap_on,0.3,2,Utah,312,13
-luna,cfp_on_ap_on,0.3,3,Notre Dame,297,13
-luna,cfp_on_ap_on,0.3,4,Miami,278,13
-luna,cfp_on_ap_on,0.3,5,UCLA,272,13
-luna,cfp_on_ap_on,0.3,6,Texas,266,13
-luna,cfp_on_ap_on,0.3,7,Indiana,239,13
-luna,cfp_on_ap_on,0.3,8,Tennessee,223,13
-luna,cfp_on_ap_on,0.3,9,Texas Tech,216,13
-luna,cfp_on_ap_on,0.3,10,Oregon,205,13
-luna,cfp_on_ap_on,0.3,11,Alabama,198,13
-luna,cfp_on_ap_on,0.3,12,BYU,194,13
-luna,cfp_on_ap_on,0.3,13,Wake Forest,186,13
-luna,cfp_on_ap_on,0.3,14,Iowa,153,13
-luna,cfp_on_ap_on,0.3,15,Ohio State,140,13
-luna,cfp_on_ap_on,0.3,16,Boise State,127,13
-luna,cfp_on_ap_on,0.3,17,Louisville,103,13
-luna,cfp_on_ap_on,0.3,18,Arizona,100,13
-luna,cfp_on_ap_on,0.3,19,USC,93,13
-luna,cfp_on_ap_on,0.3,20,Houston,76,13
-luna,cfp_on_ap_on,0.3,21,Ole Miss,70,13
-luna,cfp_on_ap_on,0.3,22,Florida,59,13
-luna,cfp_on_ap_on,0.3,23,Liberty,38,13
-luna,cfp_on_ap_on,0.3,24,Kentucky,31,13
-luna,cfp_on_ap_on,0.3,25,Memphis,20,13
-minimax,cfp_off_ap_off,0.3,1,Georgia,325,13
-minimax,cfp_off_ap_off,0.3,2,Notre Dame,304,13
-minimax,cfp_off_ap_off,0.3,3,Texas,301,13
-minimax,cfp_off_ap_off,0.3,4,Oregon,266,13
-minimax,cfp_off_ap_off,0.3,5,Miami,257,13
-minimax,cfp_off_ap_off,0.3,6,Utah,246,13
-minimax,cfp_off_ap_off,0.3,7,Indiana,243,13
-minimax,cfp_off_ap_off,0.3,8,Alabama,240,13
-minimax,cfp_off_ap_off,0.3,9,Tennessee,219,13
-minimax,cfp_off_ap_off,0.3,10,Ohio State,211,13
-minimax,cfp_off_ap_off,0.3,11,Texas Tech,202,13
-minimax,cfp_off_ap_off,0.3,12,UCLA,197,13
-minimax,cfp_off_ap_off,0.3,13,BYU,162,13
-minimax,cfp_off_ap_off,0.3,14,Iowa,156,13
-minimax,cfp_off_ap_off,0.3,15,Wake Forest,155,13
-minimax,cfp_off_ap_off,0.3,16,Louisville,123,13
-minimax,cfp_off_ap_off,0.3,17,Boise State,113,13
-minimax,cfp_off_ap_off,0.3,18,Ole Miss,109,13
-minimax,cfp_off_ap_off,0.3,19,Florida,71,13
-minimax,cfp_off_ap_off,0.3,20,USC,62,13
-minimax,cfp_off_ap_off,0.3,21,Houston,55,13
-minimax,cfp_off_ap_off,0.3,22,Arizona,52,13
-minimax,cfp_off_ap_off,0.3,23,Kentucky,49,13
-minimax,cfp_off_ap_off,0.3,24,New Mexico,44,13
-minimax,cfp_off_ap_off,0.3,25,Liberty,22,13
-minimax,cfp_off_ap_on,0.3,1,Georgia,325,13
-minimax,cfp_off_ap_on,0.3,2,Notre Dame,288,13
-minimax,cfp_off_ap_on,0.3,3,Utah,284,13
-minimax,cfp_off_ap_on,0.3,4,Texas,278,13
-minimax,cfp_off_ap_on,0.3,5,Indiana,262,13
-minimax,cfp_off_ap_on,0.3,6,Miami,258,13
-minimax,cfp_off_ap_on,0.3,7,Oregon,235,13
-minimax,cfp_off_ap_on,0.3,8,Tennessee,233,13
-minimax,cfp_off_ap_on,0.3,9,UCLA,217,13
-minimax,cfp_off_ap_on,0.3,10,Ohio State,200,13
-minimax,cfp_off_ap_on,0.3,11,Texas Tech,197,13
-minimax,cfp_off_ap_on,0.3,12,Alabama,180,13
-minimax,cfp_off_ap_on,0.3,13,Wake Forest,176,13
-minimax,cfp_off_ap_on,0.3,14,BYU,165,13
-minimax,cfp_off_ap_on,0.3,15,Iowa,164,13
-minimax,cfp_off_ap_on,0.3,16,Boise State,123,13
-minimax,cfp_off_ap_on,0.3,17,Louisville,114,13
-minimax,cfp_off_ap_on,0.3,18,Ole Miss,111,13
-minimax,cfp_off_ap_on,0.3,19,USC,85,13
-minimax,cfp_off_ap_on,0.3,20,Florida,79,13
-minimax,cfp_off_ap_on,0.3,21,Kentucky,69,13
-minimax,cfp_off_ap_on,0.3,22,Arizona,62,13
-minimax,cfp_off_ap_on,0.3,23,Houston,57,13
-minimax,cfp_off_ap_on,0.3,24,Liberty,24,13
-minimax,cfp_off_ap_on,0.3,25,New Mexico,18,13
-minimax,cfp_on_ap_off,0.3,1,Georgia,325,13
-minimax,cfp_on_ap_off,0.3,2,Texas,289,13
-minimax,cfp_on_ap_off,0.3,3,Utah,280,13
-minimax,cfp_on_ap_off,0.3,4,Notre Dame,278,13
-minimax,cfp_on_ap_off,0.3,5,Miami,252,13
-minimax,cfp_on_ap_off,0.3,6,Indiana,251,13
-minimax,cfp_on_ap_off,0.3,7,Alabama,245,13
-minimax,cfp_on_ap_off,0.3,8,Oregon,245,13
-minimax,cfp_on_ap_off,0.3,9,Tennessee,225,13
-minimax,cfp_on_ap_off,0.3,10,UCLA,221,13
-minimax,cfp_on_ap_off,0.3,11,Texas Tech,201,13
-minimax,cfp_on_ap_off,0.3,12,Ohio State,193,13
-minimax,cfp_on_ap_off,0.3,13,Wake Forest,169,13
-minimax,cfp_on_ap_off,0.3,14,Iowa,168,13
-minimax,cfp_on_ap_off,0.3,15,BYU,165,13
-minimax,cfp_on_ap_off,0.3,16,Louisville,118,13
-minimax,cfp_on_ap_off,0.3,17,Boise State,112,13
-minimax,cfp_on_ap_off,0.3,18,USC,94,13
-minimax,cfp_on_ap_off,0.3,19,Ole Miss,83,13
-minimax,cfp_on_ap_off,0.3,20,Kentucky,82,13
-minimax,cfp_on_ap_off,0.3,21,Arizona,68,13
-minimax,cfp_on_ap_off,0.3,22,Houston,64,13
-minimax,cfp_on_ap_off,0.3,23,Florida,58,13
-minimax,cfp_on_ap_off,0.3,24,New Mexico,22,13
-minimax,cfp_on_ap_off,0.3,25,Memphis,6,13
-minimax,cfp_on_ap_on,0.3,1,Georgia,325,13
-minimax,cfp_on_ap_on,0.3,2,Utah,287,13
-minimax,cfp_on_ap_on,0.3,3,Notre Dame,284,13
-minimax,cfp_on_ap_on,0.3,4,Texas,284,13
-minimax,cfp_on_ap_on,0.3,5,Miami,263,13
-minimax,cfp_on_ap_on,0.3,6,Indiana,249,13
-minimax,cfp_on_ap_on,0.3,7,Oregon,232,13
-minimax,cfp_on_ap_on,0.3,8,Tennessee,224,13
-minimax,cfp_on_ap_on,0.3,9,UCLA,208,13
-minimax,cfp_on_ap_on,0.3,10,Texas Tech,202,13
-minimax,cfp_on_ap_on,0.3,11,Alabama,195,13
-minimax,cfp_on_ap_on,0.3,12,Ohio State,179,13
-minimax,cfp_on_ap_on,0.3,13,Wake Forest,176,13
-minimax,cfp_on_ap_on,0.3,14,BYU,169,13
-minimax,cfp_on_ap_on,0.3,15,Iowa,159,13
-minimax,cfp_on_ap_on,0.3,16,Boise State,126,13
-minimax,cfp_on_ap_on,0.3,17,Ole Miss,121,13
-minimax,cfp_on_ap_on,0.3,18,Louisville,104,13
-minimax,cfp_on_ap_on,0.3,19,Kentucky,93,13
-minimax,cfp_on_ap_on,0.3,20,Florida,78,13
-minimax,cfp_on_ap_on,0.3,21,USC,76,13
-minimax,cfp_on_ap_on,0.3,22,Arizona,73,13
-minimax,cfp_on_ap_on,0.3,23,Houston,63,13
-minimax,cfp_on_ap_on,0.3,24,Liberty,22,13
-minimax,cfp_on_ap_on,0.3,25,Memphis,20,13
-mixed,cfp_off_ap_off,0.3,1,Georgia,318,13
-mixed,cfp_off_ap_off,0.3,2,Texas,291,13
-mixed,cfp_off_ap_off,0.3,3,Notre Dame,290,13
-mixed,cfp_off_ap_off,0.3,4,Utah,286,13
-mixed,cfp_off_ap_off,0.3,5,Miami,279,13
-mixed,cfp_off_ap_off,0.3,6,Alabama,220,13
-mixed,cfp_off_ap_off,0.3,7,Texas Tech,220,13
-mixed,cfp_off_ap_off,0.3,8,Oregon,219,13
-mixed,cfp_off_ap_off,0.3,9,Indiana,216,13
-mixed,cfp_off_ap_off,0.3,10,Tennessee,209,13
-mixed,cfp_off_ap_off,0.3,11,UCLA,208,13
-mixed,cfp_off_ap_off,0.3,12,Wake Forest,190,13
-mixed,cfp_off_ap_off,0.3,13,BYU,186,13
-mixed,cfp_off_ap_off,0.3,14,Ohio State,145,13
-mixed,cfp_off_ap_off,0.3,15,Iowa,128,13
+mixed,cfp_off_ap_off,0.3,1,Georgia,321,13
+mixed,cfp_off_ap_off,0.3,2,Notre Dame,293,13
+mixed,cfp_off_ap_off,0.3,3,Utah,289,13
+mixed,cfp_off_ap_off,0.3,4,Texas,288,13
+mixed,cfp_off_ap_off,0.3,5,Miami,287,13
+mixed,cfp_off_ap_off,0.3,6,Indiana,234,13
+mixed,cfp_off_ap_off,0.3,7,Alabama,232,13
+mixed,cfp_off_ap_off,0.3,8,Texas Tech,226,13
+mixed,cfp_off_ap_off,0.3,9,Tennessee,207,13
+mixed,cfp_off_ap_off,0.3,10,Oregon,199,13
+mixed,cfp_off_ap_off,0.3,11,BYU,184,13
+mixed,cfp_off_ap_off,0.3,12,UCLA,179,13
+mixed,cfp_off_ap_off,0.3,13,Wake Forest,175,13
+mixed,cfp_off_ap_off,0.3,14,Ohio State,155,13
+mixed,cfp_off_ap_off,0.3,15,Iowa,144,13
 mixed,cfp_off_ap_off,0.3,16,Boise State,126,13
-mixed,cfp_off_ap_off,0.3,17,USC,112,13
-mixed,cfp_off_ap_off,0.3,18,Louisville,109,13
-mixed,cfp_off_ap_off,0.3,19,Ole Miss,98,13
-mixed,cfp_off_ap_off,0.3,20,Arizona,84,13
-mixed,cfp_off_ap_off,0.3,21,Houston,66,13
-mixed,cfp_off_ap_off,0.3,22,New Mexico,45,13
-mixed,cfp_off_ap_off,0.3,23,North Dakota State,39,13
-mixed,cfp_off_ap_off,0.3,24,Liberty,37,13
-mixed,cfp_off_ap_off,0.3,25,Florida,28,13
-mixed,cfp_off_ap_off,0.7,1,Georgia,291,12
-mixed,cfp_off_ap_off,0.7,2,Notre Dame,269,12
-mixed,cfp_off_ap_off,0.7,3,Texas,267,12
-mixed,cfp_off_ap_off,0.7,4,Utah,263,12
-mixed,cfp_off_ap_off,0.7,5,Miami,257,12
-mixed,cfp_off_ap_off,0.7,6,UCLA,207,12
-mixed,cfp_off_ap_off,0.7,7,Indiana,205,12
-mixed,cfp_off_ap_off,0.7,8,Oregon,204,12
-mixed,cfp_off_ap_off,0.7,9,Alabama,203,12
-mixed,cfp_off_ap_off,0.7,10,Texas Tech,193,12
-mixed,cfp_off_ap_off,0.7,11,Tennessee,190,12
-mixed,cfp_off_ap_off,0.7,12,Wake Forest,179,12
-mixed,cfp_off_ap_off,0.7,13,BYU,168,12
-mixed,cfp_off_ap_off,0.7,14,Ohio State,139,12
-mixed,cfp_off_ap_off,0.7,15,Iowa,128,12
-mixed,cfp_off_ap_off,0.7,16,Boise State,119,12
-mixed,cfp_off_ap_off,0.7,17,Louisville,96,12
-mixed,cfp_off_ap_off,0.7,18,USC,88,12
-mixed,cfp_off_ap_off,0.7,19,Ole Miss,77,12
-mixed,cfp_off_ap_off,0.7,20,Houston,58,12
-mixed,cfp_off_ap_off,0.7,21,Arizona,54,12
-mixed,cfp_off_ap_off,0.7,22,New Mexico,44,12
-mixed,cfp_off_ap_off,0.7,23,Liberty,42,12
-mixed,cfp_off_ap_off,0.7,24,North Dakota State,38,12
-mixed,cfp_off_ap_off,0.7,25,Memphis,29,12
-mixed,cfp_off_ap_on,0.3,1,Georgia,299,12
-mixed,cfp_off_ap_on,0.3,2,Utah,272,12
-mixed,cfp_off_ap_on,0.3,3,Notre Dame,265,12
-mixed,cfp_off_ap_on,0.3,4,Texas,250,12
-mixed,cfp_off_ap_on,0.3,5,Miami,249,12
-mixed,cfp_off_ap_on,0.3,6,Indiana,236,12
-mixed,cfp_off_ap_on,0.3,7,Alabama,214,12
-mixed,cfp_off_ap_on,0.3,8,UCLA,206,12
-mixed,cfp_off_ap_on,0.3,9,Tennessee,201,12
-mixed,cfp_off_ap_on,0.3,10,Oregon,192,12
-mixed,cfp_off_ap_on,0.3,11,Texas Tech,180,12
-mixed,cfp_off_ap_on,0.3,12,Wake Forest,177,12
-mixed,cfp_off_ap_on,0.3,13,BYU,162,12
-mixed,cfp_off_ap_on,0.3,14,Ohio State,153,12
-mixed,cfp_off_ap_on,0.3,15,Iowa,144,12
-mixed,cfp_off_ap_on,0.3,16,Boise State,117,12
-mixed,cfp_off_ap_on,0.3,17,USC,115,12
-mixed,cfp_off_ap_on,0.3,18,Louisville,96,12
-mixed,cfp_off_ap_on,0.3,19,Houston,79,12
-mixed,cfp_off_ap_on,0.3,20,Arizona,75,12
-mixed,cfp_off_ap_on,0.3,21,Ole Miss,68,12
-mixed,cfp_off_ap_on,0.3,22,Florida,46,12
-mixed,cfp_off_ap_on,0.3,23,Liberty,41,12
-mixed,cfp_off_ap_on,0.3,24,Kentucky,37,12
-mixed,cfp_off_ap_on,0.3,25,Memphis,18,12
-mixed,cfp_off_ap_on,0.7,1,Georgia,297,12
-mixed,cfp_off_ap_on,0.7,2,Utah,271,12
-mixed,cfp_off_ap_on,0.7,3,Notre Dame,267,12
-mixed,cfp_off_ap_on,0.7,4,Miami,252,12
-mixed,cfp_off_ap_on,0.7,5,Texas,243,12
-mixed,cfp_off_ap_on,0.7,6,Indiana,234,12
-mixed,cfp_off_ap_on,0.7,7,Alabama,212,12
-mixed,cfp_off_ap_on,0.7,8,UCLA,210,12
-mixed,cfp_off_ap_on,0.7,9,Tennessee,201,12
-mixed,cfp_off_ap_on,0.7,10,Texas Tech,186,12
-mixed,cfp_off_ap_on,0.7,11,Wake Forest,182,12
-mixed,cfp_off_ap_on,0.7,12,Oregon,182,12
-mixed,cfp_off_ap_on,0.7,13,BYU,166,12
-mixed,cfp_off_ap_on,0.7,14,Iowa,152,12
-mixed,cfp_off_ap_on,0.7,15,Ohio State,147,12
-mixed,cfp_off_ap_on,0.7,16,Boise State,115,12
-mixed,cfp_off_ap_on,0.7,17,USC,103,12
-mixed,cfp_off_ap_on,0.7,18,Louisville,82,12
-mixed,cfp_off_ap_on,0.7,19,Houston,79,12
-mixed,cfp_off_ap_on,0.7,20,Arizona,70,12
-mixed,cfp_off_ap_on,0.7,21,Ole Miss,58,12
-mixed,cfp_off_ap_on,0.7,22,Kentucky,55,12
-mixed,cfp_off_ap_on,0.7,23,Florida,53,12
-mixed,cfp_off_ap_on,0.7,24,Liberty,45,12
-mixed,cfp_off_ap_on,0.7,25,Memphis,23,12
-mixed,cfp_on_ap_off,0.3,1,Georgia,324,13
-mixed,cfp_on_ap_off,0.3,2,Utah,288,13
-mixed,cfp_on_ap_off,0.3,3,Texas,275,13
-mixed,cfp_on_ap_off,0.3,4,Notre Dame,266,13
-mixed,cfp_on_ap_off,0.3,5,Alabama,261,13
-mixed,cfp_on_ap_off,0.3,6,Miami,260,13
-mixed,cfp_on_ap_off,0.3,7,UCLA,238,13
-mixed,cfp_on_ap_off,0.3,8,Tennessee,229,13
-mixed,cfp_on_ap_off,0.3,9,Indiana,225,13
-mixed,cfp_on_ap_off,0.3,10,Texas Tech,205,13
-mixed,cfp_on_ap_off,0.3,11,Oregon,205,13
-mixed,cfp_on_ap_off,0.3,12,Wake Forest,181,13
-mixed,cfp_on_ap_off,0.3,13,Ohio State,180,13
-mixed,cfp_on_ap_off,0.3,14,BYU,173,13
-mixed,cfp_on_ap_off,0.3,15,Iowa,151,13
-mixed,cfp_on_ap_off,0.3,16,USC,120,13
-mixed,cfp_on_ap_off,0.3,17,Boise State,117,13
-mixed,cfp_on_ap_off,0.3,18,Arizona,83,13
-mixed,cfp_on_ap_off,0.3,19,Louisville,82,13
-mixed,cfp_on_ap_off,0.3,20,Houston,73,13
-mixed,cfp_on_ap_off,0.3,21,Ole Miss,71,13
-mixed,cfp_on_ap_off,0.3,22,Kentucky,70,13
-mixed,cfp_on_ap_off,0.3,23,Florida,63,13
-mixed,cfp_on_ap_off,0.3,24,New Mexico,24,13
-mixed,cfp_on_ap_off,0.3,25,Liberty,21,13
-mixed,cfp_on_ap_off,0.7,1,Georgia,325,13
-mixed,cfp_on_ap_off,0.7,2,Utah,292,13
-mixed,cfp_on_ap_off,0.7,3,Texas,291,13
-mixed,cfp_on_ap_off,0.7,4,Notre Dame,277,13
-mixed,cfp_on_ap_off,0.7,5,Miami,262,13
-mixed,cfp_on_ap_off,0.7,6,Alabama,248,13
-mixed,cfp_on_ap_off,0.7,7,Tennessee,234,13
-mixed,cfp_on_ap_off,0.7,8,UCLA,230,13
-mixed,cfp_on_ap_off,0.7,9,Indiana,222,13
-mixed,cfp_on_ap_off,0.7,10,Texas Tech,203,13
-mixed,cfp_on_ap_off,0.7,11,BYU,200,13
-mixed,cfp_on_ap_off,0.7,12,Oregon,193,13
-mixed,cfp_on_ap_off,0.7,13,Wake Forest,191,13
-mixed,cfp_on_ap_off,0.7,14,Ohio State,177,13
-mixed,cfp_on_ap_off,0.7,15,Iowa,145,13
-mixed,cfp_on_ap_off,0.7,16,Boise State,116,13
-mixed,cfp_on_ap_off,0.7,17,USC,113,13
-mixed,cfp_on_ap_off,0.7,18,Louisville,87,13
-mixed,cfp_on_ap_off,0.7,19,Arizona,83,13
-mixed,cfp_on_ap_off,0.7,20,Houston,73,13
-mixed,cfp_on_ap_off,0.7,21,Ole Miss,64,13
-mixed,cfp_on_ap_off,0.7,22,Florida,59,13
-mixed,cfp_on_ap_off,0.7,23,Kentucky,58,13
-mixed,cfp_on_ap_off,0.7,24,Liberty,32,13
-mixed,cfp_on_ap_off,0.7,25,New Mexico,14,13
-mixed,cfp_on_ap_on,0.3,1,Georgia,324,13
-mixed,cfp_on_ap_on,0.3,2,Utah,283,13
-mixed,cfp_on_ap_on,0.3,3,Notre Dame,279,13
-mixed,cfp_on_ap_on,0.3,4,Texas,269,13
-mixed,cfp_on_ap_on,0.3,5,Miami,268,13
-mixed,cfp_on_ap_on,0.3,6,Indiana,249,13
-mixed,cfp_on_ap_on,0.3,7,Alabama,248,13
-mixed,cfp_on_ap_on,0.3,8,UCLA,231,13
-mixed,cfp_on_ap_on,0.3,9,Tennessee,227,13
-mixed,cfp_on_ap_on,0.3,10,Texas Tech,201,13
-mixed,cfp_on_ap_on,0.3,11,Oregon,195,13
-mixed,cfp_on_ap_on,0.3,12,Wake Forest,191,13
-mixed,cfp_on_ap_on,0.3,13,BYU,184,13
-mixed,cfp_on_ap_on,0.3,14,Ohio State,174,13
-mixed,cfp_on_ap_on,0.3,15,Iowa,143,13
-mixed,cfp_on_ap_on,0.3,16,Boise State,131,13
-mixed,cfp_on_ap_on,0.3,17,USC,113,13
-mixed,cfp_on_ap_on,0.3,18,Louisville,90,13
-mixed,cfp_on_ap_on,0.3,19,Arizona,83,13
-mixed,cfp_on_ap_on,0.3,20,Houston,82,13
-mixed,cfp_on_ap_on,0.3,21,Ole Miss,72,13
-mixed,cfp_on_ap_on,0.3,22,Kentucky,72,13
-mixed,cfp_on_ap_on,0.3,23,Florida,55,13
-mixed,cfp_on_ap_on,0.3,24,Liberty,38,13
-mixed,cfp_on_ap_on,0.3,25,Memphis,20,13
-mixed,cfp_on_ap_on,0.7,1,Georgia,324,13
-mixed,cfp_on_ap_on,0.7,2,Utah,292,13
-mixed,cfp_on_ap_on,0.7,3,Texas,275,13
-mixed,cfp_on_ap_on,0.7,4,Notre Dame,274,13
-mixed,cfp_on_ap_on,0.7,5,Miami,267,13
-mixed,cfp_on_ap_on,0.7,6,Alabama,248,13
-mixed,cfp_on_ap_on,0.7,7,UCLA,245,13
-mixed,cfp_on_ap_on,0.7,8,Indiana,243,13
-mixed,cfp_on_ap_on,0.7,9,Tennessee,224,13
-mixed,cfp_on_ap_on,0.7,10,Texas Tech,204,13
-mixed,cfp_on_ap_on,0.7,11,Wake Forest,187,13
-mixed,cfp_on_ap_on,0.7,12,Oregon,185,13
-mixed,cfp_on_ap_on,0.7,13,BYU,185,13
-mixed,cfp_on_ap_on,0.7,14,Ohio State,169,13
-mixed,cfp_on_ap_on,0.7,15,Iowa,149,13
-mixed,cfp_on_ap_on,0.7,16,Boise State,130,13
-mixed,cfp_on_ap_on,0.7,17,USC,115,13
-mixed,cfp_on_ap_on,0.7,18,Houston,87,13
-mixed,cfp_on_ap_on,0.7,19,Louisville,85,13
-mixed,cfp_on_ap_on,0.7,20,Arizona,81,13
-mixed,cfp_on_ap_on,0.7,21,Kentucky,80,13
-mixed,cfp_on_ap_on,0.7,22,Ole Miss,63,13
-mixed,cfp_on_ap_on,0.7,23,Florida,41,13
-mixed,cfp_on_ap_on,0.7,24,Liberty,37,13
-mixed,cfp_on_ap_on,0.7,25,Memphis,23,13
+mixed,cfp_off_ap_off,0.3,17,Louisville,114,13
+mixed,cfp_off_ap_off,0.3,18,Ole Miss,103,13
+mixed,cfp_off_ap_off,0.3,19,USC,99,13
+mixed,cfp_off_ap_off,0.3,20,Arizona,85,13
+mixed,cfp_off_ap_off,0.3,21,Oklahoma,73,13
+mixed,cfp_off_ap_off,0.3,22,Houston,56,13
+mixed,cfp_off_ap_off,0.3,23,Missouri,47,13
+mixed,cfp_off_ap_off,0.3,24,Liberty,35,13
+mixed,cfp_off_ap_off,0.3,25,New Mexico,20,13
+mixed,cfp_off_ap_off,0.7,1,Georgia,342,14
+mixed,cfp_off_ap_off,0.7,2,Utah,317,14
+mixed,cfp_off_ap_off,0.7,3,Notre Dame,316,14
+mixed,cfp_off_ap_off,0.7,4,Miami,305,14
+mixed,cfp_off_ap_off,0.7,5,Texas,299,14
+mixed,cfp_off_ap_off,0.7,6,Indiana,252,14
+mixed,cfp_off_ap_off,0.7,7,Texas Tech,238,14
+mixed,cfp_off_ap_off,0.7,8,Alabama,232,14
+mixed,cfp_off_ap_off,0.7,9,Tennessee,224,14
+mixed,cfp_off_ap_off,0.7,10,Oregon,216,14
+mixed,cfp_off_ap_off,0.7,11,Wake Forest,214,14
+mixed,cfp_off_ap_off,0.7,12,UCLA,212,14
+mixed,cfp_off_ap_off,0.7,13,BYU,183,14
+mixed,cfp_off_ap_off,0.7,14,Ohio State,163,14
+mixed,cfp_off_ap_off,0.7,15,Iowa,154,14
+mixed,cfp_off_ap_off,0.7,16,Louisville,116,14
+mixed,cfp_off_ap_off,0.7,17,Boise State,112,14
+mixed,cfp_off_ap_off,0.7,18,Ole Miss,112,14
+mixed,cfp_off_ap_off,0.7,19,Oklahoma,94,14
+mixed,cfp_off_ap_off,0.7,20,USC,83,14
+mixed,cfp_off_ap_off,0.7,21,Arizona,82,14
+mixed,cfp_off_ap_off,0.7,22,Missouri,63,14
+mixed,cfp_off_ap_off,0.7,23,Houston,57,14
+mixed,cfp_off_ap_off,0.7,24,Liberty,42,14
+mixed,cfp_off_ap_off,0.7,25,Florida,31,14
+mixed,cfp_off_ap_on,0.3,1,Georgia,348,14
+mixed,cfp_off_ap_on,0.3,2,Utah,329,14
+mixed,cfp_off_ap_on,0.3,3,Notre Dame,320,14
+mixed,cfp_off_ap_on,0.3,4,Miami,310,14
+mixed,cfp_off_ap_on,0.3,5,Texas,298,14
+mixed,cfp_off_ap_on,0.3,6,Alabama,246,14
+mixed,cfp_off_ap_on,0.3,7,Indiana,240,14
+mixed,cfp_off_ap_on,0.3,8,Texas Tech,238,14
+mixed,cfp_off_ap_on,0.3,9,Tennessee,237,14
+mixed,cfp_off_ap_on,0.3,10,Wake Forest,225,14
+mixed,cfp_off_ap_on,0.3,11,UCLA,213,14
+mixed,cfp_off_ap_on,0.3,12,Oregon,212,14
+mixed,cfp_off_ap_on,0.3,13,BYU,196,14
+mixed,cfp_off_ap_on,0.3,14,Iowa,154,14
+mixed,cfp_off_ap_on,0.3,15,Louisville,127,14
+mixed,cfp_off_ap_on,0.3,16,Arizona,109,14
+mixed,cfp_off_ap_on,0.3,17,Oklahoma,106,14
+mixed,cfp_off_ap_on,0.3,18,USC,105,14
+mixed,cfp_off_ap_on,0.3,19,Ohio State,100,14
+mixed,cfp_off_ap_on,0.3,20,Houston,94,14
+mixed,cfp_off_ap_on,0.3,21,Boise State,89,14
+mixed,cfp_off_ap_on,0.3,22,Ole Miss,83,14
+mixed,cfp_off_ap_on,0.3,23,Missouri,51,14
+mixed,cfp_off_ap_on,0.3,24,Florida,47,14
+mixed,cfp_off_ap_on,0.3,25,Liberty,41,14
+mixed,cfp_off_ap_on,0.7,1,Georgia,322,13
+mixed,cfp_off_ap_on,0.7,2,Utah,310,13
+mixed,cfp_off_ap_on,0.7,3,Notre Dame,292,13
+mixed,cfp_off_ap_on,0.7,4,Miami,282,13
+mixed,cfp_off_ap_on,0.7,5,Texas,274,13
+mixed,cfp_off_ap_on,0.7,6,Alabama,230,13
+mixed,cfp_off_ap_on,0.7,7,Texas Tech,229,13
+mixed,cfp_off_ap_on,0.7,8,Tennessee,222,13
+mixed,cfp_off_ap_on,0.7,9,Indiana,216,13
+mixed,cfp_off_ap_on,0.7,10,Wake Forest,207,13
+mixed,cfp_off_ap_on,0.7,11,UCLA,197,13
+mixed,cfp_off_ap_on,0.7,12,Oregon,188,13
+mixed,cfp_off_ap_on,0.7,13,BYU,185,13
+mixed,cfp_off_ap_on,0.7,14,Iowa,154,13
+mixed,cfp_off_ap_on,0.7,15,USC,127,13
+mixed,cfp_off_ap_on,0.7,16,Ohio State,112,13
+mixed,cfp_off_ap_on,0.7,17,Louisville,107,13
+mixed,cfp_off_ap_on,0.7,18,Oklahoma,97,13
+mixed,cfp_off_ap_on,0.7,19,Arizona,91,13
+mixed,cfp_off_ap_on,0.7,20,Houston,89,13
+mixed,cfp_off_ap_on,0.7,21,Boise State,81,13
+mixed,cfp_off_ap_on,0.7,22,Ole Miss,64,13
+mixed,cfp_off_ap_on,0.7,23,Florida,47,13
+mixed,cfp_off_ap_on,0.7,24,Missouri,44,13
+mixed,cfp_off_ap_on,0.7,25,Liberty,38,13
+mixed,cfp_on_ap_off,0.3,1,Georgia,345,14
+mixed,cfp_on_ap_off,0.3,2,Utah,319,14
+mixed,cfp_on_ap_off,0.3,3,Texas,306,14
+mixed,cfp_on_ap_off,0.3,4,Miami,294,14
+mixed,cfp_on_ap_off,0.3,5,Notre Dame,290,14
+mixed,cfp_on_ap_off,0.3,6,Alabama,267,14
+mixed,cfp_on_ap_off,0.3,7,Indiana,244,14
+mixed,cfp_on_ap_off,0.3,8,Tennessee,239,14
+mixed,cfp_on_ap_off,0.3,9,Texas Tech,229,14
+mixed,cfp_on_ap_off,0.3,10,UCLA,224,14
+mixed,cfp_on_ap_off,0.3,11,Oregon,217,14
+mixed,cfp_on_ap_off,0.3,12,Wake Forest,207,14
+mixed,cfp_on_ap_off,0.3,13,BYU,201,14
+mixed,cfp_on_ap_off,0.3,14,Ohio State,169,14
+mixed,cfp_on_ap_off,0.3,15,Iowa,152,14
+mixed,cfp_on_ap_off,0.3,16,Boise State,124,14
+mixed,cfp_on_ap_off,0.3,17,Oklahoma,115,14
+mixed,cfp_on_ap_off,0.3,18,USC,112,14
+mixed,cfp_on_ap_off,0.3,19,Louisville,99,14
+mixed,cfp_on_ap_off,0.3,20,Ole Miss,80,14
+mixed,cfp_on_ap_off,0.3,21,Arizona,68,14
+mixed,cfp_on_ap_off,0.3,22,Houston,60,14
+mixed,cfp_on_ap_off,0.3,23,Kentucky,55,14
+mixed,cfp_on_ap_off,0.3,24,Florida,54,14
+mixed,cfp_on_ap_off,0.3,25,Missouri,39,14
+mixed,cfp_on_ap_off,0.7,1,Georgia,346,14
+mixed,cfp_on_ap_off,0.7,2,Utah,314,14
+mixed,cfp_on_ap_off,0.7,3,Miami,298,14
+mixed,cfp_on_ap_off,0.7,4,Notre Dame,295,14
+mixed,cfp_on_ap_off,0.7,5,Texas,293,14
+mixed,cfp_on_ap_off,0.7,6,Alabama,257,14
+mixed,cfp_on_ap_off,0.7,7,Indiana,248,14
+mixed,cfp_on_ap_off,0.7,8,Texas Tech,243,14
+mixed,cfp_on_ap_off,0.7,9,Tennessee,230,14
+mixed,cfp_on_ap_off,0.7,10,Oregon,225,14
+mixed,cfp_on_ap_off,0.7,11,UCLA,224,14
+mixed,cfp_on_ap_off,0.7,12,Wake Forest,200,14
+mixed,cfp_on_ap_off,0.7,13,BYU,198,14
+mixed,cfp_on_ap_off,0.7,14,Ohio State,180,14
+mixed,cfp_on_ap_off,0.7,15,Iowa,151,14
+mixed,cfp_on_ap_off,0.7,16,USC,116,14
+mixed,cfp_on_ap_off,0.7,17,Boise State,113,14
+mixed,cfp_on_ap_off,0.7,18,Arizona,102,14
+mixed,cfp_on_ap_off,0.7,19,Oklahoma,95,14
+mixed,cfp_on_ap_off,0.7,20,Louisville,94,14
+mixed,cfp_on_ap_off,0.7,21,Houston,91,14
+mixed,cfp_on_ap_off,0.7,22,Ole Miss,80,14
+mixed,cfp_on_ap_off,0.7,23,Kentucky,31,14
+mixed,cfp_on_ap_off,0.7,24,South Carolina,27,14
+mixed,cfp_on_ap_off,0.7,25,Florida,27,14
+mixed,cfp_on_ap_on,0.3,1,Georgia,348,14
+mixed,cfp_on_ap_on,0.3,2,Utah,325,14
+mixed,cfp_on_ap_on,0.3,3,Notre Dame,314,14
+mixed,cfp_on_ap_on,0.3,4,Miami,298,14
+mixed,cfp_on_ap_on,0.3,5,Texas,292,14
+mixed,cfp_on_ap_on,0.3,6,Alabama,262,14
+mixed,cfp_on_ap_on,0.3,7,Tennessee,241,14
+mixed,cfp_on_ap_on,0.3,8,Indiana,237,14
+mixed,cfp_on_ap_on,0.3,9,UCLA,231,14
+mixed,cfp_on_ap_on,0.3,10,Texas Tech,221,14
+mixed,cfp_on_ap_on,0.3,11,Oregon,219,14
+mixed,cfp_on_ap_on,0.3,12,Wake Forest,207,14
+mixed,cfp_on_ap_on,0.3,13,BYU,206,14
+mixed,cfp_on_ap_on,0.3,14,Iowa,155,14
+mixed,cfp_on_ap_on,0.3,15,Ohio State,129,14
+mixed,cfp_on_ap_on,0.3,16,USC,126,14
+mixed,cfp_on_ap_on,0.3,17,Louisville,108,14
+mixed,cfp_on_ap_on,0.3,18,Arizona,103,14
+mixed,cfp_on_ap_on,0.3,19,Oklahoma,100,14
+mixed,cfp_on_ap_on,0.3,20,Houston,79,14
+mixed,cfp_on_ap_on,0.3,21,Boise State,75,14
+mixed,cfp_on_ap_on,0.3,22,Ole Miss,73,14
+mixed,cfp_on_ap_on,0.3,23,Missouri,59,14
+mixed,cfp_on_ap_on,0.3,24,Florida,57,14
+mixed,cfp_on_ap_on,0.3,25,Kentucky,36,14
+mixed,cfp_on_ap_on,0.7,1,Georgia,348,14
+mixed,cfp_on_ap_on,0.7,2,Utah,330,14
+mixed,cfp_on_ap_on,0.7,3,Notre Dame,312,14
+mixed,cfp_on_ap_on,0.7,4,Texas,304,14
+mixed,cfp_on_ap_on,0.7,5,Miami,296,14
+mixed,cfp_on_ap_on,0.7,6,Alabama,261,14
+mixed,cfp_on_ap_on,0.7,7,Tennessee,244,14
+mixed,cfp_on_ap_on,0.7,8,Indiana,228,14
+mixed,cfp_on_ap_on,0.7,9,Texas Tech,228,14
+mixed,cfp_on_ap_on,0.7,10,Wake Forest,224,14
+mixed,cfp_on_ap_on,0.7,11,Oregon,211,14
+mixed,cfp_on_ap_on,0.7,12,UCLA,209,14
+mixed,cfp_on_ap_on,0.7,13,BYU,199,14
+mixed,cfp_on_ap_on,0.7,14,Iowa,143,14
+mixed,cfp_on_ap_on,0.7,15,Ohio State,139,14
+mixed,cfp_on_ap_on,0.7,16,USC,118,14
+mixed,cfp_on_ap_on,0.7,17,Arizona,99,14
+mixed,cfp_on_ap_on,0.7,18,Louisville,94,14
+mixed,cfp_on_ap_on,0.7,19,Oklahoma,93,14
+mixed,cfp_on_ap_on,0.7,20,Boise State,90,14
+mixed,cfp_on_ap_on,0.7,21,Ole Miss,80,14
+mixed,cfp_on_ap_on,0.7,22,Houston,76,14
+mixed,cfp_on_ap_on,0.7,23,Florida,62,14
+mixed,cfp_on_ap_on,0.7,24,Missouri,61,14
+mixed,cfp_on_ap_on,0.7,25,Kentucky,45,14
+mixed,pundit_research,0.3,1,Georgia,350,14
+mixed,pundit_research,0.3,2,Utah,335,14
+mixed,pundit_research,0.3,3,Notre Dame,312,14
+mixed,pundit_research,0.3,4,Texas,303,14
+mixed,pundit_research,0.3,5,Miami,296,14
+mixed,pundit_research,0.3,6,Alabama,291,14
+mixed,pundit_research,0.3,7,Tennessee,262,14
+mixed,pundit_research,0.3,8,Wake Forest,227,14
+mixed,pundit_research,0.3,9,Texas Tech,223,14
+mixed,pundit_research,0.3,10,UCLA,212,14
+mixed,pundit_research,0.3,11,Indiana,211,14
+mixed,pundit_research,0.3,12,BYU,206,14
+mixed,pundit_research,0.3,13,Oregon,200,14
+mixed,pundit_research,0.3,14,Iowa,165,14
+mixed,pundit_research,0.3,15,Arizona,136,14
+mixed,pundit_research,0.3,16,USC,136,14
+mixed,pundit_research,0.3,17,Oklahoma,103,14
+mixed,pundit_research,0.3,18,Louisville,100,14
+mixed,pundit_research,0.3,19,Houston,98,14
+mixed,pundit_research,0.3,20,Ole Miss,83,14
+mixed,pundit_research,0.3,21,Florida,60,14
+mixed,pundit_research,0.3,22,Boise State,59,14
+mixed,pundit_research,0.3,23,Ohio State,57,14
+mixed,pundit_research,0.3,24,Missouri,46,14
+mixed,pundit_research,0.3,25,Liberty,31,14
+mixed,statistical_research,0.3,1,Georgia,349,14
+mixed,statistical_research,0.3,2,Utah,336,14
+mixed,statistical_research,0.3,3,Notre Dame,315,14
+mixed,statistical_research,0.3,4,Miami,303,14
+mixed,statistical_research,0.3,5,Texas,297,14
+mixed,statistical_research,0.3,6,Alabama,263,14
+mixed,statistical_research,0.3,7,Tennessee,257,14
+mixed,statistical_research,0.3,8,Texas Tech,232,14
+mixed,statistical_research,0.3,9,Wake Forest,228,14
+mixed,statistical_research,0.3,10,UCLA,226,14
+mixed,statistical_research,0.3,11,Indiana,222,14
+mixed,statistical_research,0.3,12,BYU,204,14
+mixed,statistical_research,0.3,13,Oregon,198,14
+mixed,statistical_research,0.3,14,Iowa,160,14
+mixed,statistical_research,0.3,15,USC,126,14
+mixed,statistical_research,0.3,16,Louisville,114,14
+mixed,statistical_research,0.3,17,Arizona,110,14
+mixed,statistical_research,0.3,18,Oklahoma,96,14
+mixed,statistical_research,0.3,19,Boise State,89,14
+mixed,statistical_research,0.3,20,Houston,89,14
+mixed,statistical_research,0.3,21,Ohio State,88,14
+mixed,statistical_research,0.3,22,Ole Miss,65,14
+mixed,statistical_research,0.3,23,Florida,57,14
+mixed,statistical_research,0.3,24,Missouri,53,14
+mixed,statistical_research,0.3,25,Liberty,41,14
