@@ -51,7 +51,6 @@ if (!info) {
 
   const defaultGroup = "mixed|cfp_on_ap_on|0.3";
   $("release-label").textContent = "CFP forecast · " + releaseDate.format(new Date(p.release_id + "T12:00:00Z"));
-  $("headline-team").textContent = runs[defaultGroup]?.ranking[0] ?? "—";
   const gamesThrough = releaseDate.format(new Date(p.source.games_through + "T12:00:00Z"));
   const recordNote = p.source.record_scope === "all_games"
     ? "Overall records include games against non-FBS opponents."
@@ -101,15 +100,6 @@ if (!info) {
     if (selected && Object.hasOwn(rows, selected)) node.value = selected;
   }
 
-  const snapshot = [
-    ["AI models", Object.keys(models).length],
-    ["Ballots counted", p.valid_ballots],
-  ];
-  for (const [label,value] of snapshot) {
-    const row = el("div");
-    row.append(el("dt",label),el("dd",value));
-    $("snapshot").append(row);
-  }
   const locked = p.lock.status === "pushed";
   $("official-state").textContent = p.official_status === "available"
     ? "Official CFP comparison available"
@@ -122,10 +112,12 @@ if (!info) {
     "Target CFP release "+p.release_id+". Official comparison is added after release.",
   ]) $("timeline").append(el("li",sentence));
   if (locked) {
-    const link = el(p.lock.url ? "a" : "code",p.lock.tag);
-    if (p.lock.url) link.href = p.lock.url;
+    const destination = p.lock.public_artifacts_url ?? p.lock.url;
+    const link = el(destination ? "a" : "code", p.lock.public_artifacts_url ? "Public ballot and lock snapshot" : p.lock.tag);
+    if (destination) link.href = destination;
     const item = el("li");
-    item.append("Lock tag ",link);
+    if (!p.lock.public_artifacts_url) item.append("Lock tag ");
+    item.append(link);
     $("timeline").append(item);
   }
   $("personas").className = "persona-list";
@@ -397,3 +389,13 @@ if (!info) {
   $("agreement-metric").addEventListener("change",renderCharts);
   refresh();
 }
+
+const rankingStages = document.querySelectorAll('input[name="forecast-stage"]');
+function showRankingStage() {
+  const showCouncil = document.querySelector('input[name="forecast-stage"]:checked').value === 'council';
+  document.getElementById('council-forecast').hidden = !showCouncil;
+  document.getElementById('poll-forecast').hidden = showCouncil;
+  document.getElementById('rankings').hidden = showCouncil;
+}
+for (const stage of rankingStages) stage.addEventListener('change', showRankingStage);
+window.addEventListener('pageshow', showRankingStage);
