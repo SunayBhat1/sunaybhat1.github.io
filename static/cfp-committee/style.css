@@ -27,3 +27,13 @@
 .color-track{display:flex;width:118px;height:9px;overflow:hidden;border:1px solid var(--line);border-radius:4px}
 .color-track span{flex:1}
 .color-range{font-weight:700;font-variant-numeric:tabular-nums}
+.committee-help{margin:0 20px 9px;color:var(--muted);font-size:.86rem}
+.committee-help summary,.persona-list summary{color:var(--green);cursor:pointer;font-weight:700}
+.committee-help p{margin-block:6px}
+.committee-types{margin-top:14px;padding:18px 20px}
+.committee-types dl{margin-bottom:0}
+.committee-types dt{margin-top:10px;font-weight:700}
+.committee-types dd{margin:2px 0;color:var(--muted)}
+.persona-list details{margin-top:7px}
+.persona-list details label{max-width:120px;margin-top:6px}
+.persona-prompt{white-space:pre-wrap;overflow-wrap:anywhere;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:12px;font-size:.82rem}

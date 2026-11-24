@@ -8,6 +8,7 @@
   <title>CFP Committee Lab</title>
   <link rel="icon" href="mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
+  <script defer src="/analytics.js"></script>
   <script defer src="dataset.js"></script>
   <script defer src="app.js"></script>
 </head>
@@ -51,10 +52,11 @@
         <aside id="roster-note" class="roster-note" hidden></aside>
         <div class="card rankings">
           <div class="controls">
-            <label>Committee<select id="committee"></select></label>
+            <label>Committee type<select id="committee" aria-describedby="committee-description" title="A combined committee mixes models. A single-model committee uses the same model for every voter."></select></label>
             <label>Polls shown<select id="condition"></select></label>
             <label>Team filter<input id="team-filter" type="search" placeholder="Search teams"></label>
           </div>
+          <details class="committee-help"><summary>What are the committee types?</summary><p id="committee-description"></p></details>
           <p class="selection-note" id="selection-note" aria-live="polite"></p>
           <div class="table-wrap"><table>
             <caption class="sr-only">Committee rankings and top-12 ballot votes</caption>
@@ -72,8 +74,8 @@
       <section id="downloads" class="section">
         <div class="section-heading"><div><h2>Ask your own AI</h2><p>Download both files, attach them to your chatbot, and start with the prompt below.</p></div></div>
         <div class="download-pair">
-          <a class="card file-card" href="SKILL.md" download><span><strong>Agent skill</strong><small>How to read, verify, and reproduce the analysis</small></span><span class="filetype" id="skill-size">MD</span></a>
-          <a class="card file-card" href="data/results.json" download><span><strong>Full results JSON</strong><small>Every ranking, ballot, explanation, and run detail</small></span><span class="filetype" id="results-size">JSON</span></a>
+          <a class="card file-card" href="SKILL.md" download data-umami-event="cfp-skill-download"><span><strong>Agent skill</strong><small>How to read, verify, and reproduce the analysis</small></span><span class="filetype" id="skill-size">MD</span></a>
+          <a class="card file-card" href="data/results.json" download data-umami-event="cfp-results-download"><span><strong>Full results JSON</strong><small>Every ranking, ballot, explanation, and run detail</small></span><span class="filetype" id="results-size">JSON</span></a>
         </div>
         <div class="card starter">
           <div class="starter-head"><h3>Starter prompt</h3><button class="button secondary" id="copy-prompt" type="button">Copy prompt</button></div>
@@ -83,9 +85,9 @@
         <details class="expand download-more">
           <summary>Technical downloads and reproduction</summary>
           <div class="download-list">
-            <a href="data/cfp-data.zip" download><span><strong>Complete data bundle</strong><small>Skill, rankings, ballots, usage, and audit details</small></span><span class="filetype">ZIP</span></a>
-            <a href="data/rankings.csv" download><span><strong>Committee rankings</strong><small>Ranking and vote points for each version of the committee</small></span><span class="filetype">CSV</span></a>
-            <a href="data/provenance.json" download><span><strong>Run record and lock</strong><small>Input fingerprint, exact prompts, timestamps, and model settings</small></span><span class="filetype">JSON</span></a>
+            <a href="data/cfp-data.zip" download data-umami-event="cfp-bundle-download"><span><strong>Complete data bundle</strong><small>Skill, rankings, ballots, usage, and audit details</small></span><span class="filetype">ZIP</span></a>
+            <a href="data/rankings.csv" download data-umami-event="cfp-rankings-download"><span><strong>Committee rankings</strong><small>Ranking and vote points for each version of the committee</small></span><span class="filetype">CSV</span></a>
+            <a href="data/provenance.json" download data-umami-event="cfp-provenance-download"><span><strong>Run record and lock</strong><small>Input fingerprint, exact prompts, timestamps, and model settings</small></span><span class="filetype">JSON</span></a>
           </div>
           <p class="attribution">The source games come from <a href="https://collegefootballdata.com/">CollegeFootballData.com</a>. Its <a href="https://collegefootballdata.com/terms">API terms</a> restrict bulk redistribution. The skill shows how to rebuild the inputs with an authorized key.</p>
         </details>
@@ -99,7 +101,7 @@
           <article class="card chart"><h3>How much did the polls matter?</h3><p>A higher number means rankings moved more when a poll was hidden.</p><div id="sensitivity-chart"></div></article>
           <article class="card chart"><h3>Who made the most playoff fields?</h3><p>Top-12 appearances across the individual models.</p><div id="consensus-chart"></div></article>
           <article class="card chart wide"><div class="chart-head"><div><h3>How close were the picks to the polls?</h3><p>Agreement with the AP and previous CFP rankings. The official release is added once verified.</p></div></div><div id="reference-chart"></div></article>
-          <article class="card chart wide"><h3>How many ballots counted?</h3><p>Each model group was asked for 13 ballots under each poll setup.</p><div id="validation-chart"></div></article>
+          <article class="card chart wide"><h3>How many ballots counted?</h3><p>Each committee gets the same number of voting seats per poll setup.</p><div id="validation-chart"></div></article>
         </div>
         </details>
       </section>
@@ -107,9 +109,16 @@
         <details class="expand"><summary>How the committee worked</summary>
         <div class="method-grid">
           <article class="card method-card"><h3>Timing</h3><ol id="timeline"></ol></article>
-          <article class="card method-card"><h3>Information diet</h3><p>All agents see the same alphabetized candidate list, compact game rows, team résumés, and available ratings. <span id="record-scope"></span> The four conditions cross prior CFP and AP visibility. Poll-off conditions omit the relevant poll table and résumé rank fields. AP helped define the candidate pool, so its influence on eligibility persists across conditions.</p></article>
+          <article class="card method-card"><h3>Information diet</h3><p>All agents see the same alphabetized candidate list, compact game rows, team résumés, and available ratings. <span id="record-scope"></span> The four conditions cross prior CFP and AP visibility. Poll-off conditions omit the relevant poll table and résumé rank fields. Polls help define the candidate pool before the experiment, so that eligibility stays the same across conditions.</p></article>
           <article class="card method-card"><h3>Leakage controls</h3><p>The runner verifies the frozen packet SHA-256 and date cutoffs before calling models. Agents receive no search, tools, or retrieval. The input packet predates the target CFP release. Prior CFP publication date is a configured mapping because the source has no timestamp. Prompt instructions cannot erase knowledge already in model weights.</p></article>
-          <article class="card method-card"><h3>Ballots and comparisons</h3><p>Each ballot ranks exactly 25 unique eligible teams and explains its top 12. A committee needs at least 10 valid ballots. Borda awards 25 points for first through 1 for 25th, breaking ties on available SP+ then alphabetically. Persona contrasts are descriptive. The mixed seats are fixed across conditions, and temperature support varies by provider.</p></article>
+          <article class="card method-card"><h3>Ballots and comparisons</h3><p>Each ballot ranks exactly 25 unique eligible teams and explains its top 12. A committee needs at least 10 valid ballots. Borda awards 25 points for first through 1 for 25th, breaking ties on available SP+ then alphabetically. Persona contrasts are descriptive.</p></article>
+        </div>
+        <div class="card committee-types"><h3>Committee types</h3>
+          <dl>
+            <dt>Combined committee</dt><dd>Different AI models fill fixed seats on one committee. Every seat has its own voting style. Model assignments stay the same across the poll settings.</dd>
+            <dt>Combined committee · second vote</dt><dd>The same models and seats vote again from scratch. Models that support a creativity setting get a higher setting on this vote.</dd>
+            <dt>Single-model committee</dt><dd>Every seat uses one AI model with different voting styles across seats. Historical runs included these committees to compare how the models rank the same teams.</dd>
+          </dl>
         </div>
         <div class="card personas"><h3>The voting styles</h3><p>Each voter got a different emphasis, such as efficiency, quality of wins, or head-to-head results.</p><div id="personas"></div></div>
         </details>
